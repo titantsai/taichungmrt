@@ -21,13 +21,19 @@
 
 <script>
 import RouteData from '@/services/RouteData.js'
-// import Panzoom from 'panzoom'
+import Panzoom from 'panzoom'
 
 export default {
     mounted(){
       RouteData.getRoute()
       .then(response=>this.Routes=response.data)
-      .catch(error=>console.log(error))    
+      .catch(error=>console.log(error)),
+      
+      this.panzoom = Panzoom(document.querySelector('#routemap'),{
+        bounds:true,
+        minZoom:0.5,
+        maxZoom:2,
+      })
     },
     data(){
       return{
