@@ -1,7 +1,9 @@
 import axios from 'axios'
 
+//https://my-json-server.typicode.com/titantsai/taichungmrt
+
 const APIClient = axios.create({
-    baseURL:`https://my-json-server.typicode.com/titantsai/taichungmrt`,
+    baseURL:`http://localhost:3000`,
     withCredentials:false,
     headers:{
         Accept:'application/json',
@@ -13,7 +15,7 @@ export default{
     getRoute(){
         return APIClient.get('/routes')
     },
-    getStation(route){
-        return APIClient.get('/routes/'+route)
+    getStation(ID){
+        return APIClient.get('/StationInfos/'+ID)
     }
 }

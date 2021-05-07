@@ -7,13 +7,26 @@
             </div>
             <div 
               class="route-station" 
-              v-for="(station,index) in route.stations" 
+              v-for="station in route.stations" 
               :key="station.id" 
               :style="{top:`${station.position.top}`,left:`${station.position.left}`}"
-              @click="selectStation(route.id,index)">
+              @click="selectStation(station.id)">
               <span class="route-station-dot" :class="{hasTransit:station.transit}" :style="{borderColor:`${route.color}`}"></span>
               <div class="route-station-tag" :class="`${station.position.tag}`">{{station.zh}}</div>
             </div>
+        </div>
+    </div>
+
+    <div class="bottom-sheet">
+      <div class="bottom-sheet_header">
+        <h3 class="">{{selected.name}}</h3>
+        <p class="">{{selected.line}}</p>
+      </div>
+        <div>
+          <div class="list-header">出入口</div>
+          <ul>
+            <li v-for="exit in selected.facilities.exits" :key="exit">{{exit}}</li>
+          </ul>
         </div>
     </div>
   </div>
@@ -31,18 +44,23 @@ export default {
       
       this.panzoom = Panzoom(document.querySelector('#routemap'),{
         bounds:true,
+        smoothScroll:false,
         minZoom:0.5,
         maxZoom:2,
+        initialZoom:0.75,
       })
     },
     data(){
       return{
-        Routes:[] ,
+        Routes:[],
+        selected:{}
       }
     },
     methods:{
-      selectStation(line,index){
-        console.log(line,index)
+      selectStation(index){
+        RouteData.getStation(index)
+        .then(res=>this.selected=res.data)
+        .catch(err=>console.log(err))
       }
     }
 }
@@ -124,6 +142,43 @@ export default {
 
   .hasTransit{
     background-color:#494949;
+  }
+
+  .bottom-sheet{
+    position:absolute;
+    top:0;
+    left:0;
+    width:375px;
+    z-index:3;
+    height:100%;
+    background-color:white;
+  }
+
+  .bottom-sheet_header{
+    display: block;
+  }
+
+  .header-name{
+    display:flex;
+    font-size:19px;
+    font-weight: 500;
+    color:var(--heading);
+  }
+
+  .header-line{
+    display: flex;
+    font-size:12px;
+    font-weight: 300;
+    color:var(--caption);
+    margin:0;
+    padding:0;
+  }
+
+  .list-header{
+    background-color:var(--grey);
+    font-size:13px;
+    text-align: start;
+    padding:16px 16px 8px 16px
   }
 
 </style>
