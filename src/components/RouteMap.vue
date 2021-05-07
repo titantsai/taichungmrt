@@ -28,6 +28,18 @@
             <li v-for="exit in selected.exits" :key="exit">
               <div>{{exit.name}}</div>
               <div>{{exit.hints}}</div>
+              <div>
+                <img v-if="exit.stair" alt="樓梯"/>
+                <img v-if="exit.elevator" alt="電梯"/>
+                <img v-if="exit.escalator" alt="電扶梯"/>
+              </div>
+            </li>
+          </ul>
+          <div class="list-header">站點設施</div>
+          <ul>
+            <li v-for="service in selected.services" :key="service.name">
+              <div>{{service.name}}</div>
+              <div>{{service.position}}</div>
             </li>
           </ul>
         </div>
