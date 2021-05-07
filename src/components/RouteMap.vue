@@ -25,7 +25,10 @@
         <div>
           <div class="list-header">出入口</div>
           <ul>
-            <li v-for="exit in selected.facilities.exits" :key="exit">{{exit}}</li>
+            <li v-for="exit in selected.exits" :key="exit">
+              <div>{{exit.name}}</div>
+              <div>{{exit.hints}}</div>
+            </li>
           </ul>
         </div>
     </div>
