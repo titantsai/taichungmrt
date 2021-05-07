@@ -1,24 +1,25 @@
-# taichungmrt
+# 台中捷運導覽PWA
 
-## Project setup
-```
-npm install
-```
++ 捷運與台鐵轉乘路線圖
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+#### 功能WIP
++ 車站列表
+  * 票價 
+  * 旅程時間查詢
+  * 站點資訊
+    - 列車動態 //NA
+    - 出口資訊 API
+    - 站內設施 API
+  * 轉乘資訊
+    - 公車動態 API
+    - Ubike數量 API
+    - 停車場   
 
-### Compiles and minifies for production
-```
-npm run build
-```
++ 訊息公告
 
-### Lints and fixes files
-```
-npm run lint
-```
++ 旅客服務
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Credits
+
+[PanZoom from anvaka](https://github.com/anvaka/panzoom)
