@@ -1,0 +1,153 @@
+{
+    "routes":[
+        {"id":"TRA",
+        "path":"./images/railway.svg",
+        "color":"#494949",
+        "stations":[
+            {"id":"3310",
+            "zh":"五權",
+            "en":"Wuquan",
+            "position":{"top":"493.5px","left":"458.5px","tag":"bottom"},
+            "transit":false},
+
+            {"id":"3300",
+            "zh":"臺中",
+            "en":"Taichung",
+            "position":{"top":"493.5px","left":"598.5px","tag":"bottom"},
+            "transit":false},
+
+            {"id":"3290",
+            "zh":"精武",
+            "en":"Jingwu",
+            "position":{"top":"411.5px","left":"679.5px","tag":"right"},
+            "transit":false},
+
+            {"id":"3280",
+            "zh":"太原",
+            "en":"Taiyuan",
+            "position":{"top":"272.5px","left":"679.5px","tag":"right"},
+            "transit":false},
+
+            {"id":"3260",
+            "zh":"頭家厝",
+            "en":"Toujiacuo",
+            "position":{"top":"46.5px","left":"679.5px","tag":"left"},
+            "transit":false}
+        ]
+        },
+
+        {"id":"GR",
+        "path":"./images/green.svg",
+        "color":"#8EC31C",
+        "stations":[
+            {"id":"103a",
+            "zh":"北屯總站",
+            "en":"Beitun Main",
+            "position":{"top":"52.5px","left":"751.5px","tag":"right"},
+            "transit":false},
+
+            {"id":"103",
+            "zh":"舊社",
+            "en":"Jiushe",
+            "position":{"top":"130px","left":"751.5px","tag":"right"},
+            "transit":false},
+
+            {"id":"104",
+            "zh":"松竹",
+            "en":"Songzhu",
+            "position":{"top":"151.5px","left":"679.5px","tag":"right"},
+            "transit":true},
+
+            {"id":"105",
+            "zh":"四維國小",
+            "en":"Sihwei Elementary School",
+            "position":{"top":"172.5px","left":"638.5px","tag":"top"},
+            "transit":false},
+
+            {"id":"106",
+            "zh":"文心崇德",
+            "en":"Wenshin Xongde",
+            "position":{"top":"172.5px","left":"578.75px","tag":"bottom"},
+            "transit":false},
+
+            {"id":"107",
+            "zh":"文心中清",
+            "en":"Wenxin Zhongqing",
+            "position":{"top":"172.5px","left":"519px","tag":"top"},
+            "transit":false},
+        
+            {"id":"108",
+            "zh":"文華高中",
+            "en":"Wenhua Senior High School",
+            "position":{"top":"172.5px","left":"459.25px","tag":"bottom"},
+            "transit":false},
+
+            {"id":"109",
+            "zh":"文心櫻花",
+            "en":"Wenxin Yinghua",
+            "position":{"top":"172.5px","left":"399.5px","tag":"top"},
+            "transit":false},
+
+            {"id":"110",
+            "zh":"市政府",
+            "en":"Taichung City Hall",
+            "position":{"top":"211.5px","left":"357.5px","tag":"left"},
+            "transit":false},
+
+            {"id":"111",
+            "zh":"水安宮",
+            "en":"Shui-an Temple",
+            "position":{"top":"271.5px","left":"357.5px","tag":"left"},
+            "transit":false},
+
+            {"id":"112",
+            "zh":"文心森林公園",
+            "en":"Wenxin Forest Park",
+            "position":{"top":"331.5px","left":"357.5px","tag":"left"},
+            "transit":false},
+
+            {"id":"113",
+            "zh":"南屯",
+            "en":"Nantun",
+            "position":{"top":"391.5px","left":"357.5px","tag":"left"},
+            "transit":false},
+
+            {"id":"114",
+            "zh":"豐樂公園",
+            "en":"Feng-le Park",
+            "position":{"top":"451.5px","left":"357.5px","tag":"left"},
+            "transit":false},
+
+            {"id":"115",
+            "zh":"大慶",
+            "en":"Daqing",
+            "position":{"top":"493.5px","left":"317.5px","tag":"bottom"},
+            "transit":true},
+            
+            {"id":"116",
+            "zh":"九張犁",
+            "en":"Jiuzhangli",
+            "position":{"top":"493.5px","left":"257.5px","tag":"bottom"},
+            "transit":false},
+
+            {"id":"117",
+            "zh":"九德",
+            "en":"Jiude",
+            "position":{"top":"493.5px","left":"197.5px","tag":"bottom"},
+            "transit":false},
+
+            {"id":"118",
+            "zh":"烏日",
+            "en":"Wuri",
+            "position":{"top":"493.5px","left":"137.5px","tag":"bottom"},
+            "transit":false},
+
+            {"id":"119",
+            "zh":"高鐵臺中站",
+            "en":"HSR Taichung Station",
+            "position":{"top":"493.5px","left":"77.5px","tag":"bottom-left"},
+            "transit":true}
+        ]
+        }
+    ]
+}
