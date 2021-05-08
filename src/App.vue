@@ -16,6 +16,7 @@
   --heading:#474747;
   --caption:#868686;
   --grey:#F2F2F7;
+  --white:#FFFFFF;
   --map-tag:#ffffff;
 }
 

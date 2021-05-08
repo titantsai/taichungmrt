@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37">
+  <g id="_103A" data-name="103A" transform="translate(-189.778 -487)">
+    <g id="Rectangle_1" data-name="Rectangle 1" transform="translate(189.778 487)" fill="#f1f2f4" stroke="#8ec31c" stroke-linejoin="round" stroke-width="2">
+      <rect width="37" height="37" rx="7" stroke="none"/>
+      <rect x="1" y="1" width="35" height="35" rx="6" fill="none"/>
+    </g>
+    <text id="_103" data-name="103" transform="translate(208.278 505.5)" fill="#8ec31c" font-size="18" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700"><tspan x="-15.012" y="0">103</tspan></text>
+    <text id="A" transform="translate(208.278 519.5)" fill="#8ec31c" font-size="16" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700"><tspan x="-5.48" y="0">A</tspan></text>
+  </g>
+</svg>

@@ -19,15 +19,20 @@
 
     <div class="bottom-sheet">
       <div class="bottom-sheet_header">
-        <h3 class="">{{selected.name}}</h3>
-        <p class="">{{selected.line}}</p>
+        <div class="station_num">
+          <img :src="selected.src" alt="">
+        </div>
+        <div style="text-align:start">
+          <h3 class="station_name">{{selected.name}}</h3>
+          <p class="station_line">{{selected.line}}</p>
+        </div>
       </div>
         <div>
           <div class="list-header">出入口</div>
           <ul class="sheet-list">
             <li class="list-item" v-for="exit in selected.exits" :key="exit">
-                <div class="item-icon">
-                  <img :src="exit.src"> 
+                <div>
+                  <img class="exit-num_icon" :src="exit.src"> 
                 </div>               
                 <div>                  
                   <h5>{{exit.name}}</h5>
@@ -43,6 +48,9 @@
           <div class="list-header">站點設施</div>
           <ul class="sheet-list">
             <li class="list-item" v-for="service in selected.services" :key="service.name">
+              <div class="item-icon">
+                <img :src="service.src" alt="">
+              </div>
               <div style="align-content:center">
                 <h5>{{service.name}}</h5>
                 <p>{{service.position}}</p>
@@ -166,6 +174,9 @@ export default {
     background-color:#494949;
   }
 
+
+/*-- Detail Sheet --*/
+
   .bottom-sheet{
     position:absolute;
     top:0;
@@ -175,38 +186,51 @@ export default {
     height:100%;
     background-color:white;
     overflow-y:auto;
+    background-color:var(--grey)
   }
 
   .bottom-sheet_header{
+    display: flex;
+    align-items: center;
+    padding:16px;
+    background-color:var(--white);
+    border-bottom:0.5px solid #B8B8B875
+  }
+
+  .station_num{
+    margin-right:16px;
+    width:37px;
+    height:37px;
     display: block;
   }
-
-  .header-name{
-    display:flex;
+  
+  .station_name{
     font-size:19px;
-    font-weight: 500;
-    color:var(--heading);
+    padding:0;
+    margin:0;
+    margin-bottom:3px;
+    color:var(--map-bg);
   }
 
-  .header-line{
-    display: flex;
-    font-size:12px;
-    font-weight: 300;
-    color:var(--caption);
-    margin:0;
+  .station_line{
+    font-size:14px;
     padding:0;
+    margin:0;
+    color:var(--caption)
   }
 
   .sheet-list{
     list-style: none;
     padding:0;
     margin:0;
+    background-color:var(--white);
+    
   }
 
-  .item-icon{
-    width:60px;
-    height:60px;
-    margin:0 16px;
+  .exit-num_icon{
+      width:60px;
+      height:60px;
+      margin-right:14px;
   }
 
   .exit-types{
@@ -223,37 +247,47 @@ export default {
     background-color:var(--grey);
     font-size:13px;
     text-align: start;
-    padding:16px 16px 8px 16px
+    padding:16px 16px 8px 16px;
+    border-bottom:0.5px solid #B8B8B875;
   }
 
 
   .list-item{
-    height:101px;
-    padding:0;
-    margin:0;
-    border-bottom: 0.5px solid #B8B8BB;
+    padding:12px 0;
+    margin-left:16px;
+    border-bottom: 0.5px solid #B8B8B875;
     text-align: start;
     display: flex;
+
   }
 
+
   .list-item:only-child, .list-item:last-child{
-    border-bottom:none
+    margin-left:0;
+    padding-left:16px;
   }
 
   .list-item div{
     align-self: center;
   }
 
+    .item-icon img{
+    width:30px;
+    height:30px;
+    padding-right:16px;
+  }
+
+
   .list-item h5{
     margin:0;
     font-size: 17px;
-    color:var(--black);
+    color:var(--heading);
     line-height: 22px;
     margin-bottom:2px;
   }
 
   .list-item p{
-    font-size: 12px;
+    font-size: 15px;
     color:var(--caption);
     line-height: 14px;
     margin:0;
