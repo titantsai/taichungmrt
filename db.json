@@ -155,219 +155,219 @@
             "line":"綠線",
             "name":"北屯總站",
         
-                "exits":[
-                    {"num":1,"src":".","name":"敦富東街","hints":"車站北側","stair":true,"elevator":false,"escalator":false},
-                    {"num":2,"src":".","name":"敦富東街","hints":"車站南側","stair":true,"elevator":false,"escalator":false},
-                    {"num":3,"src":".","name":"北屯機廠","hints":"北屯機廠側","stair":true,"elevator":false,"escalator":false}],
-                "services":[
-                    {"src":"./","name":"詢問處","position":"1F"},
-                    {"src":"./","name":"ATM","position":"1F非付費區，自動售票機旁，近出口2"},
-                    {"src":"./","name":"飲水機","position":"1F非付費區"},
-                    {"src":"./","name":"洗手間","position":"1F非付費區，近出口1"},
-                    {"src":"./","name":"AED","position":"1F付費區，自動閘門旁，近出口1"},
-                    {"src":"./","name":"哺集乳室","position":"1F非付費區，近出口1"}]
+            "exits":[
+                {"num":1,"src":".","name":"敦富東街","hints":"車站北側","stair":true,"elevator":false,"escalator":false},
+                {"num":2,"src":".","name":"敦富東街","hints":"車站南側","stair":true,"elevator":false,"escalator":false},
+                {"num":3,"src":".","name":"北屯機廠","hints":"北屯機廠側","stair":true,"elevator":false,"escalator":false}],
+            "services":[
+                {"src":"./","name":"詢問處","position":"1F"},
+                {"src":"./","name":"ATM","position":"1F非付費區，自動售票機旁，近出口2"},
+                {"src":"./","name":"飲水機","position":"1F非付費區"},
+                {"src":"./","name":"洗手間","position":"1F非付費區，近出口1"},
+                {"src":"./","name":"AED","position":"1F付費區，自動閘門旁，近出口1"},
+                {"src":"./","name":"哺集乳室","position":"1F非付費區，近出口1"}]
         },
         {"id":"103",
             "line":"綠線",
             "name":"舊社",
-           
-                "exits":[
-                    {"num":1,"src":".","name":"敦富路","hints":"松竹路與敦富路路口","stair":true,"elevator":true,"escalator":true}],
-                "services":[
-                    {"src":"./","name":"詢問處","position":"3F"},
-                    {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
-                    {"src":"./","name":"飲水機","position":"3F非付費區"},
-                    {"src":"./","name":"洗手間","position":"3F非付費區"},
-                    {"src":"./","name":"AED","position":"3F付費區，近手扶梯"}]
+        
+            "exits":[
+                {"num":1,"src":".","name":"敦富路","hints":"松竹路與敦富路路口","stair":true,"elevator":true,"escalator":true}],
+            "services":[
+                {"src":"./","name":"詢問處","position":"3F"},
+                {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
+                {"src":"./","name":"飲水機","position":"3F非付費區"},
+                {"src":"./","name":"洗手間","position":"3F非付費區"},
+                {"src":"./","name":"AED","position":"3F付費區，近手扶梯"}]
         },
         {"id":"104",
             "line":"綠線",
             "name":"松竹",
             
-                "exits":[
-                    {"num":1,"src":".","name":"舊社公園","hints":"北屯路，近舊社公園","stair":true,"elevator":true,"escalator":true},
-                    {"num":2,"src":".","name":"北屯路","hints":"北屯路，近臺鐵松竹站","stair":true,"elevator":true,"escalator":true},
-                    {"num":3,"src":".","name":"臺鐵松竹站","hints":"連通道至臺鐵松竹站","stair":true,"elevator":false,"escalator":false}],
-                "services":[
-                    {"src":"./","name":"詢問處","position":"3F"},
-                    {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
-                    {"src":"./","name":"飲水機","position":"3F非付費區"},
-                    {"src":"./","name":"洗手間","position":"3F非付費區"},
-                    {"src":"./","name":"AED","position":"3F付費區，無障礙廁所旁"}]
+            "exits":[
+                {"num":1,"src":".","name":"舊社公園","hints":"北屯路，近舊社公園","stair":true,"elevator":true,"escalator":true},
+                {"num":2,"src":".","name":"北屯路","hints":"北屯路，近臺鐵松竹站","stair":true,"elevator":true,"escalator":true},
+                {"num":3,"src":".","name":"臺鐵松竹站","hints":"連通道至臺鐵松竹站","stair":true,"elevator":false,"escalator":false}],
+            "services":[
+                {"src":"./","name":"詢問處","position":"3F"},
+                {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
+                {"src":"./","name":"飲水機","position":"3F非付費區"},
+                {"src":"./","name":"洗手間","position":"3F非付費區"},
+                {"src":"./","name":"AED","position":"3F付費區，無障礙廁所旁"}]
         },
         {"id":"105",
             "line":"綠線",
             "name":"四維國小",
-            
-                "exits":[
-                    {"num":1,"src":".","name":"四維國小","hints":"文心路四段與天津路四段路口","stair":true,"elevator":true,"escalator":true}],
-                "services":[
-                    {"src":"./","name":"詢問處","position":"3F"},
-                    {"src":"./","name":"ATM","position":"3F非付費區"},
-                    {"src":"./","name":"飲水機","position":"3F非付費區"},
-                    {"src":"./","name":"洗手間","position":"3F非付費區"},
-                    {"src":"./","name":"AED","position":"3F付費區，近自動售票機"}]
+        
+            "exits":[
+                {"num":1,"src":".","name":"四維國小","hints":"文心路四段與天津路四段路口","stair":true,"elevator":true,"escalator":true}],
+            "services":[
+                {"src":"./","name":"詢問處","position":"3F"},
+                {"src":"./","name":"ATM","position":"3F非付費區"},
+                {"src":"./","name":"飲水機","position":"3F非付費區"},
+                {"src":"./","name":"洗手間","position":"3F非付費區"},
+                {"src":"./","name":"AED","position":"3F付費區，近自動售票機"}]
         },
         {"id":"106",
             "line":"綠線",
             "name":"文心崇德",
             
-                "exits":[
-                    {"num":1,"src":".","name":"崇德路二段","hints":"文心路四段與崇德路二段路口","stair":true,"elevator":true,"escalator":true}],
-                "services":[
-                    {"src":"./","name":"詢問處","position":"3F"},
-                    {"src":"./","name":"ATM","position":"3F非付費區"},
-                    {"src":"./","name":"飲水機","position":"3F非付費區"},
-                    {"src":"./","name":"洗手間","position":"3F非付費區"},
-                    {"src":"./","name":"AED","position":"3F付費區，出口樓梯旁"}]
+            "exits":[
+                {"num":1,"src":".","name":"崇德路二段","hints":"文心路四段與崇德路二段路口","stair":true,"elevator":true,"escalator":true}],
+            "services":[
+                {"src":"./","name":"詢問處","position":"3F"},
+                {"src":"./","name":"ATM","position":"3F非付費區"},
+                {"src":"./","name":"飲水機","position":"3F非付費區"},
+                {"src":"./","name":"洗手間","position":"3F非付費區"},
+                {"src":"./","name":"AED","position":"3F付費區，出口樓梯旁"}]
         },
         {"id":"107",
             "line":"綠線",
             "name":"文心中清",
             
-                "exits":[
-                    {"num":1,"src":".","name":"崇德路二段","hints":"文心路三段與中清路一段路口","stair":true,"elevator":true,"escalator":true}],
-                "services":[
-                    {"src":"./","name":"詢問處","position":"3F"},
-                    {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
-                    {"src":"./","name":"飲水機","position":"3F非付費區"},
-                    {"src":"./","name":"洗手間","position":"3F非付費區"},
-                    {"src":"./","name":"AED","position":"3F付費區，近自動售票機"}]
+            "exits":[
+                {"num":1,"src":".","name":"崇德路二段","hints":"文心路三段與中清路一段路口","stair":true,"elevator":true,"escalator":true}],
+            "services":[
+                {"src":"./","name":"詢問處","position":"3F"},
+                {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
+                {"src":"./","name":"飲水機","position":"3F非付費區"},
+                {"src":"./","name":"洗手間","position":"3F非付費區"},
+                {"src":"./","name":"AED","position":"3F付費區，近自動售票機"}]
         },
         {"id":"108",
             "line":"綠線",
             "name":"文華高中",
             
-                "exits":[
-                    {"num":1,"src":".","name":"河南路二段","hints":"文心路三段與河南路二段路口","stair":true,"elevator":true,"escalator":true}],
-                "services":[
-                    {"src":"./","name":"詢問處","position":"3F"},
-                    {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
-                    {"src":"./","name":"飲水機","position":"3F非付費區"},
-                    {"src":"./","name":"洗手間","position":"3F非付費區"},
-                    {"src":"./","name":"AED","position":"3F付費區，近電扶梯"}]
+            "exits":[
+                {"num":1,"src":".","name":"河南路二段","hints":"文心路三段與河南路二段路口","stair":true,"elevator":true,"escalator":true}],
+            "services":[
+                {"src":"./","name":"詢問處","position":"3F"},
+                {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
+                {"src":"./","name":"飲水機","position":"3F非付費區"},
+                {"src":"./","name":"洗手間","position":"3F非付費區"},
+                {"src":"./","name":"AED","position":"3F付費區，近電扶梯"}]
         },
         {"id":"109",
             "line":"綠線",
             "name":"文心櫻花",
             
-                "exits":[
-                    {"num":1,"src":".","name":"櫻花路","hints":"文心路三段與櫻花路路口","stair":true,"elevator":true,"escalator":true}],
-                "services":[
-                    {"src":"./","name":"詢問處","position":"3F"},
-                    {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
-                    {"src":"./","name":"飲水機","position":"3F非付費區"},
-                    {"src":"./","name":"洗手間","position":"3F非付費區"},
-                    {"src":"./","name":"AED","position":"3F付費區，安全門前"}]
+            "exits":[
+                {"num":1,"src":".","name":"櫻花路","hints":"文心路三段與櫻花路路口","stair":true,"elevator":true,"escalator":true}],
+            "services":[
+                {"src":"./","name":"詢問處","position":"3F"},
+                {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
+                {"src":"./","name":"飲水機","position":"3F非付費區"},
+                {"src":"./","name":"洗手間","position":"3F非付費區"},
+                {"src":"./","name":"AED","position":"3F付費區，安全門前"}]
         },
         {"id":"110",
             "line":"綠線",
             "name":"市政府",
-            
-                "exits":[
-                    {"num":1,"src":".","name":"臺中市政府","hints":"文心路二段，近臺中市政府","stair":true,"elevator":true,"escalator":true},
-                    {"num":2,"src":".","name":"臺灣大道二段","hints":"臺灣大道二段及文心路二段路口","stair":true,"elevator":true,"escalator":true}],
-                "services":[
-                    {"src":"./","name":"詢問處","position":"3F"},
-                    {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁，近出口1"},
-                    {"src":"./","name":"飲水機","position":"3F非付費區"},
-                    {"src":"./","name":"洗手間","position":"3F非付費區"},
-                    {"src":"./","name":"AED","position":"3F非付費區，近詢問處、自動閘門前"},
-                    {"src":"./","name":"哺集乳室","position":"3F非付費區，自動售票機旁，近出口1"}]
+        
+            "exits":[
+                {"num":1,"src":".","name":"臺中市政府","hints":"文心路二段，近臺中市政府","stair":true,"elevator":true,"escalator":true},
+                {"num":2,"src":".","name":"臺灣大道二段","hints":"臺灣大道二段及文心路二段路口","stair":true,"elevator":true,"escalator":true}],
+            "services":[
+                {"src":"./","name":"詢問處","position":"3F"},
+                {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁，近出口1"},
+                {"src":"./","name":"飲水機","position":"3F非付費區"},
+                {"src":"./","name":"洗手間","position":"3F非付費區"},
+                {"src":"./","name":"AED","position":"3F非付費區，近詢問處、自動閘門前"},
+                {"src":"./","name":"哺集乳室","position":"3F非付費區，自動售票機旁，近出口1"}]
         },
         {"id":"111",
             "line":"綠線",
             "name":"水安宮",
             
-                "exits":[
-                    {"num":1,"src":".","name":"大業路","hints":"文心路一段與大業路路口","stair":true,"elevator":true,"escalator":true}],
-                "services":[
-                    {"src":"./","name":"詢問處","position":"3F"},
-                    {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
-                    {"src":"./","name":"飲水機","position":"3F非付費區"},
-                    {"src":"./","name":"洗手間","position":"3F非付費區"},
-                    {"src":"./","name":"AED","position":"3F非付費區，電扶梯前"}]
+            "exits":[
+                {"num":1,"src":".","name":"大業路","hints":"文心路一段與大業路路口","stair":true,"elevator":true,"escalator":true}],
+            "services":[
+                {"src":"./","name":"詢問處","position":"3F"},
+                {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
+                {"src":"./","name":"飲水機","position":"3F非付費區"},
+                {"src":"./","name":"洗手間","position":"3F非付費區"},
+                {"src":"./","name":"AED","position":"3F非付費區，電扶梯前"}]
         },
         {"id":"112",
             "line":"綠線",
             "name":"文心森林公園",
             
-                "exits":[
-                    {"num":1,"src":".","name":"文心森林公園","hints":"文心路一段，文心森林公園側","stair":true,"elevator":true,"escalator":true}],
-                "services":[
-                    {"src":"./","name":"詢問處","position":"3F"},
-                    {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
-                    {"src":"./","name":"飲水機","position":"3F非付費區"},
-                    {"src":"./","name":"洗手間","position":"3F非付費區"},
-                    {"src":"./","name":"AED","position":"3F非付費區，公用電話旁"}]
+            "exits":[
+                {"num":1,"src":".","name":"文心森林公園","hints":"文心路一段，文心森林公園側","stair":true,"elevator":true,"escalator":true}],
+            "services":[
+                {"src":"./","name":"詢問處","position":"3F"},
+                {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
+                {"src":"./","name":"飲水機","position":"3F非付費區"},
+                {"src":"./","name":"洗手間","position":"3F非付費區"},
+                {"src":"./","name":"AED","position":"3F非付費區，公用電話旁"}]
         },
         {"id":"113",
             "line":"綠線",
             "name":"南屯",
             
-                "exits":[
-                    {"num":1,"src":".","name":"五權西路二段","hints":"文心路一段與五權西路二段路口","stair":true,"elevator":true,"escalator":true}],
-                "services":[
-                    {"src":"./","name":"詢問處","position":"3F"},
-                    {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
-                    {"src":"./","name":"飲水機","position":"3F非付費區"},
-                    {"src":"./","name":"洗手間","position":"3F非付費區"},
-                    {"src":"./","name":"AED","position":"3F非付費區，自動售票機旁"}]
+            "exits":[
+                {"num":1,"src":".","name":"五權西路二段","hints":"文心路一段與五權西路二段路口","stair":true,"elevator":true,"escalator":true}],
+            "services":[
+                {"src":"./","name":"詢問處","position":"3F"},
+                {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
+                {"src":"./","name":"飲水機","position":"3F非付費區"},
+                {"src":"./","name":"洗手間","position":"3F非付費區"},
+                {"src":"./","name":"AED","position":"3F非付費區，自動售票機旁"}]
         },
         {"id":"114",
             "line":"綠線",
             "name":"豐樂公園",
             
-                "exits":[
-                    {"num":1,"src":".","name":"文心南五路","hints":"文心南路與文心南五路一段路口","stair":true,"elevator":true,"escalator":true}],
-                "services":[
-                    {"src":"./","name":"詢問處","position":"3F"},
-                    {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
-                    {"src":"./","name":"飲水機","position":"3F非付費區"},
-                    {"src":"./","name":"洗手間","position":"3F非付費區"},
-                    {"src":"./","name":"AED","position":"3F非付費區，公用電話旁"}]
+            "exits":[
+                {"num":1,"src":".","name":"文心南五路","hints":"文心南路與文心南五路一段路口","stair":true,"elevator":true,"escalator":true}],
+            "services":[
+                {"src":"./","name":"詢問處","position":"3F"},
+                {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
+                {"src":"./","name":"飲水機","position":"3F非付費區"},
+                {"src":"./","name":"洗手間","position":"3F非付費區"},
+                {"src":"./","name":"AED","position":"3F非付費區，公用電話旁"}]
         },
         {"id":"115",
             "line":"綠線",
             "name":"大慶",
-            
-                "exits":[
-                    {"num":1,"src":".","name":"中山醫學大學","hints":"建國北路，近中山醫學大學","stair":true,"elevator":true,"escalator":true},
-                    {"num":2,"src":".","name":"大慶街二段","hints":"建國北路，近臺鐵大慶站","stair":true,"elevator":true,"escalator":true},
-                    {"num":3,"src":".","name":"臺鐵大慶站","hints":"連通道至臺鐵大慶站","stair":true,"elevator":false,"escalator":false}],
-                "services":[
-                    {"src":"./","name":"詢問處","position":"2F"},
-                    {"src":"./","name":"ATM","position":"2F非付費區，公共電話旁，近出口2"},
-                    {"src":"./","name":"飲水機","position":"2F非付費區"},
-                    {"src":"./","name":"洗手間","position":"2F非付費區"},
-                    {"src":"./","name":"AED","position":"2F付費區，近詢問處"}]
+        
+            "exits":[
+                {"num":1,"src":".","name":"中山醫學大學","hints":"建國北路，近中山醫學大學","stair":true,"elevator":true,"escalator":true},
+                {"num":2,"src":".","name":"大慶街二段","hints":"建國北路，近臺鐵大慶站","stair":true,"elevator":true,"escalator":true},
+                {"num":3,"src":".","name":"臺鐵大慶站","hints":"連通道至臺鐵大慶站","stair":true,"elevator":false,"escalator":false}],
+            "services":[
+                {"src":"./","name":"詢問處","position":"2F"},
+                {"src":"./","name":"ATM","position":"2F非付費區，公共電話旁，近出口2"},
+                {"src":"./","name":"飲水機","position":"2F非付費區"},
+                {"src":"./","name":"洗手間","position":"2F非付費區"},
+                {"src":"./","name":"AED","position":"2F付費區，近詢問處"}]
         },
         {"id":"116",
             "line":"綠線",
             "name":"九張犁",
             
-                "exits":[
-                    {"num":1,"src":".","name":"建國路","hints":"建國路","stair":true,"elevator":true,"escalator":true}],
-                "services":[
-                    {"src":"./","name":"詢問處","position":"3F"},
-                    {"src":"./","name":"ATM","position":"3F非付費區，公共電話旁"},
-                    {"src":"./","name":"飲水機","position":"3F非付費區"},
-                    {"src":"./","name":"洗手間","position":"3F非付費區"},
-                    {"src":"./","name":"AED","position":"3F付費區，近詢問處"}]
+            "exits":[
+                {"num":1,"src":".","name":"建國路","hints":"建國路","stair":true,"elevator":true,"escalator":true}],
+            "services":[
+                {"src":"./","name":"詢問處","position":"3F"},
+                {"src":"./","name":"ATM","position":"3F非付費區，公共電話旁"},
+                {"src":"./","name":"飲水機","position":"3F非付費區"},
+                {"src":"./","name":"洗手間","position":"3F非付費區"},
+                {"src":"./","name":"AED","position":"3F付費區，近詢問處"}]
         },
         {"id":"117",
             "line":"綠線",
             "name":"九德",
             
-                "exits":[
-                    {"num":1,"src":".","name":"興華街","hints":"興華街與自強街口","stair":true,"elevator":true,"escalator":true},
-                    {"num":2,"src":".","name":"建國路","hints":"建國路西側","stair":true,"elevator":true,"escalator":true}],
-                "services":[
-                    {"src":"./","name":"詢問處","position":"2F"},
-                    {"src":"./","name":"ATM","position":"2F非付費區，公共電話旁"},
-                    {"src":"./","name":"飲水機","position":"2F非付費區"},
-                    {"src":"./","name":"洗手間","position":"2F非付費區"},
-                    {"src":"./","name":"AED","position":"2F付費區，近詢問處"}]
+            "exits":[
+                {"num":1,"src":".","name":"興華街","hints":"興華街與自強街口","stair":true,"elevator":true,"escalator":true},
+                {"num":2,"src":".","name":"建國路","hints":"建國路西側","stair":true,"elevator":true,"escalator":true}],
+            "services":[
+                {"src":"./","name":"詢問處","position":"2F"},
+                {"src":"./","name":"ATM","position":"2F非付費區，公共電話旁"},
+                {"src":"./","name":"飲水機","position":"2F非付費區"},
+                {"src":"./","name":"洗手間","position":"2F非付費區"},
+                {"src":"./","name":"AED","position":"2F付費區，近詢問處"}]
                 
         },
       
@@ -375,31 +375,31 @@
             "line":"綠線",
             "name":"烏日",
             
-                "exits":[
-                    {"num":2,"src":".","name":"光日路","hints":"光日路，近烏日國小","stair":true,"elevator":true,"escalator":true},
-                    {"num":2,"src":".","name":"建國路","hints":"建國路","stair":true,"elevator":true,"escalator":true}],
-                "services":[
-                    {"src":"./","name":"詢問處","position":"3F"},
-                    {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
-                    {"src":"./","name":"飲水機","position":"3F非付費區"},
-                    {"src":"./","name":"洗手間","position":"3F非付費區"},
-                    {"src":"./","name":"AED","position":"3F非付費區，公用電話旁"}]
+            "exits":[
+                {"num":2,"src":".","name":"光日路","hints":"光日路，近烏日國小","stair":true,"elevator":true,"escalator":true},
+                {"num":2,"src":".","name":"建國路","hints":"建國路","stair":true,"elevator":true,"escalator":true}],
+            "services":[
+                {"src":"./","name":"詢問處","position":"3F"},
+                {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
+                {"src":"./","name":"飲水機","position":"3F非付費區"},
+                {"src":"./","name":"洗手間","position":"3F非付費區"},
+                {"src":"./","name":"AED","position":"3F非付費區，公用電話旁"}]
         },
         {"id":"119",
             "line":"綠線",
             "name":"高鐵臺中站",
             
-                "exits":[
-                    {"num":1,"src":".","name":"高鐵","hints":"連通道至高鐵臺中站","stair":false,"elevator":false,"escalator":false},
-                    {"num":2,"src":".","name":"高鐵一路","hints":"高鐵一路北側","stair":true,"elevator":true,"escalator":true},
-                    {"num":3,"src":".","name":"臺鐵新烏日站","hints":"連通道至臺鐵新烏日站","stair":false,"elevator":false,"escalator":false}],
-                "services":[
-                    {"src":"./","name":"詢問處","position":"2F"},
-                    {"src":"./","name":"ATM","position":"2F非付費區，公共電話旁，近出口1、2F非付費區，自動售票機旁，進出口3"},
-                    {"src":"./","name":"飲水機","position":"2F非付費區"},
-                    {"src":"./","name":"洗手間","position":"2F非付費區"},
-                    {"src":"./","name":"AED","position":"2F付費區，近詢問處"},
-                    {"src":"./","name":"哺集乳室","position":"2F付費區，詢問處旁及穿堂走道各一組"}]
+            "exits":[
+                {"num":1,"src":".","name":"高鐵","hints":"連通道至高鐵臺中站","stair":false,"elevator":false,"escalator":false},
+                {"num":2,"src":".","name":"高鐵一路","hints":"高鐵一路北側","stair":true,"elevator":true,"escalator":true},
+                {"num":3,"src":".","name":"臺鐵新烏日站","hints":"連通道至臺鐵新烏日站","stair":false,"elevator":false,"escalator":false}],
+            "services":[
+                {"src":"./","name":"詢問處","position":"2F"},
+                {"src":"./","name":"ATM","position":"2F非付費區，公共電話旁，近出口1、2F非付費區，自動售票機旁，進出口3"},
+                {"src":"./","name":"飲水機","position":"2F非付費區"},
+                {"src":"./","name":"洗手間","position":"2F非付費區"},
+                {"src":"./","name":"AED","position":"2F付費區，近詢問處"},
+                {"src":"./","name":"哺集乳室","position":"2F付費區，詢問處旁及穿堂走道各一組"}]
         }
     ]
 }

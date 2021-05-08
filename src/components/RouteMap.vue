@@ -24,22 +24,26 @@
       </div>
         <div>
           <div class="list-header">出入口</div>
-          <ul>
-            <li v-for="exit in selected.exits" :key="exit">
-              <div>{{exit.name}}</div>
-              <div>{{exit.hints}}</div>
-              <div>
-                <img v-if="exit.stair" alt="樓梯"/>
-                <img v-if="exit.elevator" alt="電梯"/>
-                <img v-if="exit.escalator" alt="電扶梯"/>
+          <ul class="sheet-list">
+            <li class="list-item" v-for="exit in selected.exits" :key="exit">
+                <div>
+                <h5>{{exit.name}}</h5>
+                <p>{{exit.hints}}</p>
+                <div>
+                  <img v-if="exit.stair" alt="樓梯"/>
+                  <img v-if="exit.elevator" alt="電梯"/>
+                  <img v-if="exit.escalator" alt="電扶梯"/>
+                </div>
               </div>
             </li>
           </ul>
           <div class="list-header">站點設施</div>
-          <ul>
-            <li v-for="service in selected.services" :key="service.name">
-              <div>{{service.name}}</div>
-              <div>{{service.position}}</div>
+          <ul class="sheet-list">
+            <li class="list-item" v-for="service in selected.services" :key="service.name">
+              <div style="align-content:center">
+                <h5>{{service.name}}</h5>
+                <p>{{service.position}}</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -167,6 +171,7 @@ export default {
     z-index:3;
     height:100%;
     background-color:white;
+    overflow-y:auto;
   }
 
   .bottom-sheet_header{
@@ -189,11 +194,46 @@ export default {
     padding:0;
   }
 
+  .sheet-list{
+    list-style: none;
+    padding:0;
+    margin:0;
+  }
+
   .list-header{
     background-color:var(--grey);
     font-size:13px;
     text-align: start;
     padding:16px 16px 8px 16px
   }
+
+
+  .list-item{
+    height:101px;
+    padding:0;
+    margin:0;
+    border-bottom: 0.5px solid rgba(60,60,67,0.36);
+    text-align: start;
+    display: flex;
+  }
+
+  .list-item div{
+    align-self: center;
+  }
+
+  .list-item h5{
+    margin:0;
+    font-size: 17px;
+    color:var(--black);
+    line-height: 22px;
+  }
+
+  .list-item p{
+    font-size: 12px;
+    color:var(--caption);
+    line-height: 14px;
+    margin:0;
+  }
+  
 
 </style>

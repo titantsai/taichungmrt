@@ -11,6 +11,7 @@
   --green:#8EC31C;
   --green-lighten:#AAD255;
   --blue:#1E7ABB;
+  --black:#000000;
   --map-bg:#25282d;
   --heading:#474747;
   --caption:#868686;
