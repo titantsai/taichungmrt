@@ -156,9 +156,9 @@
             "name":"北屯總站",
         
             "exits":[
-                {"num":1,"src":".","name":"敦富東街","hints":"車站北側","stair":true,"elevator":false,"escalator":false},
-                {"num":2,"src":".","name":"敦富東街","hints":"車站南側","stair":true,"elevator":false,"escalator":false},
-                {"num":3,"src":".","name":"北屯機廠","hints":"北屯機廠側","stair":true,"elevator":false,"escalator":false}],
+                {"num":1,"src":"./images/exit_1.svg","name":"敦富東街","hints":"車站北側","stair":true,"elevator":false,"escalator":false},
+                {"num":2,"src":"./images/exit_2.svg","name":"敦富東街","hints":"車站南側","stair":true,"elevator":false,"escalator":false},
+                {"num":3,"src":"./images/exit_3.svg","name":"北屯機廠","hints":"北屯機廠側","stair":true,"elevator":true,"escalator":false}],
             "services":[
                 {"src":"./","name":"詢問處","position":"1F"},
                 {"src":"./","name":"ATM","position":"1F非付費區，自動售票機旁，近出口2"},
@@ -172,7 +172,7 @@
             "name":"舊社",
         
             "exits":[
-                {"num":1,"src":".","name":"敦富路","hints":"松竹路與敦富路路口","stair":true,"elevator":true,"escalator":true}],
+                {"num":1,"src":"./images/exit_1.svg","name":"敦富路","hints":"松竹路與敦富路路口","stair":true,"elevator":true,"escalator":true}],
             "services":[
                 {"src":"./","name":"詢問處","position":"3F"},
                 {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
@@ -185,9 +185,9 @@
             "name":"松竹",
             
             "exits":[
-                {"num":1,"src":".","name":"舊社公園","hints":"北屯路，近舊社公園","stair":true,"elevator":true,"escalator":true},
-                {"num":2,"src":".","name":"北屯路","hints":"北屯路，近臺鐵松竹站","stair":true,"elevator":true,"escalator":true},
-                {"num":3,"src":".","name":"臺鐵松竹站","hints":"連通道至臺鐵松竹站","stair":true,"elevator":false,"escalator":false}],
+                {"num":1,"src":"./images/exit_1.svg","name":"舊社公園","hints":"北屯路，近舊社公園","stair":true,"elevator":true,"escalator":true},
+                {"num":2,"src":"./images/exit_2.svg","name":"北屯路","hints":"北屯路，近臺鐵松竹站","stair":true,"elevator":true,"escalator":true},
+                {"num":3,"src":"./images/exit_3.svg","name":"臺鐵松竹站","hints":"連通道至臺鐵松竹站","stair":true,"elevator":false,"escalator":false}],
             "services":[
                 {"src":"./","name":"詢問處","position":"3F"},
                 {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
@@ -200,7 +200,7 @@
             "name":"四維國小",
         
             "exits":[
-                {"num":1,"src":".","name":"四維國小","hints":"文心路四段與天津路四段路口","stair":true,"elevator":true,"escalator":true}],
+                {"num":1,"src":"./images/exit_1.svg","name":"四維國小","hints":"文心路四段與天津路四段路口","stair":true,"elevator":true,"escalator":true}],
             "services":[
                 {"src":"./","name":"詢問處","position":"3F"},
                 {"src":"./","name":"ATM","position":"3F非付費區"},
@@ -213,7 +213,7 @@
             "name":"文心崇德",
             
             "exits":[
-                {"num":1,"src":".","name":"崇德路二段","hints":"文心路四段與崇德路二段路口","stair":true,"elevator":true,"escalator":true}],
+                {"num":1,"src":"./images/exit_1.svg","name":"崇德路二段","hints":"文心路四段與崇德路二段路口","stair":true,"elevator":true,"escalator":true}],
             "services":[
                 {"src":"./","name":"詢問處","position":"3F"},
                 {"src":"./","name":"ATM","position":"3F非付費區"},
@@ -226,7 +226,7 @@
             "name":"文心中清",
             
             "exits":[
-                {"num":1,"src":".","name":"崇德路二段","hints":"文心路三段與中清路一段路口","stair":true,"elevator":true,"escalator":true}],
+                {"num":1,"src":"./images/exit_1.svg","name":"崇德路二段","hints":"文心路三段與中清路一段路口","stair":true,"elevator":true,"escalator":true}],
             "services":[
                 {"src":"./","name":"詢問處","position":"3F"},
                 {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
@@ -239,7 +239,7 @@
             "name":"文華高中",
             
             "exits":[
-                {"num":1,"src":".","name":"河南路二段","hints":"文心路三段與河南路二段路口","stair":true,"elevator":true,"escalator":true}],
+                {"num":1,"src":"./images/exit_1.svg","name":"河南路二段","hints":"文心路三段與河南路二段路口","stair":true,"elevator":true,"escalator":true}],
             "services":[
                 {"src":"./","name":"詢問處","position":"3F"},
                 {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
@@ -252,7 +252,7 @@
             "name":"文心櫻花",
             
             "exits":[
-                {"num":1,"src":".","name":"櫻花路","hints":"文心路三段與櫻花路路口","stair":true,"elevator":true,"escalator":true}],
+                {"num":1,"src":"./images/exit_1.svg","name":"櫻花路","hints":"文心路三段與櫻花路路口","stair":true,"elevator":true,"escalator":true}],
             "services":[
                 {"src":"./","name":"詢問處","position":"3F"},
                 {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
@@ -265,8 +265,8 @@
             "name":"市政府",
         
             "exits":[
-                {"num":1,"src":".","name":"臺中市政府","hints":"文心路二段，近臺中市政府","stair":true,"elevator":true,"escalator":true},
-                {"num":2,"src":".","name":"臺灣大道二段","hints":"臺灣大道二段及文心路二段路口","stair":true,"elevator":true,"escalator":true}],
+                {"num":1,"src":"./images/exit_1.svg","name":"臺中市政府","hints":"文心路二段，近臺中市政府","stair":true,"elevator":true,"escalator":true},
+                {"num":2,"src":"./images/exit_2.svg","name":"臺灣大道二段","hints":"臺灣大道二段及文心路二段路口","stair":true,"elevator":true,"escalator":true}],
             "services":[
                 {"src":"./","name":"詢問處","position":"3F"},
                 {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁，近出口1"},
@@ -280,7 +280,7 @@
             "name":"水安宮",
             
             "exits":[
-                {"num":1,"src":".","name":"大業路","hints":"文心路一段與大業路路口","stair":true,"elevator":true,"escalator":true}],
+                {"num":1,"src":"./images/exit_1.svg","name":"大業路","hints":"文心路一段與大業路路口","stair":true,"elevator":true,"escalator":true}],
             "services":[
                 {"src":"./","name":"詢問處","position":"3F"},
                 {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
@@ -293,7 +293,7 @@
             "name":"文心森林公園",
             
             "exits":[
-                {"num":1,"src":".","name":"文心森林公園","hints":"文心路一段，文心森林公園側","stair":true,"elevator":true,"escalator":true}],
+                {"num":1,"src":"./images/exit_1.svg","name":"文心森林公園","hints":"文心路一段，文心森林公園側","stair":true,"elevator":true,"escalator":true}],
             "services":[
                 {"src":"./","name":"詢問處","position":"3F"},
                 {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
@@ -306,7 +306,7 @@
             "name":"南屯",
             
             "exits":[
-                {"num":1,"src":".","name":"五權西路二段","hints":"文心路一段與五權西路二段路口","stair":true,"elevator":true,"escalator":true}],
+                {"num":1,"src":"./images/exit_1.svg","name":"五權西路二段","hints":"文心路一段與五權西路二段路口","stair":true,"elevator":true,"escalator":true}],
             "services":[
                 {"src":"./","name":"詢問處","position":"3F"},
                 {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
@@ -319,7 +319,7 @@
             "name":"豐樂公園",
             
             "exits":[
-                {"num":1,"src":".","name":"文心南五路","hints":"文心南路與文心南五路一段路口","stair":true,"elevator":true,"escalator":true}],
+                {"num":1,"src":"./images/exit_1.svg","name":"文心南五路","hints":"文心南路與文心南五路一段路口","stair":true,"elevator":true,"escalator":true}],
             "services":[
                 {"src":"./","name":"詢問處","position":"3F"},
                 {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
@@ -332,9 +332,9 @@
             "name":"大慶",
         
             "exits":[
-                {"num":1,"src":".","name":"中山醫學大學","hints":"建國北路，近中山醫學大學","stair":true,"elevator":true,"escalator":true},
-                {"num":2,"src":".","name":"大慶街二段","hints":"建國北路，近臺鐵大慶站","stair":true,"elevator":true,"escalator":true},
-                {"num":3,"src":".","name":"臺鐵大慶站","hints":"連通道至臺鐵大慶站","stair":true,"elevator":false,"escalator":false}],
+                {"num":1,"src":"./images/exit_1.svg","name":"中山醫學大學","hints":"建國北路，近中山醫學大學","stair":true,"elevator":true,"escalator":true},
+                {"num":2,"src":"./images/exit_2.svg","name":"大慶街二段","hints":"建國北路，近臺鐵大慶站","stair":true,"elevator":true,"escalator":true},
+                {"num":3,"src":"./images/exit_3.svg","name":"臺鐵大慶站","hints":"連通道至臺鐵大慶站","stair":true,"elevator":false,"escalator":false}],
             "services":[
                 {"src":"./","name":"詢問處","position":"2F"},
                 {"src":"./","name":"ATM","position":"2F非付費區，公共電話旁，近出口2"},
@@ -347,7 +347,7 @@
             "name":"九張犁",
             
             "exits":[
-                {"num":1,"src":".","name":"建國路","hints":"建國路","stair":true,"elevator":true,"escalator":true}],
+                {"num":1,"src":"./images/exit_1.svg","name":"建國路","hints":"建國路","stair":true,"elevator":true,"escalator":true}],
             "services":[
                 {"src":"./","name":"詢問處","position":"3F"},
                 {"src":"./","name":"ATM","position":"3F非付費區，公共電話旁"},
@@ -360,8 +360,8 @@
             "name":"九德",
             
             "exits":[
-                {"num":1,"src":".","name":"興華街","hints":"興華街與自強街口","stair":true,"elevator":true,"escalator":true},
-                {"num":2,"src":".","name":"建國路","hints":"建國路西側","stair":true,"elevator":true,"escalator":true}],
+                {"num":1,"src":"./images/exit_1.svg","name":"興華街","hints":"興華街與自強街口","stair":true,"elevator":true,"escalator":true},
+                {"num":2,"src":"./images/exit_2.svg","name":"建國路","hints":"建國路西側","stair":true,"elevator":true,"escalator":true}],
             "services":[
                 {"src":"./","name":"詢問處","position":"2F"},
                 {"src":"./","name":"ATM","position":"2F非付費區，公共電話旁"},
@@ -376,8 +376,8 @@
             "name":"烏日",
             
             "exits":[
-                {"num":2,"src":".","name":"光日路","hints":"光日路，近烏日國小","stair":true,"elevator":true,"escalator":true},
-                {"num":2,"src":".","name":"建國路","hints":"建國路","stair":true,"elevator":true,"escalator":true}],
+                {"num":2,"src":"./images/exit_1.svg","name":"光日路","hints":"光日路，近烏日國小","stair":true,"elevator":true,"escalator":true},
+                {"num":2,"src":"./images/exit_2.svg","name":"建國路","hints":"建國路","stair":true,"elevator":true,"escalator":true}],
             "services":[
                 {"src":"./","name":"詢問處","position":"3F"},
                 {"src":"./","name":"ATM","position":"3F非付費區，自動售票機旁"},
@@ -390,9 +390,9 @@
             "name":"高鐵臺中站",
             
             "exits":[
-                {"num":1,"src":".","name":"高鐵","hints":"連通道至高鐵臺中站","stair":false,"elevator":false,"escalator":false},
-                {"num":2,"src":".","name":"高鐵一路","hints":"高鐵一路北側","stair":true,"elevator":true,"escalator":true},
-                {"num":3,"src":".","name":"臺鐵新烏日站","hints":"連通道至臺鐵新烏日站","stair":false,"elevator":false,"escalator":false}],
+                {"num":1,"src":"./images/exit_1.svg","name":"高鐵","hints":"連通道至高鐵臺中站","stair":false,"elevator":false,"escalator":false},
+                {"num":2,"src":"./images/exit_2.svg","name":"高鐵一路","hints":"高鐵一路北側","stair":true,"elevator":true,"escalator":true},
+                {"num":3,"src":"./images/exit_3.svg","name":"臺鐵新烏日站","hints":"連通道至臺鐵新烏日站","stair":false,"elevator":false,"escalator":false}],
             "services":[
                 {"src":"./","name":"詢問處","position":"2F"},
                 {"src":"./","name":"ATM","position":"2F非付費區，公共電話旁，近出口1、2F非付費區，自動售票機旁，進出口3"},

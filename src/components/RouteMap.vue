@@ -26,15 +26,18 @@
           <div class="list-header">出入口</div>
           <ul class="sheet-list">
             <li class="list-item" v-for="exit in selected.exits" :key="exit">
-                <div>
-                <h5>{{exit.name}}</h5>
-                <p>{{exit.hints}}</p>
-                <div>
-                  <img v-if="exit.stair" alt="樓梯"/>
-                  <img v-if="exit.elevator" alt="電梯"/>
-                  <img v-if="exit.escalator" alt="電扶梯"/>
+                <div class="item-icon">
+                  <img :src="exit.src"> 
+                </div>               
+                <div>                  
+                  <h5>{{exit.name}}</h5>
+                  <p>{{exit.hints}}</p>
+                  <div class="exit-types">
+                    <img v-if="exit.stair" class="exit-icon" src="../assets/fac-stair.png" alt="樓梯"/>
+                    <img v-if="exit.elevator" class="exit-icon" src="../assets/fac-elevator.png" alt="電梯"/>
+                    <img v-if="exit.escalator" class="exit-icon" src="../assets/fac-escalator.png" alt="電扶梯"/>
+                  </div>
                 </div>
-              </div>
             </li>
           </ul>
           <div class="list-header">站點設施</div>
@@ -200,6 +203,22 @@ export default {
     margin:0;
   }
 
+  .item-icon{
+    width:60px;
+    height:60px;
+    margin:0 16px;
+  }
+
+  .exit-types{
+    margin-top:6px;
+  }
+
+  .exit-icon{
+    width:24px;
+    height: 24px;
+    margin-right:10px;
+  }
+
   .list-header{
     background-color:var(--grey);
     font-size:13px;
@@ -212,9 +231,13 @@ export default {
     height:101px;
     padding:0;
     margin:0;
-    border-bottom: 0.5px solid rgba(60,60,67,0.36);
+    border-bottom: 0.5px solid #B8B8BB;
     text-align: start;
     display: flex;
+  }
+
+  .list-item:only-child, .list-item:last-child{
+    border-bottom:none
   }
 
   .list-item div{
@@ -226,6 +249,7 @@ export default {
     font-size: 17px;
     color:var(--black);
     line-height: 22px;
+    margin-bottom:2px;
   }
 
   .list-item p{
