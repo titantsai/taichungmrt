@@ -1,8 +1,8 @@
 <template>
 
   <div class="map">
-    <RouteMap />
     <DetailSheet />
+    <RouteMap />
   </div>
 
 </template>

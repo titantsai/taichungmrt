@@ -58,7 +58,6 @@ export default {
 <style scoped>
 
   .route{
-    width:90%;
     margin-left:auto;
     margin-right: auto;
     height:100%;
