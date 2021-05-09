@@ -155,6 +155,7 @@
             "line":"綠線",
             "name":"北屯總站",
             "src":"./images/103A.svg",
+            "servicetime":[{"via":"./images/line-GR.svg","to":"高鐵臺中站","first":"06:00","last":"00:00"}],
             "exits":[
                 {"num":1,"src":"./images/exit_1.svg","name":"敦富東街","hints":"車站北側","stair":true,"elevator":false,"escalator":false},
                 {"num":2,"src":"./images/exit_2.svg","name":"敦富東街","hints":"車站南側","stair":true,"elevator":false,"escalator":false},
@@ -171,6 +172,7 @@
             "line":"綠線",
             "name":"舊社",
             "src":"./images/103.svg",
+            "servicetime":[{"via":"./images/line-GR.svg","to":"北屯總站","first":"06:04","last":"00:32"},{"via":"./images/line-GR.svg","to":"高鐵臺中站","first":"06:02","last":"00:02"}],
             "exits":[
                 {"num":1,"src":"./images/exit_1.svg","name":"敦富路","hints":"松竹路與敦富路路口","stair":true,"elevator":true,"escalator":true}],
             "services":[
@@ -184,6 +186,7 @@
             "line":"綠線",
             "name":"松竹",
             "src":"./images/104.svg",
+            "servicetime":[{"via":"./images/line-GR.svg","to":"北屯總站","first":"06:04","last":"00:32"},{"via":"./images/line-GR.svg","to":"高鐵臺中站","first":"06:02","last":"00:02"}],
             "exits":[
                 {"num":1,"src":"./images/exit_1.svg","name":"舊社公園","hints":"北屯路，近舊社公園","stair":true,"elevator":true,"escalator":true},
                 {"num":2,"src":"./images/exit_2.svg","name":"北屯路","hints":"北屯路，近臺鐵松竹站","stair":true,"elevator":true,"escalator":true},
@@ -199,6 +202,7 @@
             "line":"綠線",
             "name":"四維國小",
             "src":"./images/105.svg",
+            "servicetime":[{"via":"./images/line-GR.svg","to":"北屯總站","first":"06:04","last":"00:32"},{"via":"./images/line-GR.svg","to":"高鐵臺中站","first":"06:02","last":"00:02"}],
             "exits":[
                 {"num":1,"src":"./images/exit_1.svg","name":"四維國小","hints":"文心路四段與天津路四段路口","stair":true,"elevator":true,"escalator":true}],
             "services":[
@@ -212,6 +216,7 @@
             "line":"綠線",
             "name":"文心崇德",
             "src":"./images/106.svg",
+            "servicetime":[{"via":"./images/line-GR.svg","to":"北屯總站","first":"06:04","last":"00:32"},{"via":"./images/line-GR.svg","to":"高鐵臺中站","first":"06:02","last":"00:02"}],
             "exits":[
                 {"num":1,"src":"./images/exit_1.svg","name":"崇德路二段","hints":"文心路四段與崇德路二段路口","stair":true,"elevator":true,"escalator":true}],
             "services":[
@@ -225,6 +230,7 @@
             "line":"綠線",
             "name":"文心中清",
             "src":"./images/107.svg",
+            "servicetime":[{"via":"./images/line-GR.svg","to":"北屯總站","first":"06:04","last":"00:32"},{"via":"./images/line-GR.svg","to":"高鐵臺中站","first":"06:02","last":"00:02"}],
             "exits":[
                 {"num":1,"src":"./images/exit_1.svg","name":"崇德路二段","hints":"文心路三段與中清路一段路口","stair":true,"elevator":true,"escalator":true}],
             "services":[
@@ -238,6 +244,7 @@
             "line":"綠線",
             "name":"文華高中",
             "src":"./images/108.svg",
+            "servicetime":[{"via":"./images/line-GR.svg","to":"北屯總站","first":"06:04","last":"00:32"},{"via":"./images/line-GR.svg","to":"高鐵臺中站","first":"06:02","last":"00:02"}],
             "exits":[
                 {"num":1,"src":"./images/exit_1.svg","name":"河南路二段","hints":"文心路三段與河南路二段路口","stair":true,"elevator":true,"escalator":true}],
             "services":[
@@ -251,6 +258,7 @@
             "line":"綠線",
             "name":"文心櫻花",
             "src":"./images/109.svg",
+            "servicetime":[{"via":"./images/line-GR.svg","to":"北屯總站","first":"06:04","last":"00:32"},{"via":"./images/line-GR.svg","to":"高鐵臺中站","first":"06:02","last":"00:02"}],
             "exits":[
                 {"num":1,"src":"./images/exit_1.svg","name":"櫻花路","hints":"文心路三段與櫻花路路口","stair":true,"elevator":true,"escalator":true}],
             "services":[
@@ -264,6 +272,7 @@
             "line":"綠線",
             "name":"市政府",
             "src":"./images/110.svg",
+            "servicetime":[{"via":"./images/line-GR.svg","to":"北屯總站","first":"06:04","last":"00:32"},{"via":"./images/line-GR.svg","to":"高鐵臺中站","first":"06:02","last":"00:02"}],
             "exits":[
                 {"num":1,"src":"./images/exit_1.svg","name":"臺中市政府","hints":"文心路二段，近臺中市政府","stair":true,"elevator":true,"escalator":true},
                 {"num":2,"src":"./images/exit_2.svg","name":"臺灣大道二段","hints":"臺灣大道二段及文心路二段路口","stair":true,"elevator":true,"escalator":true}],
@@ -279,6 +288,7 @@
             "line":"綠線",
             "name":"水安宮",
             "src":"./images/111.svg",
+            "servicetime":[{"via":"./images/line-GR.svg","to":"北屯總站","first":"06:04","last":"00:32"},{"via":"./images/line-GR.svg","to":"高鐵臺中站","first":"06:02","last":"00:02"}],
             "exits":[
                 {"num":1,"src":"./images/exit_1.svg","name":"大業路","hints":"文心路一段與大業路路口","stair":true,"elevator":true,"escalator":true}],
             "services":[
@@ -292,6 +302,7 @@
             "line":"綠線",
             "name":"文心森林公園",
             "src":"./images/112.svg",
+            "servicetime":[{"via":"./images/line-GR.svg","to":"北屯總站","first":"06:04","last":"00:32"},{"via":"./images/line-GR.svg","to":"高鐵臺中站","first":"06:02","last":"00:02"}],
             "exits":[
                 {"num":1,"src":"./images/exit_1.svg","name":"文心森林公園","hints":"文心路一段，文心森林公園側","stair":true,"elevator":true,"escalator":true}],
             "services":[
@@ -305,6 +316,7 @@
             "line":"綠線",
             "name":"南屯",
             "src":"./images/113.svg",
+            "servicetime":[{"via":"./images/line-GR.svg","to":"北屯總站","first":"06:04","last":"00:32"},{"via":"./images/line-GR.svg","to":"高鐵臺中站","first":"06:02","last":"00:02"}],
             "exits":[
                 {"num":1,"src":"./images/exit_1.svg","name":"五權西路二段","hints":"文心路一段與五權西路二段路口","stair":true,"elevator":true,"escalator":true}],
             "services":[
@@ -318,6 +330,7 @@
             "line":"綠線",
             "name":"豐樂公園",
             "src":"./images/114.svg",
+            "servicetime":[{"via":"./images/line-GR.svg","to":"北屯總站","first":"06:04","last":"00:32"},{"via":"./images/line-GR.svg","to":"高鐵臺中站","first":"06:02","last":"00:02"}],
             "exits":[
                 {"num":1,"src":"./images/exit_1.svg","name":"文心南五路","hints":"文心南路與文心南五路一段路口","stair":true,"elevator":true,"escalator":true}],
             "services":[
@@ -331,6 +344,7 @@
             "line":"綠線",
             "name":"大慶",
             "src":"./images/115.svg",
+            "servicetime":[{"via":"./images/line-GR.svg","to":"北屯總站","first":"06:04","last":"00:32"},{"via":"./images/line-GR.svg","to":"高鐵臺中站","first":"06:02","last":"00:02"}],
             "exits":[
                 {"num":1,"src":"./images/exit_1.svg","name":"中山醫學大學","hints":"建國北路，近中山醫學大學","stair":true,"elevator":true,"escalator":true},
                 {"num":2,"src":"./images/exit_2.svg","name":"大慶街二段","hints":"建國北路，近臺鐵大慶站","stair":true,"elevator":true,"escalator":true},
@@ -346,6 +360,7 @@
             "line":"綠線",
             "name":"九張犁",
             "src":"./images/116.svg",
+            "servicetime":[{"via":"./images/line-GR.svg","to":"北屯總站","first":"06:04","last":"00:32"},{"via":"./images/line-GR.svg","to":"高鐵臺中站","first":"06:02","last":"00:02"}],
             "exits":[
                 {"num":1,"src":"./images/exit_1.svg","name":"建國路","hints":"建國路","stair":true,"elevator":true,"escalator":true}],
             "services":[
@@ -359,6 +374,7 @@
             "line":"綠線",
             "name":"九德",
             "src":"./images/117.svg",
+            "servicetime":[{"via":"./images/line-GR.svg","to":"北屯總站","first":"06:04","last":"00:32"},{"via":"./images/line-GR.svg","to":"高鐵臺中站","first":"06:02","last":"00:02"}],
             "exits":[
                 {"num":1,"src":"./images/exit_1.svg","name":"興華街","hints":"興華街與自強街口","stair":true,"elevator":true,"escalator":true},
                 {"num":2,"src":"./images/exit_2.svg","name":"建國路","hints":"建國路西側","stair":true,"elevator":true,"escalator":true}],
@@ -375,6 +391,7 @@
             "line":"綠線",
             "name":"烏日",
             "src":"./images/118.svg",
+            "servicetime":[{"via":"./images/line-GR.svg","to":"北屯總站","first":"06:04","last":"00:32"},{"via":"./images/line-GR.svg","to":"高鐵臺中站","first":"06:02","last":"00:02"}],
             "exits":[
                 {"num":2,"src":"./images/exit_1.svg","name":"光日路","hints":"光日路，近烏日國小","stair":true,"elevator":true,"escalator":true},
                 {"num":2,"src":"./images/exit_2.svg","name":"建國路","hints":"建國路","stair":true,"elevator":true,"escalator":true}],
@@ -389,6 +406,7 @@
             "line":"綠線",
             "name":"高鐵臺中站",
             "src":"./images/119.svg",
+            "servicetime":[{"via":"./images/line-GR.svg","to":"北屯總站","first":"06:04","last":"00:32"},{"via":"./images/line-GR.svg","to":"高鐵臺中站","first":"06:02","last":"00:02"}],
             "exits":[
                 {"num":1,"src":"./images/exit_1.svg","name":"高鐵","hints":"連通道至高鐵臺中站","stair":false,"elevator":false,"escalator":false},
                 {"num":2,"src":"./images/exit_2.svg","name":"高鐵一路","hints":"高鐵一路北側","stair":true,"elevator":true,"escalator":true},

@@ -12,14 +12,16 @@ export default createStore({
     loadData(state,obj){
       state.database = obj
     },
-    // 掛載車站代碼
-    // selectStation(state,id){
-    //   state.selected = id
-    // },
+
+    clearCurrent(state){
+      state.current= null
+    },
+
     // 掛載選取車站的資料
     loadCurrent(state,obj){
       state.current = obj
     }
+    
   },
   actions: {
     // 取得並呼叫所有路線
@@ -34,7 +36,9 @@ export default createStore({
     // 選取車站
     selection(context,payload){
       RouteData.getStation(payload)
-      .then(res=>context.commit('loadCurrent',res.data))
+      .then(res=>{
+        context.commit('clearCurrent');
+        context.commit('loadCurrent',res.data)})
     }
   },
   modules: {

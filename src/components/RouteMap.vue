@@ -58,9 +58,10 @@ export default {
 <style scoped>
 
   .route{
-    margin-left:auto;
-    margin-right: auto;
-    height:100%;
+    width:calc(100% - 375px);
+    padding:1em;
+    top:0;
+    left:375px;
     overflow:hidden;
   }
 
@@ -131,125 +132,4 @@ export default {
   .hasTransit{
     background-color:#494949;
   }
-
-
-/*-- Detail Sheet --*/
-
-  .bottom-sheet{
-    position:absolute;
-    top:0;
-    left:0;
-    width:375px;
-    z-index:3;
-    height:100%;
-    background-color:white;
-    overflow-y:auto;
-    background-color:var(--grey)
-  }
-
-  .bottom-sheet_header{
-    display: flex;
-    align-items: center;
-    padding:16px;
-    background-color:var(--white);
-    border-bottom:0.5px solid #B8B8B875
-  }
-
-  .station_num{
-    margin-right:16px;
-    width:37px;
-    height:37px;
-    display: block;
-  }
-  
-  .station_name{
-    font-size:19px;
-    padding:0;
-    margin:0;
-    margin-bottom:3px;
-    color:var(--map-bg);
-  }
-
-  .station_line{
-    font-size:14px;
-    padding:0;
-    margin:0;
-    color:var(--caption)
-  }
-
-  .sheet-list{
-    list-style: none;
-    padding:0;
-    margin:0;
-    background-color:var(--white);
-    
-  }
-
-  .exit-num_icon{
-      width:60px;
-      height:60px;
-      margin-right:14px;
-  }
-
-  .exit-types{
-    margin-top:6px;
-  }
-
-  .exit-icon{
-    width:24px;
-    height: 24px;
-    margin-right:10px;
-  }
-
-  .list-header{
-    background-color:var(--grey);
-    font-size:13px;
-    text-align: start;
-    padding:16px 16px 8px 16px;
-    border-bottom:0.5px solid #B8B8B875;
-  }
-
-
-  .list-item{
-    padding:12px 0;
-    margin-left:16px;
-    border-bottom: 0.5px solid #B8B8B875;
-    text-align: start;
-    display: flex;
-
-  }
-
-
-  .list-item:only-child, .list-item:last-child{
-    margin-left:0;
-    padding-left:16px;
-  }
-
-  .list-item div{
-    align-self: center;
-  }
-
-    .item-icon img{
-    width:30px;
-    height:30px;
-    padding-right:16px;
-  }
-
-
-  .list-item h5{
-    margin:0;
-    font-size: 17px;
-    color:var(--heading);
-    line-height: 22px;
-    margin-bottom:2px;
-  }
-
-  .list-item p{
-    font-size: 15px;
-    color:var(--caption);
-    line-height: 14px;
-    margin:0;
-  }
-  
-
 </style>

@@ -1,8 +1,8 @@
 <template>
-  <div id="nav">
+  <!-- <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/routes">捷運路線圖</router-link>
-  </div>
+  </div> -->
   <router-view/>
 </template>
 

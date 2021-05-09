@@ -10,22 +10,42 @@
             </div>
         </div>
         <div class="ds-nav">
-
+            <div class="ds-nav-item">旅程規劃</div>
+            <div class="ds-nav-item">車站資訊</div>
+            <div class="ds-nav-item">轉乘資訊</div>
         </div>
         <div class="ds-nav-view">
             <div class="ds-list">
-                <div class="ds-list-header">出入口</div>
+                <div class="ds-list-header">首末班車</div>
                 <ul>
-                    <li class="ds-list-item" v-for="exit in selected.exits" :key="exit.num">
-                        <div class="ds-exit-icon"><img :src="exit.src" :alt="exit.num"></div>
-                        <div class="ds-exit-name">
-                            <h3>{{exit.name}}</h3>
-                            <p>{{exit.hints}}</p>
-                            <div class="ds-exit-type-group">
-                                 <img src="../assets/fac-stair.png" v-show="exit.stair" alt="stair">
-                                <img src="../assets/fac-escalator.png" v-show="exit.escalator" alt="escalator">
-                                 <img src="../assets/fac-elevator.png" v-show="exit.elevator" alt="elevator">
+                    <li class="ds-list-item ds-list-schedule" v-for="time in selected.servicetime" :key="time.to">
+                        <div class="ds-schedule">
+                            <div class="ds-schedule-via"><img :src="time.via"/></div>
+                            <div class="ds-schedule-name">
+                                <h3>往{{time.to}}</h3>
                             </div>
+                        </div>
+
+                        <div style="display:flex;margin-right:16px;">
+                            <div class="ds-time"><span class="ds-badge">首</span>{{time.first}}</div>
+                            <div class="ds-time"><span class="ds-badge">末</span>{{time.last}}</div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="ds-list-header">出入口資訊</div>
+                <ul>
+                    <li class="ds-list-item ds-list-exit" v-for="exit in selected.exits" :key="exit.num">
+                        <div class="ds-exit">
+                            <img class="ds-exit-num" :src="exit.src" alt="">
+                            <div class="ds-exit-name">
+                                <h3>{{exit.name}}</h3>
+                                <p>{{exit.hints}}</p>
+                            </div>
+                        </div>
+                        <div class="ds-exit-type-group">
+                            <img src="../assets/fac-stair.png">
+                            <img src="../assets/fac-escalator.png"> 
+                            <img src="../assets/fac-elevator.png">  
                         </div>
                     </li>
                 </ul>
@@ -82,18 +102,37 @@ export default {
 <style scoped>
     .detail-sheet{
         width:375px;
+        height:100vh;
         top:0;
         left:0;
-        background: white;
+        background:var(--grey);
+        overflow: auto;
     }
 
     .ds-header{
         padding:16px;
         display: flex;
         align-items: center;
+        background: var(--white);
     }
 
-    .ds-num img{
+    .ds-nav{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap:12px;
+        padding:16px;
+        background-color: var(--white);
+    }
+
+    .ds-nav-item{
+        padding:8px;
+        background: var(--grey);
+        border-radius: 6px;
+        font-size:13px;
+        color:var(--caption)
+    }
+
+    .ds-schedule-via, .ds-exit-num, .ds-num img,.ds-service-img img{
         margin-right:16px;
         width:37px;
         height:37px;
@@ -119,14 +158,15 @@ export default {
 
     .ds-list{
         background-color:var(--grey);
+        margin-bottom:1.5em;
     }
 
     .ds-list ul{
         list-style: none;
         margin:0;
         padding:0;
-        border-top:0.5px solid #b8b8b836;
-        border-bottom:0.5px solid #b8b8b836;
+        border-top:0.5px solid #b8b8b848;
+        border-bottom:0.5px solid #b8b8b848;
         background-color:var(--white)
     }
 
@@ -139,18 +179,51 @@ export default {
     }
 
     .ds-list-item{
+        height:72px;
+        box-sizing: border-box;
         display: flex;
         align-items: center;
-        padding:16px 0;
+        padding:12px 0;
         margin-left:16px;
         border-bottom:1px solid #b8b8b836
     }
 
-    .ds-exit-icon{
-        display:block;
-        margin-right:16px;
-        width:60px;
-        height:60px;
+    .ds-list-item:only-child, .ds-list-item:last-child{
+        border-bottom: none;
+    }
+
+    .ds-list-schedule, .ds-list-exit{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .ds-time{
+        display: flex;
+        font-size:15px;
+        color:var(--heading);}
+
+    .ds-badge{
+        padding:2px 4px;
+        font-size:12px;
+        border-radius: 4px;
+        background-color:var(--caption);
+        color:var(--white);
+        margin:0 6px;
+        vertical-align: baseline;
+    }
+
+    .ds-schedule,.ds-exit{
+        display:flex;
+        align-items: center;
+    }
+
+    .ds-schedule-name h3{
+        margin:0;
+        font-size:17px;
+        color:var(--heading);
+        padding:0;
+        line-height: 22px;
+        font-weight:400;
     }
 
     .ds-exit-name h3, p{
@@ -160,31 +233,28 @@ export default {
     }
 
     .ds-exit-name h3{
+        font-weight:400;
         font-size:17px;
         line-height: 22px;
         color:var(--heading);
     }
 
     .ds-exit-name p{
+        font-weight: 400;
         font-size:12px;
         line-height: 14px;
         color:var(--caption)
     }
 
     .ds-exit-type-group{
-        text-align: start;
+        margin:0;
+        margin-right:16px;
     }
 
     .ds-exit-type-group img{
         width:24px;
         height:24px;
-        margin-right:10px
-    }
-
-    .ds-service-img img{
-        width:30px;
-        height:30px;
-        margin-right:16px;
+        margin-left:8px
     }
 
     .ds-service-name{
@@ -192,6 +262,7 @@ export default {
     }
 
     .ds-service-name h3, p{
+        font-weight:400;
         margin:0;
         margin-bottom: 3px;
     }
@@ -204,5 +275,18 @@ export default {
     .ds-service-name p{
         font-size:12px;
         color:var(--caption)
+    }
+
+
+    @media screen and (max-width:512px) {
+        .detail-sheet{
+            position:absolute;
+            z-index:3;
+            top:60px;
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+            overflow:hidden;
+        }
+        
     }
 </style>
