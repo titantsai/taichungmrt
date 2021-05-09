@@ -16,62 +16,19 @@
             </div>
         </div>
     </div>
-
-    <div class="bottom-sheet">
-      <div class="bottom-sheet_header">
-        <div class="station_num">
-          <img :src="selected.src" alt="">
-        </div>
-        <div style="text-align:start">
-          <h3 class="station_name">{{selected.name}}</h3>
-          <p class="station_line">{{selected.line}}</p>
-        </div>
-      </div>
-        <div>
-          <div class="list-header">出入口</div>
-          <ul class="sheet-list">
-            <li class="list-item" v-for="exit in selected.exits" :key="exit">
-                <div>
-                  <img class="exit-num_icon" :src="exit.src"> 
-                </div>               
-                <div>                  
-                  <h5>{{exit.name}}</h5>
-                  <p>{{exit.hints}}</p>
-                  <div class="exit-types">
-                    <img v-if="exit.stair" class="exit-icon" src="../assets/fac-stair.png" alt="樓梯"/>
-                    <img v-if="exit.elevator" class="exit-icon" src="../assets/fac-elevator.png" alt="電梯"/>
-                    <img v-if="exit.escalator" class="exit-icon" src="../assets/fac-escalator.png" alt="電扶梯"/>
-                  </div>
-                </div>
-            </li>
-          </ul>
-          <div class="list-header">站點設施</div>
-          <ul class="sheet-list">
-            <li class="list-item" v-for="service in selected.services" :key="service.name">
-              <div class="item-icon">
-                <img :src="service.src" alt="">
-              </div>
-              <div style="align-content:center">
-                <h5>{{service.name}}</h5>
-                <p>{{service.position}}</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-    </div>
   </div>
 </template>
 
 <script>
-import RouteData from '@/services/RouteData.js'
+import store from '@/store'
 import Panzoom from 'panzoom'
 
 export default {
+    created(){
+       this.$store.dispatch('initRoute');
+       this.selectStation(110)
+    },
     mounted(){
-      RouteData.getRoute()
-      .then(response=>this.Routes=response.data)
-      .catch(error=>console.log(error)),
-      
       this.panzoom = Panzoom(document.querySelector('#routemap'),{
         bounds:true,
         smoothScroll:false,
@@ -82,16 +39,18 @@ export default {
     },
     data(){
       return{
-        Routes:[],
-        selected:{}
+        
       }
     },
     methods:{
       selectStation(index){
-        RouteData.getStation(index)
-        .then(res=>this.selected=res.data)
-        .catch(err=>console.log(err))
+          store.dispatch('selection',index);
       }
+    },
+    computed:{
+        Routes(){
+            return store.state.database
+        }
     }
 }
 </script>

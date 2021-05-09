@@ -19,6 +19,9 @@
 
 + 旅客服務
 
+## Changelog
++ Add Vuex Store Support 
++ Initial Build 
 
 ## Credits
 

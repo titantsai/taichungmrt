@@ -2,6 +2,7 @@
 
   <div class="map">
     <RouteMap />
+    <DetailSheet />
   </div>
 
 </template>
@@ -9,10 +10,12 @@
 <script>
 
 import RouteMap from '../components/RouteMap'
+import DetailSheet from '../components/DetailSheet'
 
 export default {
   components:{
     RouteMap,
+    DetailSheet
     }
 }
 </script>
