@@ -3,7 +3,7 @@ import axios from 'axios'
 //https://my-json-server.typicode.com/titantsai/taichungmrt
 
 const APIClient = axios.create({
-    baseURL:`http://localhost:3000`,
+    baseURL:`https://tmrt-database-default-rtdb.firebaseio.com`,
     withCredentials:false,
     headers:{
         Accept:'application/json',

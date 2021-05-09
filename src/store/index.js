@@ -28,6 +28,7 @@ export default createStore({
     initRoute(){
       RouteData.getRoute()
       .then(response=>{
+        console.log(response.data)
         let db = response.data;
         this.commit('loadData',db)
       })
