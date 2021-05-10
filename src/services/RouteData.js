@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const url ='https://api.jsonbin.io/v3/b/60989f6da23274124b0166a6/latest'
+const url ='http://localhost:3000'
 
 const APIClient = axios.create({
     baseURL:url,

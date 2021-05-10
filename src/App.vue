@@ -1,6 +1,5 @@
 <template>
   <!-- <div id="nav">
-    <router-link to="/">Home</router-link> |
     <router-link to="/routes">捷運路線圖</router-link>
   </div> -->
   <router-view/>
@@ -42,6 +41,7 @@ body{
 
 #nav {
   padding: 30px;
+  position:absolute;
 }
 
 #nav a {

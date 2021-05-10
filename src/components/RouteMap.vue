@@ -58,11 +58,9 @@ export default {
 <style scoped>
 
   .route{
-    width:calc(100% - 375px);
-    padding:1em;
-    top:0;
-    left:375px;
     overflow:hidden;
+    width: 100%;
+    height: 100%;
   }
 
   .route-map{

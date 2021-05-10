@@ -411,14 +411,14 @@
                 {
                     "via": "./images/line-GR.svg",
                     "to": "北屯總站",
-                    "first": "06:04",
-                    "last": "00:32"
+                    "first": "06:03",
+                    "last": "00:31"
                 },
                 {
                     "via": "./images/line-GR.svg",
                     "to": "高鐵臺中站",
-                    "first": "06:02",
-                    "last": "00:02"
+                    "first": "06:04",
+                    "last": "00:04"
                 }
             ],
             "exits": [
@@ -487,14 +487,14 @@
                 {
                     "via": "./images/line-GR.svg",
                     "to": "北屯總站",
-                    "first": "06:04",
-                    "last": "00:32"
+                    "first": "06:00",
+                    "last": "00:27"
                 },
                 {
                     "via": "./images/line-GR.svg",
                     "to": "高鐵臺中站",
-                    "first": "06:02",
-                    "last": "00:02"
+                    "first": "06:00",
+                    "last": "00:07"
                 }
             ],
             "exits": [
@@ -545,14 +545,14 @@
                 {
                     "via": "./images/line-GR.svg",
                     "to": "北屯總站",
-                    "first": "06:04",
-                    "last": "00:32"
+                    "first": "06:07",
+                    "last": "00:26"
                 },
                 {
                     "via": "./images/line-GR.svg",
                     "to": "高鐵臺中站",
-                    "first": "06:02",
-                    "last": "00:02"
+                    "first": "06:01",
+                    "last": "00:09"
                 }
             ],
             "exits": [
@@ -603,14 +603,14 @@
                 {
                     "via": "./images/line-GR.svg",
                     "to": "北屯總站",
-                    "first": "06:04",
-                    "last": "00:32"
+                    "first": "06:05",
+                    "last": "00:23"
                 },
                 {
                     "via": "./images/line-GR.svg",
                     "to": "高鐵臺中站",
-                    "first": "06:02",
-                    "last": "00:02"
+                    "first": "06:04",
+                    "last": "00:11"
                 }
             ],
             "exits": [
@@ -661,14 +661,14 @@
                 {
                     "via": "./images/line-GR.svg",
                     "to": "北屯總站",
-                    "first": "06:04",
-                    "last": "00:32"
+                    "first": "06:03",
+                    "last": "00:21"
                 },
                 {
                     "via": "./images/line-GR.svg",
                     "to": "高鐵臺中站",
-                    "first": "06:02",
-                    "last": "00:02"
+                    "first": "06:06",
+                    "last": "00:13"
                 }
             ],
             "exits": [
@@ -719,14 +719,14 @@
                 {
                     "via": "./images/line-GR.svg",
                     "to": "北屯總站",
-                    "first": "06:04",
-                    "last": "00:32"
+                    "first": "06:01",
+                    "last": "00:20"
                 },
                 {
                     "via": "./images/line-GR.svg",
                     "to": "高鐵臺中站",
-                    "first": "06:02",
-                    "last": "00:02"
+                    "first": "06:07",
+                    "last": "00:15"
                 }
             ],
             "exits": [
@@ -777,14 +777,14 @@
                 {
                     "via": "./images/line-GR.svg",
                     "to": "北屯總站",
-                    "first": "06:04",
-                    "last": "00:32"
+                    "first": "06:00",
+                    "last": "00:18"
                 },
                 {
                     "via": "./images/line-GR.svg",
                     "to": "高鐵臺中站",
-                    "first": "06:02",
-                    "last": "00:02"
+                    "first": "06:00",
+                    "last": "00:17"
                 }
             ],
             "exits": [
@@ -849,14 +849,14 @@
                 {
                     "via": "./images/line-GR.svg",
                     "to": "北屯總站",
-                    "first": "06:04",
-                    "last": "00:32"
+                    "first": "06:08",
+                    "last": "00:15"
                 },
                 {
                     "via": "./images/line-GR.svg",
                     "to": "高鐵臺中站",
                     "first": "06:02",
-                    "last": "00:02"
+                    "last": "00:19"
                 }
             ],
             "exits": [
@@ -907,14 +907,14 @@
                 {
                     "via": "./images/line-GR.svg",
                     "to": "北屯總站",
-                    "first": "06:04",
-                    "last": "00:32"
+                    "first": "06:06",
+                    "last": "00:14"
                 },
                 {
                     "via": "./images/line-GR.svg",
                     "to": "高鐵臺中站",
-                    "first": "06:02",
-                    "last": "00:02"
+                    "first": "06:04",
+                    "last": "00:21"
                 }
             ],
             "exits": [
@@ -966,13 +966,13 @@
                     "via": "./images/line-GR.svg",
                     "to": "北屯總站",
                     "first": "06:04",
-                    "last": "00:32"
+                    "last": "00:12"
                 },
                 {
                     "via": "./images/line-GR.svg",
                     "to": "高鐵臺中站",
-                    "first": "06:02",
-                    "last": "00:02"
+                    "first": "06:05",
+                    "last": "00:23"
                 }
             ],
             "exits": [
@@ -1023,14 +1023,14 @@
                 {
                     "via": "./images/line-GR.svg",
                     "to": "北屯總站",
-                    "first": "06:04",
-                    "last": "00:32"
+                    "first": "06:03",
+                    "last": "00:10"
                 },
                 {
                     "via": "./images/line-GR.svg",
                     "to": "高鐵臺中站",
-                    "first": "06:02",
-                    "last": "00:02"
+                    "first": "06:07",
+                    "last": "00:24"
                 }
             ],
             "exits": [
@@ -1081,14 +1081,14 @@
                 {
                     "via": "./images/line-GR.svg",
                     "to": "北屯總站",
-                    "first": "06:04",
-                    "last": "00:32"
+                    "first": "06:00",
+                    "last": "00:07"
                 },
                 {
                     "via": "./images/line-GR.svg",
                     "to": "高鐵臺中站",
-                    "first": "06:02",
-                    "last": "00:02"
+                    "first": "06:00",
+                    "last": "00:28"
                 }
             ],
             "exits": [
@@ -1157,14 +1157,14 @@
                 {
                     "via": "./images/line-GR.svg",
                     "to": "北屯總站",
-                    "first": "06:04",
-                    "last": "00:32"
+                    "first": "06:05",
+                    "last": "00:05"
                 },
                 {
                     "via": "./images/line-GR.svg",
                     "to": "高鐵臺中站",
-                    "first": "06:02",
-                    "last": "00:02"
+                    "first": "06:01",
+                    "last": "00:29"
                 }
             ],
             "exits": [
@@ -1216,13 +1216,13 @@
                     "via": "./images/line-GR.svg",
                     "to": "北屯總站",
                     "first": "06:04",
-                    "last": "00:32"
+                    "last": "00:04"
                 },
                 {
                     "via": "./images/line-GR.svg",
                     "to": "高鐵臺中站",
-                    "first": "06:02",
-                    "last": "00:02"
+                    "first": "06:03",
+                    "last": "00:31"
                 }
             ],
             "exits": [
@@ -1283,13 +1283,13 @@
                     "via": "./images/line-GR.svg",
                     "to": "北屯總站",
                     "first": "06:04",
-                    "last": "00:32"
+                    "last": "00:02"
                 },
                 {
                     "via": "./images/line-GR.svg",
                     "to": "高鐵臺中站",
-                    "first": "06:02",
-                    "last": "00:02"
+                    "first": "06:05",
+                    "last": "00:33"
                 }
             ],
             "exits": [
@@ -1338,7 +1338,8 @@
                     "name": "AED",
                     "position": "3F非付費區，公用電話旁"
                 }
-            ]
+            ],
+            "iBikeUID":3266
         },
         {
             "id": "119",
@@ -1349,14 +1350,8 @@
                 {
                     "via": "./images/line-GR.svg",
                     "to": "北屯總站",
-                    "first": "06:04",
-                    "last": "00:32"
-                },
-                {
-                    "via": "./images/line-GR.svg",
-                    "to": "高鐵臺中站",
-                    "first": "06:02",
-                    "last": "00:02"
+                    "first": "06:00",
+                    "last": "00:00"
                 }
             ],
             "exits": [
