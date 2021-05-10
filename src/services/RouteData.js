@@ -1,9 +1,9 @@
 import axios from 'axios'
 
-//https://my-json-server.typicode.com/titantsai/taichungmrt
+const url ='https://api.jsonbin.io/v3/b/60989f6da23274124b0166a6/latest'
 
 const APIClient = axios.create({
-    baseURL:`https://tmrt-database-default-rtdb.firebaseio.com`,
+    baseURL:url,
     withCredentials:false,
     headers:{
         Accept:'application/json',
