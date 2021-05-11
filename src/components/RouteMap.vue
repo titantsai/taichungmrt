@@ -26,6 +26,7 @@ import Panzoom from 'panzoom'
 export default {
     created(){
        this.$store.dispatch('initRoute');
+       this.$store.dispatch('getYoubike');
        this.selectStation(110)
     },
     mounted(){

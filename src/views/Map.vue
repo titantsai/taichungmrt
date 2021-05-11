@@ -13,9 +13,9 @@
                 </div>
             </div>
             <div class="ds-nav">
-                <router-link to="/#" class="ds-nav-item">旅程規劃</router-link>
-                <router-link to="/facilities" class="ds-nav-item">車站資訊</router-link>
-                <router-link to="/transfer" class="ds-nav-item">轉乘資訊</router-link>
+                <router-link to="/#" class="ds-nav-item" replace>旅程規劃</router-link>
+                <router-link to="/facilities" class="ds-nav-item" replace>車站資訊</router-link>
+                <router-link to="/transfer" class="ds-nav-item" replace>轉乘資訊</router-link>
             </div>
         </div>
         

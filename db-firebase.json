@@ -272,301 +272,1143 @@
         "103a": {
             "line": "綠線",
             "name": "北屯總站",
-            "src":"./images/103A.svg",
-            "exits":[
-              {"num": 1,"src": "./images/exit_1.svg","name": "敦富東街","hints": "車站北側","elevator": false,"escalator": false,"stair": true},
-              {"num": 2,"src": "./images/exit_2.svg","name": "敦富東街","hints": "車站南側","elevator": false,"escalator": false,"stair": true},
-              {"num": 3,"src": "./images/exit_3.svg","name": "北屯機廠", "hints": "北屯機廠側","elevator": true,"escalator": false,"stair": true}],
-            "services":[
-                {"name": "詢問處","position": "1F","src": "./images/info.png"},
-                {"name": "ATM","position": "1F非付費區，自動售票機旁，近出口2","src": "./images/atm.png"},
-                {"name": "飲水機","position": "1F非付費區","src": "./images/fountain.png"},
-                {"name": "洗手間","position": "1F非付費區，近出口1","src": "./images/lavatory.png"},
-                {"name": "AED","position": "1F付費區，自動閘門旁，近出口1","src": "./images/aed.png"},
-                {"name": "哺集乳室","position": "1F非付費區，近出口1","src": "./images/nursing.png"}],
+            "src": "./images/103A.svg",
+            "exits": [
+                {
+                    "num": 1,
+                    "src": "./images/exit_1.svg",
+                    "name": "敦富東街",
+                    "hints": "車站北側",
+                    "elevator": false,
+                    "escalator": false,
+                    "stair": true
+                },
+                {
+                    "num": 2,
+                    "src": "./images/exit_2.svg",
+                    "name": "敦富東街",
+                    "hints": "車站南側",
+                    "elevator": false,
+                    "escalator": false,
+                    "stair": true
+                },
+                {
+                    "num": 3,
+                    "src": "./images/exit_3.svg",
+                    "name": "北屯機廠",
+                    "hints": "北屯機廠側",
+                    "elevator": true,
+                    "escalator": false,
+                    "stair": true
+                }
+            ],
+            "services": [
+                {
+                    "name": "詢問處",
+                    "position": "1F",
+                    "src": "./images/info.png"
+                },
+                {
+                    "name": "ATM",
+                    "position": "1F非付費區，自動售票機旁，近出口2",
+                    "src": "./images/atm.png"
+                },
+                {
+                    "name": "飲水機",
+                    "position": "1F非付費區",
+                    "src": "./images/fountain.png"
+                },
+                {
+                    "name": "洗手間",
+                    "position": "1F非付費區，近出口1",
+                    "src": "./images/lavatory.png"
+                },
+                {
+                    "name": "AED",
+                    "position": "1F付費區，自動閘門旁，近出口1",
+                    "src": "./images/aed.png"
+                },
+                {
+                    "name": "哺集乳室",
+                    "position": "1F非付費區，近出口1",
+                    "src": "./images/nursing.png"
+                }
+            ],
             "servicetime": [
-                {"first": "06:00","last": "00:00","to": "北屯總站","via": "./images/line-GR.svg"}]
+                {
+                    "first": "06:00",
+                    "last": "00:00",
+                    "to": "北屯總站",
+                    "via": "./images/line-GR.svg"
+                }
+            ],
+            "bike": 500608004
         },
         "103": {
             "line": "綠線",
             "name": "舊社",
-            "src":"./images/103.svg",
-            "exits":[
-              {"num": 1,"src": "./images/exit_1.svg","name": "敦富路","hints": "松竹路與敦富路路口","elevator": true,"escalator": true,"stair": true}],
-            "services":[
-                {"name": "詢問處","position": "3F","src": "./images/info.png"},
-                {"name": "ATM","position": "3F非付費區，自動售票機旁","src": "./images/atm.png"},
-                {"name": "飲水機","position": "3F非付費區","src": "./images/fountain.png"},
-                {"name": "洗手間","position": "3F非付費區","src": "./images/lavatory.png"},
-                {"name": "AED","position": "3F付費區，近手扶梯","src": "./images/aed.png"}],
+            "src": "./images/103.svg",
+            "exits": [
+                {
+                    "num": 1,
+                    "src": "./images/exit_1.svg",
+                    "name": "敦富路",
+                    "hints": "松竹路與敦富路路口",
+                    "elevator": true,
+                    "escalator": true,
+                    "stair": true
+                }
+            ],
+            "services": [
+                {
+                    "name": "詢問處",
+                    "position": "3F",
+                    "src": "./images/info.png"
+                },
+                {
+                    "name": "ATM",
+                    "position": "3F非付費區，自動售票機旁",
+                    "src": "./images/atm.png"
+                },
+                {
+                    "name": "飲水機",
+                    "position": "3F非付費區",
+                    "src": "./images/fountain.png"
+                },
+                {
+                    "name": "洗手間",
+                    "position": "3F非付費區",
+                    "src": "./images/lavatory.png"
+                },
+                {
+                    "name": "AED",
+                    "position": "3F付費區，近手扶梯",
+                    "src": "./images/aed.png"
+                }
+            ],
             "servicetime": [
-                {"first": "06:04","last": "00:32","to": "北屯總站","via": "./images/line-GR.svg"},
-                {"first": "06:02","last": "00:02","to": "高鐵臺中站","via": "./images/line-GR.svg"}]
+                {
+                    "first": "06:04",
+                    "last": "00:32",
+                    "to": "北屯總站",
+                    "via": "./images/line-GR.svg"
+                },
+                {
+                    "first": "06:02",
+                    "last": "00:02",
+                    "to": "高鐵臺中站",
+                    "via": "./images/line-GR.svg"
+                }
+            ],
+            "bike": 500608001
         },
         "104": {
             "line": "綠線",
             "name": "松竹",
-            "src":"./images/104.svg",
-            "exits":[
-              {"num": 1,"src": "./images/exit_1.svg","name": "舊社公園","hints": "北屯路，近舊社公園","elevator": true,"escalator": true,"stair": true},
-              {"num": 2,"src": "./images/exit_2.svg","name": "北屯路","hints": "北屯路，近臺鐵松竹站","elevator": true,"escalator": true,"stair": true},
-              {"num": 3,"src": "./images/exit_3.svg","name": "臺鐵松竹站", "hints": "連通道至臺鐵松竹站","elevator": false,"escalator": false,"stair": true}],
-            "services":[
-                {"name": "詢問處","position": "3F","src": "./images/info.png"},
-                {"name": "ATM","position": "3F非付費區，自動售票機旁","src": "./images/atm.png"},
-                {"name": "飲水機","position": "3F非付費區","src": "./images/fountain.png"},
-                {"name": "洗手間","position": "3F非付費區，近出口1","src": "./images/lavatory.png"},
-                {"name": "AED","position": "3F付費區，無障礙廁所旁","src": "./images/aed.png"}],
+            "src": "./images/104.svg",
+            "exits": [
+                {
+                    "num": 1,
+                    "src": "./images/exit_1.svg",
+                    "name": "舊社公園",
+                    "hints": "北屯路，近舊社公園",
+                    "elevator": true,
+                    "escalator": true,
+                    "stair": true
+                },
+                {
+                    "num": 2,
+                    "src": "./images/exit_2.svg",
+                    "name": "北屯路",
+                    "hints": "北屯路，近臺鐵松竹站",
+                    "elevator": true,
+                    "escalator": true,
+                    "stair": true
+                },
+                {
+                    "num": 3,
+                    "src": "./images/exit_3.svg",
+                    "name": "臺鐵松竹站",
+                    "hints": "連通道至臺鐵松竹站",
+                    "elevator": false,
+                    "escalator": false,
+                    "stair": true
+                }
+            ],
+            "services": [
+                {
+                    "name": "詢問處",
+                    "position": "3F",
+                    "src": "./images/info.png"
+                },
+                {
+                    "name": "ATM",
+                    "position": "3F非付費區，自動售票機旁",
+                    "src": "./images/atm.png"
+                },
+                {
+                    "name": "飲水機",
+                    "position": "3F非付費區",
+                    "src": "./images/fountain.png"
+                },
+                {
+                    "name": "洗手間",
+                    "position": "3F非付費區，近出口1",
+                    "src": "./images/lavatory.png"
+                },
+                {
+                    "name": "AED",
+                    "position": "3F付費區，無障礙廁所旁",
+                    "src": "./images/aed.png"
+                }
+            ],
             "servicetime": [
-                {"first": "06:03","last": "00:31","to": "北屯總站","via": "./images/line-GR.svg"},
-                {"first": "06:04","last": "00:04","to": "高鐵臺中站","via": "./images/line-GR.svg"}]
+                {
+                    "first": "06:03",
+                    "last": "00:31",
+                    "to": "北屯總站",
+                    "via": "./images/line-GR.svg"
+                },
+                {
+                    "first": "06:04",
+                    "last": "00:04",
+                    "to": "高鐵臺中站",
+                    "via": "./images/line-GR.svg"
+                }
+            ],
+            "bike": 500608014
         },
         "105": {
             "line": "綠線",
             "name": "四維國小",
-            "src":"./images/105.svg",
-            "exits":[
-              {"num": 1,"src": "./images/exit_1.svg","name": "四維國小","hints": "文心路四段與天津路四段路口","elevator": true,"escalator": true,"stair": true}],
-            "services":[
-                {"name": "詢問處","position": "3F","src": "./images/info.png"},
-                {"name": "ATM","position": "3F非付費區","src": "./images/atm.png"},
-                {"name": "飲水機","position": "3F非付費區","src": "./images/fountain.png"},
-                {"name": "洗手間","position": "3F非付費區","src": "./images/lavatory.png"},
-                {"name": "AED","position": "3F付費區，近自動售票機","src": "./images/aed.png"}],
+            "src": "./images/105.svg",
+            "exits": [
+                {
+                    "num": 1,
+                    "src": "./images/exit_1.svg",
+                    "name": "四維國小",
+                    "hints": "文心路四段與天津路四段路口",
+                    "elevator": true,
+                    "escalator": true,
+                    "stair": true
+                }
+            ],
+            "services": [
+                {
+                    "name": "詢問處",
+                    "position": "3F",
+                    "src": "./images/info.png"
+                },
+                {
+                    "name": "ATM",
+                    "position": "3F非付費區",
+                    "src": "./images/atm.png"
+                },
+                {
+                    "name": "飲水機",
+                    "position": "3F非付費區",
+                    "src": "./images/fountain.png"
+                },
+                {
+                    "name": "洗手間",
+                    "position": "3F非付費區",
+                    "src": "./images/lavatory.png"
+                },
+                {
+                    "name": "AED",
+                    "position": "3F付費區，近自動售票機",
+                    "src": "./images/aed.png"
+                }
+            ],
             "servicetime": [
-                {"first": "06:00","last": "00:27","to": "北屯總站","via": "./images/line-GR.svg"},
-                {"first": "06:00","last": "00:07","to": "高鐵臺中站","via": "./images/line-GR.svg"}]
+                {
+                    "first": "06:00",
+                    "last": "00:27",
+                    "to": "北屯總站",
+                    "via": "./images/line-GR.svg"
+                },
+                {
+                    "first": "06:00",
+                    "last": "00:07",
+                    "to": "高鐵臺中站",
+                    "via": "./images/line-GR.svg"
+                }
+            ],
+            "bike": 500608002
         },
         "106": {
             "line": "綠線",
             "name": "文心崇德",
-            "src":"./images/106.svg",
-            "exits":[
-              {"num": 1,"src": "./images/exit_1.svg","name": "崇德路二段","hints": "文心路四段與崇德路二段路口","elevator": true,"escalator": true,"stair": true}],
-            "services":[
-                {"name": "詢問處","position": "3F","src": "./images/info.png"},
-                {"name": "ATM","position": "3F非付費區","src": "./images/atm.png"},
-                {"name": "飲水機","position": "3F非付費區","src": "./images/fountain.png"},
-                {"name": "洗手間","position": "3F非付費區","src": "./images/lavatory.png"},
-                {"name": "AED","position": "3F付費區，出口樓梯旁","src": "./images/aed.png"}],
+            "src": "./images/106.svg",
+            "exits": [
+                {
+                    "num": 1,
+                    "src": "./images/exit_1.svg",
+                    "name": "崇德路二段",
+                    "hints": "文心路四段與崇德路二段路口",
+                    "elevator": true,
+                    "escalator": true,
+                    "stair": true
+                }
+            ],
+            "services": [
+                {
+                    "name": "詢問處",
+                    "position": "3F",
+                    "src": "./images/info.png"
+                },
+                {
+                    "name": "ATM",
+                    "position": "3F非付費區",
+                    "src": "./images/atm.png"
+                },
+                {
+                    "name": "飲水機",
+                    "position": "3F非付費區",
+                    "src": "./images/fountain.png"
+                },
+                {
+                    "name": "洗手間",
+                    "position": "3F非付費區",
+                    "src": "./images/lavatory.png"
+                },
+                {
+                    "name": "AED",
+                    "position": "3F付費區，出口樓梯旁",
+                    "src": "./images/aed.png"
+                }
+            ],
             "servicetime": [
-                {"first": "06:07","last": "00:26","to": "北屯總站","via": "./images/line-GR.svg"},
-                {"first": "06:01","last": "00:09","to": "高鐵臺中站","via": "./images/line-GR.svg"}]
+                {
+                    "first": "06:07",
+                    "last": "00:26",
+                    "to": "北屯總站",
+                    "via": "./images/line-GR.svg"
+                },
+                {
+                    "first": "06:01",
+                    "last": "00:09",
+                    "to": "高鐵臺中站",
+                    "via": "./images/line-GR.svg"
+                }
+            ],
+            "bike": 500608013
         },
         "107": {
             "line": "綠線",
             "name": "文心中清",
-            "src":"./images/107.svg",
-            "exits":[
-              {"num": 1,"src": "./images/exit_1.svg","name": "中清路一段","hints": "文心路三段與中清路一段路口","elevator": true,"escalator": true,"stair": true}],
-            "services":[
-                {"name": "詢問處","position": "3F","src": "./images/info.png"},
-                {"name": "ATM","position": "3F非付費區，自動售票機旁","src": "./images/atm.png"},
-                {"name": "飲水機","position": "3F非付費區","src": "./images/fountain.png"},
-                {"name": "洗手間","position": "3F非付費區","src": "./images/lavatory.png"},
-                {"name": "AED","position": "3F付費區，近自動售票機","src": "./images/aed.png"}],
+            "src": "./images/107.svg",
+            "exits": [
+                {
+                    "num": 1,
+                    "src": "./images/exit_1.svg",
+                    "name": "中清路一段",
+                    "hints": "文心路三段與中清路一段路口",
+                    "elevator": true,
+                    "escalator": true,
+                    "stair": true
+                }
+            ],
+            "services": [
+                {
+                    "name": "詢問處",
+                    "position": "3F",
+                    "src": "./images/info.png"
+                },
+                {
+                    "name": "ATM",
+                    "position": "3F非付費區，自動售票機旁",
+                    "src": "./images/atm.png"
+                },
+                {
+                    "name": "飲水機",
+                    "position": "3F非付費區",
+                    "src": "./images/fountain.png"
+                },
+                {
+                    "name": "洗手間",
+                    "position": "3F非付費區",
+                    "src": "./images/lavatory.png"
+                },
+                {
+                    "name": "AED",
+                    "position": "3F付費區，近自動售票機",
+                    "src": "./images/aed.png"
+                }
+            ],
             "servicetime": [
-                {"first": "06:05","last": "00:23","to": "北屯總站","via": "./images/line-GR.svg"},
-                {"first": "06:04","last": "00:11","to": "高鐵臺中站","via": "./images/line-GR.svg"}]
+                {
+                    "first": "06:05",
+                    "last": "00:23",
+                    "to": "北屯總站",
+                    "via": "./images/line-GR.svg"
+                },
+                {
+                    "first": "06:04",
+                    "last": "00:11",
+                    "to": "高鐵臺中站",
+                    "via": "./images/line-GR.svg"
+                }
+            ],
+            "bike": 500605004
         },
         "108": {
             "line": "綠線",
             "name": "文華高中",
-            "src":"./images/108.svg",
-            "exits":[
-              {"num": 1,"src": "./images/exit_1.svg","name": "文華高中","hints": "文心路三段與河南路二段路口","elevator": true,"escalator": true,"stair": true}],
-            "services":[
-                {"name": "詢問處","position": "3F","src": "./images/info.png"},
-                {"name": "ATM","position": "3F非付費區，自動售票機旁","src": "./images/atm.png"},
-                {"name": "飲水機","position": "3F非付費區","src": "./images/fountain.png"},
-                {"name": "洗手間","position": "3F非付費區","src": "./images/lavatory.png"},
-                {"name": "AED","position": "3F付費區，近手扶梯","src": "./images/aed.png"}],
+            "src": "./images/108.svg",
+            "exits": [
+                {
+                    "num": 1,
+                    "src": "./images/exit_1.svg",
+                    "name": "文華高中",
+                    "hints": "文心路三段與河南路二段路口",
+                    "elevator": true,
+                    "escalator": true,
+                    "stair": true
+                }
+            ],
+            "services": [
+                {
+                    "name": "詢問處",
+                    "position": "3F",
+                    "src": "./images/info.png"
+                },
+                {
+                    "name": "ATM",
+                    "position": "3F非付費區，自動售票機旁",
+                    "src": "./images/atm.png"
+                },
+                {
+                    "name": "飲水機",
+                    "position": "3F非付費區",
+                    "src": "./images/fountain.png"
+                },
+                {
+                    "name": "洗手間",
+                    "position": "3F非付費區",
+                    "src": "./images/lavatory.png"
+                },
+                {
+                    "name": "AED",
+                    "position": "3F付費區，近手扶梯",
+                    "src": "./images/aed.png"
+                }
+            ],
             "servicetime": [
-                {"first": "06:03","last": "00:21","to": "北屯總站","via": "./images/line-GR.svg"},
-                {"first": "06:06","last": "00:13","to": "高鐵臺中站","via": "./images/line-GR.svg"}]
+                {
+                    "first": "06:03",
+                    "last": "00:21",
+                    "to": "北屯總站",
+                    "via": "./images/line-GR.svg"
+                },
+                {
+                    "first": "06:06",
+                    "last": "00:13",
+                    "to": "高鐵臺中站",
+                    "via": "./images/line-GR.svg"
+                }
+            ],
+            "bike": 500606003
         },
         "109": {
             "line": "綠線",
             "name": "文心櫻花",
-            "src":"./images/109.svg",
-            "exits":[
-              {"num": 1,"src": "./images/exit_1.svg","name": "櫻花路","hints": "文心路三段與櫻花路路口","elevator": true,"escalator": true,"stair": true}],
-            "services":[
-                {"name": "詢問處","position": "3F","src": "./images/info.png"},
-                {"name": "ATM","position": "3F非付費區，自動售票機旁","src": "./images/atm.png"},
-                {"name": "飲水機","position": "3F非付費區","src": "./images/fountain.png"},
-                {"name": "洗手間","position": "3F非付費區","src": "./images/lavatory.png"},
-                {"name": "AED","position": "3F付費區，安全門前","src": "./images/aed.png"}],
+            "src": "./images/109.svg",
+            "exits": [
+                {
+                    "num": 1,
+                    "src": "./images/exit_1.svg",
+                    "name": "櫻花路",
+                    "hints": "文心路三段與櫻花路路口",
+                    "elevator": true,
+                    "escalator": true,
+                    "stair": true
+                }
+            ],
+            "services": [
+                {
+                    "name": "詢問處",
+                    "position": "3F",
+                    "src": "./images/info.png"
+                },
+                {
+                    "name": "ATM",
+                    "position": "3F非付費區，自動售票機旁",
+                    "src": "./images/atm.png"
+                },
+                {
+                    "name": "飲水機",
+                    "position": "3F非付費區",
+                    "src": "./images/fountain.png"
+                },
+                {
+                    "name": "洗手間",
+                    "position": "3F非付費區",
+                    "src": "./images/lavatory.png"
+                },
+                {
+                    "name": "AED",
+                    "position": "3F付費區，安全門前",
+                    "src": "./images/aed.png"
+                }
+            ],
             "servicetime": [
-                {"first": "06:01","last": "00:20","to": "北屯總站","via": "./images/line-GR.svg"},
-                {"first": "06:07","last": "00:15","to": "高鐵臺中站","via": "./images/line-GR.svg"}]
+                {
+                    "first": "06:01",
+                    "last": "00:20",
+                    "to": "北屯總站",
+                    "via": "./images/line-GR.svg"
+                },
+                {
+                    "first": "06:07",
+                    "last": "00:15",
+                    "to": "高鐵臺中站",
+                    "via": "./images/line-GR.svg"
+                }
+            ],
+            "bike": 500606001
         },
         "110": {
             "line": "綠線",
             "name": "市政府",
-            "src":"./images/110.svg",
-            "exits":[
-              {"num": 1,"src": "./images/exit_1.svg","name": "臺中市政府","hints": "文心路二段，近臺中市政府","elevator": true,"escalator": true,"stair": true},
-              {"num": 2,"src": "./images/exit_2.svg","name": "臺灣大道二段","hints": "臺灣大道二段及文心路二段路口","elevator": true,"escalator": true,"stair": true}],
-            "services":[
-                {"name": "詢問處","position": "3F","src": "./images/info.png"},
-                {"name": "ATM","position": "3F非付費區，自動售票機旁，近出口1","src": "./images/atm.png"},
-                {"name": "飲水機","position": "3F非付費區","src": "./images/fountain.png"},
-                {"name": "洗手間","position": "3F非付費區","src": "./images/lavatory.png"},
-                {"name": "AED","position": "3F非付費區，詢問處及自動閘門前各一組","src": "./images/aed.png"},
-                {"name": "哺集乳室","position": "3F付費區，自動售票機旁，近出口1","src": "./images/nursing.png"}],
+            "src": "./images/110.svg",
+            "exits": [
+                {
+                    "num": 1,
+                    "src": "./images/exit_1.svg",
+                    "name": "臺中市政府",
+                    "hints": "文心路二段，近臺中市政府",
+                    "elevator": true,
+                    "escalator": true,
+                    "stair": true
+                },
+                {
+                    "num": 2,
+                    "src": "./images/exit_2.svg",
+                    "name": "臺灣大道二段",
+                    "hints": "臺灣大道二段及文心路二段路口",
+                    "elevator": true,
+                    "escalator": true,
+                    "stair": true
+                }
+            ],
+            "services": [
+                {
+                    "name": "詢問處",
+                    "position": "3F",
+                    "src": "./images/info.png"
+                },
+                {
+                    "name": "ATM",
+                    "position": "3F非付費區，自動售票機旁，近出口1",
+                    "src": "./images/atm.png"
+                },
+                {
+                    "name": "飲水機",
+                    "position": "3F非付費區",
+                    "src": "./images/fountain.png"
+                },
+                {
+                    "name": "洗手間",
+                    "position": "3F非付費區",
+                    "src": "./images/lavatory.png"
+                },
+                {
+                    "name": "AED",
+                    "position": "3F非付費區，詢問處及自動閘門前各一組",
+                    "src": "./images/aed.png"
+                },
+                {
+                    "name": "哺集乳室",
+                    "position": "3F付費區，自動售票機旁，近出口1",
+                    "src": "./images/nursing.png"
+                }
+            ],
             "servicetime": [
-                {"first": "06:00","last": "00:18","to": "北屯總站","via": "./images/line-GR.svg"},
-                {"first": "06:00","last": "00:17","to": "高鐵臺中站","via": "./images/line-GR.svg"}]
+                {
+                    "first": "06:00",
+                    "last": "00:18",
+                    "to": "北屯總站",
+                    "via": "./images/line-GR.svg"
+                },
+                {
+                    "first": "06:00",
+                    "last": "00:17",
+                    "to": "高鐵臺中站",
+                    "via": "./images/line-GR.svg"
+                }
+            ],
+            "bike": [500606003,500606002]
         },
         "111": {
             "line": "綠線",
             "name": "水安宮",
-            "src":"./images/111.svg",
-            "exits":[
-              {"num": 1,"src": "./images/exit_1.svg","name": "大業路","hints": "文心路一段與大業路路口","elevator": true,"escalator": true,"stair": true}],
-            "services":[
-                {"name": "詢問處","position": "3F","src": "./images/info.png"},
-                {"name": "ATM","position": "3F非付費區，自動售票機旁","src": "./images/atm.png"},
-                {"name": "飲水機","position": "3F非付費區","src": "./images/fountain.png"},
-                {"name": "洗手間","position": "3F非付費區","src": "./images/lavatory.png"},
-                {"name": "AED","position": "3F非付費區，電扶梯前","src": "./images/aed.png"}],
+            "src": "./images/111.svg",
+            "exits": [
+                {
+                    "num": 1,
+                    "src": "./images/exit_1.svg",
+                    "name": "大業路",
+                    "hints": "文心路一段與大業路路口",
+                    "elevator": true,
+                    "escalator": true,
+                    "stair": true
+                }
+            ],
+            "services": [
+                {
+                    "name": "詢問處",
+                    "position": "3F",
+                    "src": "./images/info.png"
+                },
+                {
+                    "name": "ATM",
+                    "position": "3F非付費區，自動售票機旁",
+                    "src": "./images/atm.png"
+                },
+                {
+                    "name": "飲水機",
+                    "position": "3F非付費區",
+                    "src": "./images/fountain.png"
+                },
+                {
+                    "name": "洗手間",
+                    "position": "3F非付費區",
+                    "src": "./images/lavatory.png"
+                },
+                {
+                    "name": "AED",
+                    "position": "3F非付費區，電扶梯前",
+                    "src": "./images/aed.png"
+                }
+            ],
             "servicetime": [
-                {"first": "06:08","last": "00:15","to": "北屯總站","via": "./images/line-GR.svg"},
-                {"first": "06:02","last": "00:19","to": "高鐵臺中站","via": "./images/line-GR.svg"}]
+                {
+                    "first": "06:08",
+                    "last": "00:15",
+                    "to": "北屯總站",
+                    "via": "./images/line-GR.svg"
+                },
+                {
+                    "first": "06:02",
+                    "last": "00:19",
+                    "to": "高鐵臺中站",
+                    "via": "./images/line-GR.svg"
+                }
+            ],
+            "bike": 500607001
         },
         "112": {
             "line": "綠線",
             "name": "文心森林公園",
-            "src":"./images/112.svg",
-            "exits":[
-              {"num": 1,"src": "./images/exit_1.svg","name": "文心森林公園","hints": "文心路一段，文心森林公園側","elevator": true,"escalator": true,"stair": true}],
-            "services":[
-                {"name": "詢問處","position": "3F","src": "./images/info.png"},
-                {"name": "ATM","position": "3F非付費區，自動售票機旁","src": "./images/atm.png"},
-                {"name": "飲水機","position": "3F非付費區","src": "./images/fountain.png"},
-                {"name": "洗手間","position": "3F非付費區","src": "./images/lavatory.png"},
-                {"name": "AED","position": "3F非付費區，公用電話旁","src": "./images/aed.png"}],
+            "src": "./images/112.svg",
+            "exits": [
+                {
+                    "num": 1,
+                    "src": "./images/exit_1.svg",
+                    "name": "文心森林公園",
+                    "hints": "文心路一段，文心森林公園側",
+                    "elevator": true,
+                    "escalator": true,
+                    "stair": true
+                }
+            ],
+            "services": [
+                {
+                    "name": "詢問處",
+                    "position": "3F",
+                    "src": "./images/info.png"
+                },
+                {
+                    "name": "ATM",
+                    "position": "3F非付費區，自動售票機旁",
+                    "src": "./images/atm.png"
+                },
+                {
+                    "name": "飲水機",
+                    "position": "3F非付費區",
+                    "src": "./images/fountain.png"
+                },
+                {
+                    "name": "洗手間",
+                    "position": "3F非付費區",
+                    "src": "./images/lavatory.png"
+                },
+                {
+                    "name": "AED",
+                    "position": "3F非付費區，公用電話旁",
+                    "src": "./images/aed.png"
+                }
+            ],
             "servicetime": [
-                {"first": "06:06","last": "00:14","to": "北屯總站","via": "./images/line-GR.svg"},
-                {"first": "06:04","last": "00:21","to": "高鐵臺中站","via": "./images/line-GR.svg"}]
+                {
+                    "first": "06:06",
+                    "last": "00:14",
+                    "to": "北屯總站",
+                    "via": "./images/line-GR.svg"
+                },
+                {
+                    "first": "06:04",
+                    "last": "00:21",
+                    "to": "高鐵臺中站",
+                    "via": "./images/line-GR.svg"
+                }
+            ],
+            "bike": 500606003
         },
         "113": {
             "line": "綠線",
             "name": "南屯",
-            "src":"./images/113.svg",
-            "exits":[
-              {"num": 1,"src": "./images/exit_1.svg","name": "五權西路二段","hints": "文心路一段與五權西路二段路口","elevator": true,"escalator": true,"stair": true}],
-            "services":[
-                {"name": "詢問處","position": "3F","src": "./images/info.png"},
-                {"name": "ATM","position": "3F非付費區，自動售票機旁","src": "./images/atm.png"},
-                {"name": "飲水機","position": "3F非付費區","src": "./images/fountain.png"},
-                {"name": "洗手間","position": "3F非付費區","src": "./images/lavatory.png"},
-                {"name": "AED","position": "3F非付費區，自動售票機旁","src": "./images/aed.png"}],
+            "src": "./images/113.svg",
+            "exits": [
+                {
+                    "num": 1,
+                    "src": "./images/exit_1.svg",
+                    "name": "五權西路二段",
+                    "hints": "文心路一段與五權西路二段路口",
+                    "elevator": true,
+                    "escalator": true,
+                    "stair": true
+                }
+            ],
+            "services": [
+                {
+                    "name": "詢問處",
+                    "position": "3F",
+                    "src": "./images/info.png"
+                },
+                {
+                    "name": "ATM",
+                    "position": "3F非付費區，自動售票機旁",
+                    "src": "./images/atm.png"
+                },
+                {
+                    "name": "飲水機",
+                    "position": "3F非付費區",
+                    "src": "./images/fountain.png"
+                },
+                {
+                    "name": "洗手間",
+                    "position": "3F非付費區",
+                    "src": "./images/lavatory.png"
+                },
+                {
+                    "name": "AED",
+                    "position": "3F非付費區，自動售票機旁",
+                    "src": "./images/aed.png"
+                }
+            ],
             "servicetime": [
-                {"first": "06:04","last": "00:12","to": "北屯總站","via": "./images/line-GR.svg"},
-                {"first": "06:05","last": "00:23","to": "高鐵臺中站","via": "./images/line-GR.svg"}]
+                {
+                    "first": "06:04",
+                    "last": "00:12",
+                    "to": "北屯總站",
+                    "via": "./images/line-GR.svg"
+                },
+                {
+                    "first": "06:05",
+                    "last": "00:23",
+                    "to": "高鐵臺中站",
+                    "via": "./images/line-GR.svg"
+                }
+            ],
+            "bike": 500607014
         },
         "114": {
             "line": "綠線",
             "name": "豐樂公園",
-            "src":"./images/114.svg",
-            "exits":[
-              {"num": 1,"src": "./images/exit_1.svg","name": "文心南五路","hints": "文心南路與文心南五路一段路口","elevator": true,"escalator": true,"stair": true}],
-            "services":[
-                {"name": "詢問處","position": "3F","src": "./images/info.png"},
-                {"name": "ATM","position": "3F非付費區，自動售票機旁","src": "./images/atm.png"},
-                {"name": "飲水機","position": "3F非付費區","src": "./images/fountain.png"},
-                {"name": "洗手間","position": "3F非付費區","src": "./images/lavatory.png"},
-                {"name": "AED","position": "3F非付費區，公用電話旁","src": "./images/aed.png"}],
+            "src": "./images/114.svg",
+            "exits": [
+                {
+                    "num": 1,
+                    "src": "./images/exit_1.svg",
+                    "name": "文心南五路",
+                    "hints": "文心南路與文心南五路一段路口",
+                    "elevator": true,
+                    "escalator": true,
+                    "stair": true
+                }
+            ],
+            "services": [
+                {
+                    "name": "詢問處",
+                    "position": "3F",
+                    "src": "./images/info.png"
+                },
+                {
+                    "name": "ATM",
+                    "position": "3F非付費區，自動售票機旁",
+                    "src": "./images/atm.png"
+                },
+                {
+                    "name": "飲水機",
+                    "position": "3F非付費區",
+                    "src": "./images/fountain.png"
+                },
+                {
+                    "name": "洗手間",
+                    "position": "3F非付費區",
+                    "src": "./images/lavatory.png"
+                },
+                {
+                    "name": "AED",
+                    "position": "3F非付費區，公用電話旁",
+                    "src": "./images/aed.png"
+                }
+            ],
             "servicetime": [
-                {"first": "06:03","last": "00:10","to": "北屯總站","via": "./images/line-GR.svg"},
-                {"first": "06:07","last": "00:24","to": "高鐵臺中站","via": "./images/line-GR.svg"}]
+                {
+                    "first": "06:03",
+                    "last": "00:10",
+                    "to": "北屯總站",
+                    "via": "./images/line-GR.svg"
+                },
+                {
+                    "first": "06:07",
+                    "last": "00:24",
+                    "to": "高鐵臺中站",
+                    "via": "./images/line-GR.svg"
+                }
+            ],
+            "bike": 500606003
         },
         "115": {
             "line": "綠線",
             "name": "大慶",
-            "src":"./images/115.svg",
-            "exits":[
-              {"num": 1,"src": "./images/exit_1.svg","name": "中山醫學大學","hints": "建國北路，近中山醫學大學","elevator": true,"escalator": true,"stair": true},
-              {"num": 2,"src": "./images/exit_2.svg","name": "大慶街二段","hints": "建國北路，近臺鐵大慶站","elevator": true,"escalator": true,"stair": true},
-              {"num": 3,"src": "./images/exit_3.svg","name": "臺鐵大慶站","hints": "連通道至臺鐵大慶站","elevator": false,"escalator": false,"stair": true}],
-            "services":[
-                {"name": "詢問處","position": "2F","src": "./images/info.png"},
-                {"name": "ATM","position": "2F非付費區，公共電話旁，近出口2","src": "./images/atm.png"},
-                {"name": "飲水機","position": "2F非付費區","src": "./images/fountain.png"},
-                {"name": "洗手間","position": "2F非付費區","src": "./images/lavatory.png"},
-                {"name": "AED","position": "2F非付費區，近詢問處","src": "./images/aed.png"}],
+            "src": "./images/115.svg",
+            "exits": [
+                {
+                    "num": 1,
+                    "src": "./images/exit_1.svg",
+                    "name": "中山醫學大學",
+                    "hints": "建國北路，近中山醫學大學",
+                    "elevator": true,
+                    "escalator": true,
+                    "stair": true
+                },
+                {
+                    "num": 2,
+                    "src": "./images/exit_2.svg",
+                    "name": "大慶街二段",
+                    "hints": "建國北路，近臺鐵大慶站",
+                    "elevator": true,
+                    "escalator": true,
+                    "stair": true
+                },
+                {
+                    "num": 3,
+                    "src": "./images/exit_3.svg",
+                    "name": "臺鐵大慶站",
+                    "hints": "連通道至臺鐵大慶站",
+                    "elevator": false,
+                    "escalator": false,
+                    "stair": true
+                }
+            ],
+            "services": [
+                {
+                    "name": "詢問處",
+                    "position": "2F",
+                    "src": "./images/info.png"
+                },
+                {
+                    "name": "ATM",
+                    "position": "2F非付費區，公共電話旁，近出口2",
+                    "src": "./images/atm.png"
+                },
+                {
+                    "name": "飲水機",
+                    "position": "2F非付費區",
+                    "src": "./images/fountain.png"
+                },
+                {
+                    "name": "洗手間",
+                    "position": "2F非付費區",
+                    "src": "./images/lavatory.png"
+                },
+                {
+                    "name": "AED",
+                    "position": "2F非付費區，近詢問處",
+                    "src": "./images/aed.png"
+                }
+            ],
             "servicetime": [
-                {"first": "06:00","last": "00:07","to": "北屯總站","via": "./images/line-GR.svg"},
-                {"first": "06:00","last": "00:28","to": "高鐵臺中站","via": "./images/line-GR.svg"}]
+                {
+                    "first": "06:00",
+                    "last": "00:07",
+                    "to": "北屯總站",
+                    "via": "./images/line-GR.svg"
+                },
+                {
+                    "first": "06:00",
+                    "last": "00:28",
+                    "to": "高鐵臺中站",
+                    "via": "./images/line-GR.svg"
+                }
+            ],
+            "bike": 500604001
         },
         "116": {
             "line": "綠線",
             "name": "九張犁",
-            "src":"./images/116.svg",
-            "exits":[
-              {"num": 1,"src": "./images/exit_1.svg","name": "建國路","hints": "建國路","elevator": true,"escalator": true,"stair": true}],
-            "services":[
-                {"name": "詢問處","position": "3F","src": "./images/info.png"},
-                {"name": "ATM","position": "3F非付費區，公共電話旁","src": "./images/atm.png"},
-                {"name": "飲水機","position": "3F非付費區","src": "./images/fountain.png"},
-                {"name": "洗手間","position": "3F非付費區","src": "./images/lavatory.png"},
-                {"name": "AED","position": "3F非付費區，近詢問處","src": "./images/aed.png"}],
+            "src": "./images/116.svg",
+            "exits": [
+                {
+                    "num": 1,
+                    "src": "./images/exit_1.svg",
+                    "name": "建國路",
+                    "hints": "建國路",
+                    "elevator": true,
+                    "escalator": true,
+                    "stair": true
+                }
+            ],
+            "services": [
+                {
+                    "name": "詢問處",
+                    "position": "3F",
+                    "src": "./images/info.png"
+                },
+                {
+                    "name": "ATM",
+                    "position": "3F非付費區，公共電話旁",
+                    "src": "./images/atm.png"
+                },
+                {
+                    "name": "飲水機",
+                    "position": "3F非付費區",
+                    "src": "./images/fountain.png"
+                },
+                {
+                    "name": "洗手間",
+                    "position": "3F非付費區",
+                    "src": "./images/lavatory.png"
+                },
+                {
+                    "name": "AED",
+                    "position": "3F非付費區，近詢問處",
+                    "src": "./images/aed.png"
+                }
+            ],
             "servicetime": [
-                {"first": "06:05","last": "00:05","to": "北屯總站","via": "./images/line-GR.svg"},
-                {"first": "06:01","last": "00:29","to": "高鐵臺中站","via": "./images/line-GR.svg"}]
+                {
+                    "first": "06:05",
+                    "last": "00:05",
+                    "to": "北屯總站",
+                    "via": "./images/line-GR.svg"
+                },
+                {
+                    "first": "06:01",
+                    "last": "00:29",
+                    "to": "高鐵臺中站",
+                    "via": "./images/line-GR.svg"
+                }
+            ],
+            "bike": 500617001
         },
         "117": {
             "line": "綠線",
             "name": "九德",
-            "src":"./images/117.svg",
-            "exits":[
-              {"num": 1,"src": "./images/exit_1.svg","name": "興華街","hints": "興華街與自強街口","elevator": true,"escalator": true,"stair": true},
-              {"num": 2,"src": "./images/exit_2.svg","name": "建國路","hints": "建國路西側","elevator": true,"escalator": true,"stair": true}],
-            "services":[
-                {"name": "詢問處","position": "2F","src": "./images/info.png"},
-                {"name": "ATM","position": "2F非付費區，公共電話旁","src": "./images/atm.png"},
-                {"name": "飲水機","position": "2F非付費區","src": "./images/fountain.png"},
-                {"name": "洗手間","position": "2F非付費區","src": "./images/lavatory.png"},
-                {"name": "AED","position": "2F非付費區，近詢問處","src": "./images/aed.png"}],
+            "src": "./images/117.svg",
+            "exits": [
+                {
+                    "num": 1,
+                    "src": "./images/exit_1.svg",
+                    "name": "興華街",
+                    "hints": "興華街與自強街口",
+                    "elevator": true,
+                    "escalator": true,
+                    "stair": true
+                },
+                {
+                    "num": 2,
+                    "src": "./images/exit_2.svg",
+                    "name": "建國路",
+                    "hints": "建國路西側",
+                    "elevator": true,
+                    "escalator": true,
+                    "stair": true
+                }
+            ],
+            "services": [
+                {
+                    "name": "詢問處",
+                    "position": "2F",
+                    "src": "./images/info.png"
+                },
+                {
+                    "name": "ATM",
+                    "position": "2F非付費區，公共電話旁",
+                    "src": "./images/atm.png"
+                },
+                {
+                    "name": "飲水機",
+                    "position": "2F非付費區",
+                    "src": "./images/fountain.png"
+                },
+                {
+                    "name": "洗手間",
+                    "position": "2F非付費區",
+                    "src": "./images/lavatory.png"
+                },
+                {
+                    "name": "AED",
+                    "position": "2F非付費區，近詢問處",
+                    "src": "./images/aed.png"
+                }
+            ],
             "servicetime": [
-                {"first": "06:04","last": "00:04","to": "北屯總站","via": "./images/line-GR.svg"},
-                {"first": "06:03","last": "00:31","to": "高鐵臺中站","via": "./images/line-GR.svg"}]
+                {
+                    "first": "06:04",
+                    "last": "00:04",
+                    "to": "北屯總站",
+                    "via": "./images/line-GR.svg"
+                },
+                {
+                    "first": "06:03",
+                    "last": "00:31",
+                    "to": "高鐵臺中站",
+                    "via": "./images/line-GR.svg"
+                }
+            ],
+            "bike": [500617002,500617011]
         },
         "118": {
             "line": "綠線",
             "name": "烏日",
-            "src":"./images/118.svg",
-            "exits":[
-              {"num": 1,"src": "./images/exit_1.svg","name": "光日路","hints": "光日路，近烏日國小","elevator": true,"escalator": true,"stair": true},
-              {"num": 2,"src": "./images/exit_2.svg","name": "建國路","hints": "建國路","elevator": true,"escalator": true,"stair": true}],
-            "services":[
-                {"name": "詢問處","position": "3F","src": "./images/info.png"},
-                {"name": "ATM","position": "3F非付費區，自動售票機旁","src": "./images/atm.png"},
-                {"name": "飲水機","position": "3F非付費區","src": "./images/fountain.png"},
-                {"name": "洗手間","position": "3F非付費區","src": "./images/lavatory.png"},
-                {"name": "AED","position": "3F非付費區，公共電話旁","src": "./images/aed.png"}],
+            "src": "./images/118.svg",
+            "exits": [
+                {
+                    "num": 1,
+                    "src": "./images/exit_1.svg",
+                    "name": "光日路",
+                    "hints": "光日路，近烏日國小",
+                    "elevator": true,
+                    "escalator": true,
+                    "stair": true
+                },
+                {
+                    "num": 2,
+                    "src": "./images/exit_2.svg",
+                    "name": "建國路",
+                    "hints": "建國路",
+                    "elevator": true,
+                    "escalator": true,
+                    "stair": true
+                }
+            ],
+            "services": [
+                {
+                    "name": "詢問處",
+                    "position": "3F",
+                    "src": "./images/info.png"
+                },
+                {
+                    "name": "ATM",
+                    "position": "3F非付費區，自動售票機旁",
+                    "src": "./images/atm.png"
+                },
+                {
+                    "name": "飲水機",
+                    "position": "3F非付費區",
+                    "src": "./images/fountain.png"
+                },
+                {
+                    "name": "洗手間",
+                    "position": "3F非付費區",
+                    "src": "./images/lavatory.png"
+                },
+                {
+                    "name": "AED",
+                    "position": "3F非付費區，公共電話旁",
+                    "src": "./images/aed.png"
+                }
+            ],
             "servicetime": [
-                {"first": "06:02","last": "00:02","to": "北屯總站","via": "./images/line-GR.svg"},
-                {"first": "06:05","last": "00:33","to": "高鐵臺中站","via": "./images/line-GR.svg"}]
+                {
+                    "first": "06:02",
+                    "last": "00:02",
+                    "to": "北屯總站",
+                    "via": "./images/line-GR.svg"
+                },
+                {
+                    "first": "06:05",
+                    "last": "00:33",
+                    "to": "高鐵臺中站",
+                    "via": "./images/line-GR.svg"
+                }
+            ],
+            "bike": 500617007
         },
         "119": {
             "line": "綠線",
             "name": "高鐵臺中站",
-            "src":"./images/119.svg",
-            "exits":[
-              {"num": 1,"src": "./images/exit_1.svg","name": "高鐵","hints": "連通道至高鐵","elevator": false,"escalator": false,"stair": false},
-              {"num": 2,"src": "./images/exit_2.svg","name": "高鐵一路","hints": "高鐵一路北側","elevator": true,"escalator": true,"stair": true},
-              {"num": 3,"src": "./images/exit_3.svg","name": "臺鐵新烏日站","hints": "連通道至臺鐵新烏日站","elevator": false,"escalator": false,"stair": false}],
-            "services":[
-                {"name": "詢問處","position": "2F","src": "./images/info.png"},
-                {"name": "ATM","position": "2F非付費區，公共電話及自動售票機旁各一組","src": "./images/atm.png"},
-                {"name": "飲水機","position": "2F非付費區","src": "./images/fountain.png"},
-                {"name": "洗手間","position": "2F非付費區","src": "./images/lavatory.png"},
-                {"name": "AED","position": "2F付費區，詢問處及穿堂走道各一組","src": "./images/aed.png"}],
+            "src": "./images/119.svg",
+            "exits": [
+                {
+                    "num": 1,
+                    "src": "./images/exit_1.svg",
+                    "name": "高鐵",
+                    "hints": "連通道至高鐵",
+                    "elevator": false,
+                    "escalator": false,
+                    "stair": false
+                },
+                {
+                    "num": 2,
+                    "src": "./images/exit_2.svg",
+                    "name": "高鐵一路",
+                    "hints": "高鐵一路北側",
+                    "elevator": true,
+                    "escalator": true,
+                    "stair": true
+                },
+                {
+                    "num": 3,
+                    "src": "./images/exit_3.svg",
+                    "name": "臺鐵新烏日站",
+                    "hints": "連通道至臺鐵新烏日站",
+                    "elevator": false,
+                    "escalator": false,
+                    "stair": false
+                }
+            ],
+            "services": [
+                {
+                    "name": "詢問處",
+                    "position": "2F",
+                    "src": "./images/info.png"
+                },
+                {
+                    "name": "ATM",
+                    "position": "2F非付費區，公共電話及自動售票機旁各一組",
+                    "src": "./images/atm.png"
+                },
+                {
+                    "name": "飲水機",
+                    "position": "2F非付費區",
+                    "src": "./images/fountain.png"
+                },
+                {
+                    "name": "洗手間",
+                    "position": "2F非付費區",
+                    "src": "./images/lavatory.png"
+                },
+                {
+                    "name": "AED",
+                    "position": "2F付費區，詢問處及穿堂走道各一組",
+                    "src": "./images/aed.png"
+                }
+            ],
             "servicetime": [
-                {"first": "06:00","last": "00:00(00:15加班車)","to": "北屯總站","via": "./images/line-GR.svg"}]
+                {
+                    "first": "06:00",
+                    "last": "00:00(00:15加班車)",
+                    "to": "北屯總站",
+                    "via": "./images/line-GR.svg"
+                }
+            ],
+            "bike": 500617009
         }
     }
 }

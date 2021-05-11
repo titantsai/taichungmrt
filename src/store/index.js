@@ -6,7 +6,7 @@ export default createStore({
     selected:'110',
     database:{},
     current:{},
-    YouBike: {},
+    bikes: {},
   },
   mutations: {
     // 掛載所有路線
@@ -24,7 +24,7 @@ export default createStore({
     },
 
     mountYoubike(state,db){
-      state.YouBike = db
+      state.bikes = db
     }
     
   },
@@ -52,6 +52,12 @@ export default createStore({
       RouteData.getYouBikeStat()
       .then(response=>this.commit('mountYoubike',response.data.retVal))
       .catch(error=>console.log(error))
+    }
+  },
+  getters: {
+
+    getBikesById:(state) => (id) => {
+        return state.bikes.find(bike => bike.sno === id)
     }
   },
   modules: {
