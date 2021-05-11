@@ -16,7 +16,10 @@ export default{
     getRoute(){
         return APIClient.get('./routes.json')
     },
-    getStation(){
-        return APIClient.get('/StationInfos/0.json')
+    getStation(id){
+        return APIClient.get(`/StationInfos/${id}.json`)
+    },
+    getYouBikeStat(){
+        return axios.get(`https://datacenter.taichung.gov.tw/swagger/OpenData/9af00e84-473a-4f3d-99be-b875d8e86256`)
     }
 }

@@ -6,12 +6,8 @@
         </ul>
         <div class="ds-list-header">iBike微笑單車</div>
         <ul>
-            <li class="ds-list-item ds-list-ibike" v-for="IBike in IBikes" :key="IBike.sno" :id="IBike.sno">
-                <div style="display:flex;align-items:center">
-                    <img style="width:37px;height:37px;marginRight:16px;" src="@/assets/ibike.jpg"/>
-                    <div>{{IBike.sna.slice(11)}}</div>
-                </div>
-                <div class="ds-ibike-status"><span style="fontSize:17px;fontWeight:500">{{IBike.sbi}}</span>/{{IBike.tot}}</div>
+            <li class="ds-list-item ds-list-ibike" v-for="Bike in YouBikes" :key="Bike">
+                
             </li>
         </ul>
         <div class="ds-list-header">公車轉乘</div>
@@ -22,30 +18,29 @@
 </template>
 
 <script>
-import axios from 'axios'
+import store from '@/store'
 
 export default {
     data(){
         return{
-            IBikes:{}
+            
         }
     },
     watch(){
         
     },
-    mounted(){
-        this.iBikeStat()
+    created(){
+        this.$store.dispatch('getYoubike');
     },
-
     methods:{
-        iBikeStat(){
-            axios.get(`https://datacenter.taichung.gov.tw/swagger/OpenData/9af00e84-473a-4f3d-99be-b875d8e86256?filters`)
-            .then(res=>{this.IBikes = res.data.retVal})
-            .catch(err=>console.log(err))
+        getStationBike(id){
+            return store.state.YouBike[id]
         }
     },
     computed:{
-
+        YouBikes(){
+            return store.state.YouBike
+        }
     }
 }
 </script>

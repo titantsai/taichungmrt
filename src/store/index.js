@@ -5,7 +5,8 @@ export default createStore({
   state: {
     selected:'110',
     database:{},
-    current:{}
+    current:{},
+    YouBike: {},
   },
   mutations: {
     // 掛載所有路線
@@ -20,6 +21,10 @@ export default createStore({
     // 掛載選取車站的資料
     loadCurrent(state,obj){
       state.current = obj
+    },
+
+    mountYoubike(state,db){
+      state.YouBike = db
     }
     
   },
@@ -33,12 +38,20 @@ export default createStore({
       })
       .catch(err=>console.log(err))
     },
+    
     // 選取車站
     selection(context,payload){
       RouteData.getStation(payload)
       .then(res=>{
         context.commit('clearCurrent');
         context.commit('loadCurrent',res.data)})
+    },
+
+    //取得Youbike即時資料
+    getYoubike(){
+      RouteData.getYouBikeStat()
+      .then(response=>this.commit('mountYoubike',response.data.retVal))
+      .catch(error=>console.log(error))
     }
   },
   modules: {

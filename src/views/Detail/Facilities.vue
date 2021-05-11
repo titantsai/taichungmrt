@@ -1,5 +1,5 @@
 <template>
-    <div class="ds-list">
+    <div class="ds-list" v-if="selected.line !==null">
         <div class="ds-list-header">首末班車</div>
         <ul>
             <li class="ds-list-item ds-list-schedule" v-for="time in selected.servicetime" :key="time.to">
