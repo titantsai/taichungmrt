@@ -1,25 +1,24 @@
 # 台中捷運導覽PWA
 
+## 功能
+
 + 捷運與台鐵轉乘路線圖
 
-#### 功能WIP
-+ 車站列表
-  * 票價 
-  * 旅程時間查詢
++ 車站資訊
   * 站點資訊
-    - 列車動態 //NA
-    - 出口資訊 API
-    - 站內設施 API
+    - 首末班車
+    - 出口位置設施
+    - 站內設施
   * 轉乘資訊
-    - 公車動態 API
-    - Ubike數量 API
-    - 停車場   
+    - Youbike 2.0 即時動態
 
-+ 訊息公告
-
-+ 旅客服務
+## 待解決
++ Youbike僅能顯示單一站點
++ 旅程規劃功能
++ 於手機無法點選功能 
 
 ## Changelog
++ Migrate database to Firebase
 + Add Vuex Store Support 
 + Initial Build 
 

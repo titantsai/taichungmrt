@@ -27,6 +27,12 @@
 
 import store from '@/store'
 export default {
+    data(){
+        return{
+            
+        }
+    },
+
     computed:{
         bikes(){
             return store.state.bikes
