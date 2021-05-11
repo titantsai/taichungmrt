@@ -306,32 +306,32 @@
                 {
                     "name": "詢問處",
                     "position": "1F",
-                    "src": "./images/info.png"
+                    "src": "./images/info.svg"
                 },
                 {
                     "name": "ATM",
                     "position": "1F非付費區，自動售票機旁，近出口2",
-                    "src": "./images/atm.png"
+                    "src": "./images/atm.svg"
                 },
                 {
                     "name": "飲水機",
                     "position": "1F非付費區",
-                    "src": "./images/fountain.png"
+                    "src": "./images/fountain.svg"
                 },
                 {
                     "name": "洗手間",
                     "position": "1F非付費區，近出口1",
-                    "src": "./images/lavatory.png"
+                    "src": "./images/lavatory.svg"
                 },
                 {
                     "name": "AED",
                     "position": "1F付費區，自動閘門旁，近出口1",
-                    "src": "./images/aed.png"
+                    "src": "./images/aed.svg"
                 },
                 {
                     "name": "哺集乳室",
                     "position": "1F非付費區，近出口1",
-                    "src": "./images/nursing.png"
+                    "src": "./images/nursing.svg"
                 }
             ],
             "servicetime": [
@@ -363,27 +363,27 @@
                 {
                     "name": "詢問處",
                     "position": "3F",
-                    "src": "./images/info.png"
+                    "src": "./images/info.svg"
                 },
                 {
                     "name": "ATM",
                     "position": "3F非付費區，自動售票機旁",
-                    "src": "./images/atm.png"
+                    "src": "./images/atm.svg"
                 },
                 {
                     "name": "飲水機",
                     "position": "3F非付費區",
-                    "src": "./images/fountain.png"
+                    "src": "./images/fountain.svg"
                 },
                 {
                     "name": "洗手間",
                     "position": "3F非付費區",
-                    "src": "./images/lavatory.png"
+                    "src": "./images/lavatory.svg"
                 },
                 {
                     "name": "AED",
                     "position": "3F付費區，近手扶梯",
-                    "src": "./images/aed.png"
+                    "src": "./images/aed.svg"
                 }
             ],
             "servicetime": [
@@ -439,27 +439,27 @@
                 {
                     "name": "詢問處",
                     "position": "3F",
-                    "src": "./images/info.png"
+                    "src": "./images/info.svg"
                 },
                 {
                     "name": "ATM",
                     "position": "3F非付費區，自動售票機旁",
-                    "src": "./images/atm.png"
+                    "src": "./images/atm.svg"
                 },
                 {
                     "name": "飲水機",
                     "position": "3F非付費區",
-                    "src": "./images/fountain.png"
+                    "src": "./images/fountain.svg"
                 },
                 {
                     "name": "洗手間",
                     "position": "3F非付費區，近出口1",
-                    "src": "./images/lavatory.png"
+                    "src": "./images/lavatory.svg"
                 },
                 {
                     "name": "AED",
                     "position": "3F付費區，無障礙廁所旁",
-                    "src": "./images/aed.png"
+                    "src": "./images/aed.svg"
                 }
             ],
             "servicetime": [
@@ -497,27 +497,27 @@
                 {
                     "name": "詢問處",
                     "position": "3F",
-                    "src": "./images/info.png"
+                    "src": "./images/info.svg"
                 },
                 {
                     "name": "ATM",
                     "position": "3F非付費區",
-                    "src": "./images/atm.png"
+                    "src": "./images/atm.svg"
                 },
                 {
                     "name": "飲水機",
                     "position": "3F非付費區",
-                    "src": "./images/fountain.png"
+                    "src": "./images/fountain.svg"
                 },
                 {
                     "name": "洗手間",
                     "position": "3F非付費區",
-                    "src": "./images/lavatory.png"
+                    "src": "./images/lavatory.svg"
                 },
                 {
                     "name": "AED",
                     "position": "3F付費區，近自動售票機",
-                    "src": "./images/aed.png"
+                    "src": "./images/aed.svg"
                 }
             ],
             "servicetime": [
@@ -555,27 +555,27 @@
                 {
                     "name": "詢問處",
                     "position": "3F",
-                    "src": "./images/info.png"
+                    "src": "./images/info.svg"
                 },
                 {
                     "name": "ATM",
                     "position": "3F非付費區",
-                    "src": "./images/atm.png"
+                    "src": "./images/atm.svg"
                 },
                 {
                     "name": "飲水機",
                     "position": "3F非付費區",
-                    "src": "./images/fountain.png"
+                    "src": "./images/fountain.svg"
                 },
                 {
                     "name": "洗手間",
                     "position": "3F非付費區",
-                    "src": "./images/lavatory.png"
+                    "src": "./images/lavatory.svg"
                 },
                 {
                     "name": "AED",
                     "position": "3F付費區，出口樓梯旁",
-                    "src": "./images/aed.png"
+                    "src": "./images/aed.svg"
                 }
             ],
             "servicetime": [
@@ -613,27 +613,27 @@
                 {
                     "name": "詢問處",
                     "position": "3F",
-                    "src": "./images/info.png"
+                    "src": "./images/info.svg"
                 },
                 {
                     "name": "ATM",
                     "position": "3F非付費區，自動售票機旁",
-                    "src": "./images/atm.png"
+                    "src": "./images/atm.svg"
                 },
                 {
                     "name": "飲水機",
                     "position": "3F非付費區",
-                    "src": "./images/fountain.png"
+                    "src": "./images/fountain.svg"
                 },
                 {
                     "name": "洗手間",
                     "position": "3F非付費區",
-                    "src": "./images/lavatory.png"
+                    "src": "./images/lavatory.svg"
                 },
                 {
                     "name": "AED",
                     "position": "3F付費區，近自動售票機",
-                    "src": "./images/aed.png"
+                    "src": "./images/aed.svg"
                 }
             ],
             "servicetime": [
@@ -671,27 +671,27 @@
                 {
                     "name": "詢問處",
                     "position": "3F",
-                    "src": "./images/info.png"
+                    "src": "./images/info.svg"
                 },
                 {
                     "name": "ATM",
                     "position": "3F非付費區，自動售票機旁",
-                    "src": "./images/atm.png"
+                    "src": "./images/atm.svg"
                 },
                 {
                     "name": "飲水機",
                     "position": "3F非付費區",
-                    "src": "./images/fountain.png"
+                    "src": "./images/fountain.svg"
                 },
                 {
                     "name": "洗手間",
                     "position": "3F非付費區",
-                    "src": "./images/lavatory.png"
+                    "src": "./images/lavatory.svg"
                 },
                 {
                     "name": "AED",
                     "position": "3F付費區，近手扶梯",
-                    "src": "./images/aed.png"
+                    "src": "./images/aed.svg"
                 }
             ],
             "servicetime": [
@@ -729,27 +729,27 @@
                 {
                     "name": "詢問處",
                     "position": "3F",
-                    "src": "./images/info.png"
+                    "src": "./images/info.svg"
                 },
                 {
                     "name": "ATM",
                     "position": "3F非付費區，自動售票機旁",
-                    "src": "./images/atm.png"
+                    "src": "./images/atm.svg"
                 },
                 {
                     "name": "飲水機",
                     "position": "3F非付費區",
-                    "src": "./images/fountain.png"
+                    "src": "./images/fountain.svg"
                 },
                 {
                     "name": "洗手間",
                     "position": "3F非付費區",
-                    "src": "./images/lavatory.png"
+                    "src": "./images/lavatory.svg"
                 },
                 {
                     "name": "AED",
                     "position": "3F付費區，安全門前",
-                    "src": "./images/aed.png"
+                    "src": "./images/aed.svg"
                 }
             ],
             "servicetime": [
@@ -796,32 +796,32 @@
                 {
                     "name": "詢問處",
                     "position": "3F",
-                    "src": "./images/info.png"
+                    "src": "./images/info.svg"
                 },
                 {
                     "name": "ATM",
                     "position": "3F非付費區，自動售票機旁，近出口1",
-                    "src": "./images/atm.png"
+                    "src": "./images/atm.svg"
                 },
                 {
                     "name": "飲水機",
                     "position": "3F非付費區",
-                    "src": "./images/fountain.png"
+                    "src": "./images/fountain.svg"
                 },
                 {
                     "name": "洗手間",
                     "position": "3F非付費區",
-                    "src": "./images/lavatory.png"
+                    "src": "./images/lavatory.svg"
                 },
                 {
                     "name": "AED",
                     "position": "3F非付費區，詢問處及自動閘門前各一組",
-                    "src": "./images/aed.png"
+                    "src": "./images/aed.svg"
                 },
                 {
                     "name": "哺集乳室",
                     "position": "3F付費區，自動售票機旁，近出口1",
-                    "src": "./images/nursing.png"
+                    "src": "./images/nursing.svg"
                 }
             ],
             "servicetime": [
@@ -859,27 +859,27 @@
                 {
                     "name": "詢問處",
                     "position": "3F",
-                    "src": "./images/info.png"
+                    "src": "./images/info.svg"
                 },
                 {
                     "name": "ATM",
                     "position": "3F非付費區，自動售票機旁",
-                    "src": "./images/atm.png"
+                    "src": "./images/atm.svg"
                 },
                 {
                     "name": "飲水機",
                     "position": "3F非付費區",
-                    "src": "./images/fountain.png"
+                    "src": "./images/fountain.svg"
                 },
                 {
                     "name": "洗手間",
                     "position": "3F非付費區",
-                    "src": "./images/lavatory.png"
+                    "src": "./images/lavatory.svg"
                 },
                 {
                     "name": "AED",
                     "position": "3F非付費區，電扶梯前",
-                    "src": "./images/aed.png"
+                    "src": "./images/aed.svg"
                 }
             ],
             "servicetime": [
@@ -917,27 +917,27 @@
                 {
                     "name": "詢問處",
                     "position": "3F",
-                    "src": "./images/info.png"
+                    "src": "./images/info.svg"
                 },
                 {
                     "name": "ATM",
                     "position": "3F非付費區，自動售票機旁",
-                    "src": "./images/atm.png"
+                    "src": "./images/atm.svg"
                 },
                 {
                     "name": "飲水機",
                     "position": "3F非付費區",
-                    "src": "./images/fountain.png"
+                    "src": "./images/fountain.svg"
                 },
                 {
                     "name": "洗手間",
                     "position": "3F非付費區",
-                    "src": "./images/lavatory.png"
+                    "src": "./images/lavatory.svg"
                 },
                 {
                     "name": "AED",
                     "position": "3F非付費區，公用電話旁",
-                    "src": "./images/aed.png"
+                    "src": "./images/aed.svg"
                 }
             ],
             "servicetime": [
@@ -975,27 +975,27 @@
                 {
                     "name": "詢問處",
                     "position": "3F",
-                    "src": "./images/info.png"
+                    "src": "./images/info.svg"
                 },
                 {
                     "name": "ATM",
                     "position": "3F非付費區，自動售票機旁",
-                    "src": "./images/atm.png"
+                    "src": "./images/atm.svg"
                 },
                 {
                     "name": "飲水機",
                     "position": "3F非付費區",
-                    "src": "./images/fountain.png"
+                    "src": "./images/fountain.svg"
                 },
                 {
                     "name": "洗手間",
                     "position": "3F非付費區",
-                    "src": "./images/lavatory.png"
+                    "src": "./images/lavatory.svg"
                 },
                 {
                     "name": "AED",
                     "position": "3F非付費區，自動售票機旁",
-                    "src": "./images/aed.png"
+                    "src": "./images/aed.svg"
                 }
             ],
             "servicetime": [
@@ -1033,27 +1033,27 @@
                 {
                     "name": "詢問處",
                     "position": "3F",
-                    "src": "./images/info.png"
+                    "src": "./images/info.svg"
                 },
                 {
                     "name": "ATM",
                     "position": "3F非付費區，自動售票機旁",
-                    "src": "./images/atm.png"
+                    "src": "./images/atm.svg"
                 },
                 {
                     "name": "飲水機",
                     "position": "3F非付費區",
-                    "src": "./images/fountain.png"
+                    "src": "./images/fountain.svg"
                 },
                 {
                     "name": "洗手間",
                     "position": "3F非付費區",
-                    "src": "./images/lavatory.png"
+                    "src": "./images/lavatory.svg"
                 },
                 {
                     "name": "AED",
                     "position": "3F非付費區，公用電話旁",
-                    "src": "./images/aed.png"
+                    "src": "./images/aed.svg"
                 }
             ],
             "servicetime": [
@@ -1109,27 +1109,27 @@
                 {
                     "name": "詢問處",
                     "position": "2F",
-                    "src": "./images/info.png"
+                    "src": "./images/info.svg"
                 },
                 {
                     "name": "ATM",
                     "position": "2F非付費區，公共電話旁，近出口2",
-                    "src": "./images/atm.png"
+                    "src": "./images/atm.svg"
                 },
                 {
                     "name": "飲水機",
                     "position": "2F非付費區",
-                    "src": "./images/fountain.png"
+                    "src": "./images/fountain.svg"
                 },
                 {
                     "name": "洗手間",
                     "position": "2F非付費區",
-                    "src": "./images/lavatory.png"
+                    "src": "./images/lavatory.svg"
                 },
                 {
                     "name": "AED",
                     "position": "2F非付費區，近詢問處",
-                    "src": "./images/aed.png"
+                    "src": "./images/aed.svg"
                 }
             ],
             "servicetime": [
@@ -1167,27 +1167,27 @@
                 {
                     "name": "詢問處",
                     "position": "3F",
-                    "src": "./images/info.png"
+                    "src": "./images/info.svg"
                 },
                 {
                     "name": "ATM",
                     "position": "3F非付費區，公共電話旁",
-                    "src": "./images/atm.png"
+                    "src": "./images/atm.svg"
                 },
                 {
                     "name": "飲水機",
                     "position": "3F非付費區",
-                    "src": "./images/fountain.png"
+                    "src": "./images/fountain.svg"
                 },
                 {
                     "name": "洗手間",
                     "position": "3F非付費區",
-                    "src": "./images/lavatory.png"
+                    "src": "./images/lavatory.svg"
                 },
                 {
                     "name": "AED",
                     "position": "3F非付費區，近詢問處",
-                    "src": "./images/aed.png"
+                    "src": "./images/aed.svg"
                 }
             ],
             "servicetime": [
@@ -1234,27 +1234,27 @@
                 {
                     "name": "詢問處",
                     "position": "2F",
-                    "src": "./images/info.png"
+                    "src": "./images/info.svg"
                 },
                 {
                     "name": "ATM",
                     "position": "2F非付費區，公共電話旁",
-                    "src": "./images/atm.png"
+                    "src": "./images/atm.svg"
                 },
                 {
                     "name": "飲水機",
                     "position": "2F非付費區",
-                    "src": "./images/fountain.png"
+                    "src": "./images/fountain.svg"
                 },
                 {
                     "name": "洗手間",
                     "position": "2F非付費區",
-                    "src": "./images/lavatory.png"
+                    "src": "./images/lavatory.svg"
                 },
                 {
                     "name": "AED",
                     "position": "2F非付費區，近詢問處",
-                    "src": "./images/aed.png"
+                    "src": "./images/aed.svg"
                 }
             ],
             "servicetime": [
@@ -1301,27 +1301,27 @@
                 {
                     "name": "詢問處",
                     "position": "3F",
-                    "src": "./images/info.png"
+                    "src": "./images/info.svg"
                 },
                 {
                     "name": "ATM",
                     "position": "3F非付費區，自動售票機旁",
-                    "src": "./images/atm.png"
+                    "src": "./images/atm.svg"
                 },
                 {
                     "name": "飲水機",
                     "position": "3F非付費區",
-                    "src": "./images/fountain.png"
+                    "src": "./images/fountain.svg"
                 },
                 {
                     "name": "洗手間",
                     "position": "3F非付費區",
-                    "src": "./images/lavatory.png"
+                    "src": "./images/lavatory.svg"
                 },
                 {
                     "name": "AED",
                     "position": "3F非付費區，公共電話旁",
-                    "src": "./images/aed.png"
+                    "src": "./images/aed.svg"
                 }
             ],
             "servicetime": [
@@ -1377,27 +1377,27 @@
                 {
                     "name": "詢問處",
                     "position": "2F",
-                    "src": "./images/info.png"
+                    "src": "./images/info.svg"
                 },
                 {
                     "name": "ATM",
                     "position": "2F非付費區，公共電話及自動售票機旁各一組",
-                    "src": "./images/atm.png"
+                    "src": "./images/atm.svg"
                 },
                 {
                     "name": "飲水機",
                     "position": "2F非付費區",
-                    "src": "./images/fountain.png"
+                    "src": "./images/fountain.svg"
                 },
                 {
                     "name": "洗手間",
                     "position": "2F非付費區",
-                    "src": "./images/lavatory.png"
+                    "src": "./images/lavatory.svg"
                 },
                 {
                     "name": "AED",
                     "position": "2F付費區，詢問處及穿堂走道各一組",
-                    "src": "./images/aed.png"
+                    "src": "./images/aed.svg"
                 }
             ],
             "servicetime": [

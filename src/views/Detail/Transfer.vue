@@ -8,7 +8,7 @@
         <ul>
             <li class="ds-list-item ds-list-ibike">
                 <div class="ds-service-img" style="display:flex;align-items:center">
-                    <img src="@/assets/ibike.jpg" alt="">
+                    <img src="@/assets/ibike.svg" alt="">
                     <div class="ds-service-name">{{filterBike.sna.slice(11)}}</div>
                 </div>
                 <div class="ds-ibike-status">

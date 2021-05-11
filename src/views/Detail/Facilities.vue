@@ -27,9 +27,9 @@
                     </div>
                 </div>
                 <div class="ds-exit-type-group">
-                    <img v-if="exit.stair" src="@/assets/fac-stair.png">
-                    <img v-if="exit.escalator" src="@/assets/fac-escalator.png"> 
-                    <img v-if="exit.elevator" src="@/assets/fac-elevator.png">  
+                    <img v-if="exit.stair" src="@/assets/fac-stair.svg">
+                    <img v-if="exit.escalator" src="@/assets/fac-escalator.svg"> 
+                    <img v-if="exit.elevator" src="@/assets/fac-elevator.svg">  
                 </div>
             </li>
         </ul>
@@ -101,10 +101,11 @@ export default {
     .ds-time{
         display: flex;
         font-size:15px;
-        color:var(--heading);}
+        color:var(--heading);
+        align-items: center;}
 
     .ds-badge{
-        padding:2px 4px;
+        padding:4px 4px;
         font-size:12px;
         border-radius: 4px;
         background-color:var(--caption);

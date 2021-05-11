@@ -4,12 +4,17 @@
     <div class="detail-sheet">
         <div class="ds-header">
             <div class="ds-currentstation">
-                <div class="ds-num">
-                    <img :src="selected.src"> 
-                </div>
-                <div class="ds-station"> 
-                    <h3>{{selected.name}}</h3>
-                    <p>{{selected.line}}</p>
+                <div style="display:flex;">
+                    <img class="ds-num" :src="selected.src">
+                    <div class="ds-station">   
+                        <h3>{{selected.name}}</h3>
+                        <p>{{selected.line}}</p>
+                    </div>
+                </div>    
+                
+                <div style="display:flex">
+                    <img src="@/assets/line-TRA.svg" v-show="selected.tra">
+                    <img style="margin-left:8px;" src="@/assets/line-HSR.svg" v-show="selected.hsr">
                 </div>
             </div>
             <div class="ds-nav">
@@ -109,6 +114,7 @@ export default {
 
     .ds-currentstation{
         display: flex;
+        justify-content: space-between;
     }
 
     .ds-nav{
@@ -129,13 +135,14 @@ export default {
     }
 
     .ds-num img{
-        margin-right:16px;
+        margin-right:8px;
         width:37px;
         height:37px;
     }
 
     .ds-station{
         text-align: start;
+        margin-left:8px;
     }
 
     .ds-station h3{
@@ -147,8 +154,8 @@ export default {
     }
 
     .ds-station p{
-        line-height: 14px;
-        font-size:12px;
+        line-height: 16px;
+        font-size:14px;
         margin:0;
     }
 

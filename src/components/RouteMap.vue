@@ -27,7 +27,7 @@ export default {
     created(){
        this.$store.dispatch('initRoute');
        this.$store.dispatch('getYoubike');
-       this.selectStation(110)
+       this.selectStation(104)
     },
     mounted(){
       this.panzoom = Panzoom(document.querySelector('#routemap'),{
