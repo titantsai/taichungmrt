@@ -95,6 +95,7 @@ export default {
 
   .route-station{
     position: absolute;
+    cursor: pointer;
   }
 
   .route-station-dot{
@@ -106,6 +107,7 @@ export default {
     background-color:var(--grey);
     z-index:2;
     transform:translate(-50%, -50%);
+   
   }
 
   .route-station-tag{

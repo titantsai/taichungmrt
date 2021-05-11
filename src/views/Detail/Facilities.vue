@@ -27,9 +27,9 @@
                     </div>
                 </div>
                 <div class="ds-exit-type-group">
-                    <img src="@/assets/fac-stair.png">
-                    <img src="@/assets/fac-escalator.png"> 
-                    <img src="@/assets/fac-elevator.png">  
+                    <img v-if="exit.stair" src="@/assets/fac-stair.png">
+                    <img v-if="exit.escalator" src="@/assets/fac-escalator.png"> 
+                    <img v-if="exit.elevator" src="@/assets/fac-elevator.png">  
                 </div>
             </li>
         </ul>
@@ -83,7 +83,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
     
     .ds-schedule-via, .ds-exit-num, .ds-service-img img{
         margin-right:16px;

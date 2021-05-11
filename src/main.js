@@ -6,15 +6,13 @@ import './normalize.css'
 import firebase from 'firebase/app'
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDQa8NEy2Ws1rphDXWgBh7Da3t4czHazIw",
-    authDomain: "tmrt-database.firebaseapp.com",
-    databaseURL: "https://tmrt-database-default-rtdb.firebaseio.com",
-    projectId: "tmrt-database",
-    storageBucket: "tmrt-database.appspot.com",
-    messagingSenderId: "1084265006206",
-    appId: "1:1084265006206:web:267dfce5e13361ef13042f",
-    measurementId: "G-QMT5JVX8YT"
-  };
+  apiKey: "AIzaSyAh-cvnsYbIP4Oor2qj5g7FlxpJr83qWL8",
+  authDomain: "taichungmetro-github.firebaseapp.com",
+  projectId: "taichungmetro-github",
+  storageBucket: "taichungmetro-github.appspot.com",
+  messagingSenderId: "571532253123",
+  appId: "1:571532253123:web:57b30736f2c5d13e180f76"
+};
 
   firebase.initializeApp(firebaseConfig)
 
