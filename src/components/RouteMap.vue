@@ -7,10 +7,10 @@
             </div>
             <div 
               class="route-station" 
-              v-for="station in route.stations" 
+              v-for="(station,index) in route.stations" 
               :key="station.id" 
               :style="{top:`${station.position.top}`,left:`${station.position.left}`}"
-              @click="selectStation(station.id)">
+              @click="selectStation(index)">
               <span class="route-station-dot" :class="{hasTransit:station.transit}" :style="{borderColor:`${route.color}`}"></span>
               <div class="route-station-tag" :class="`${station.position.tag}`">{{station.zh}}</div>
             </div>
