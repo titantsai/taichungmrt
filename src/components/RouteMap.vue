@@ -45,6 +45,11 @@ export default {
     },
     methods:{
       selectStation(index){
+          if(this.$route.name === 'fare'){
+            console.log(index);
+            store.dispatch('setDest',index)
+            return
+          }
           store.dispatch('selection',index);
       }
     },

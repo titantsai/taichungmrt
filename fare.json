@@ -1,0 +1,47 @@
+[
+    {
+        "OriginStationID": "110",
+        "OriginStationName": {
+            "Zh_tw": "市政府",
+            "En": "Taichung City Hall"
+        },
+        "DestinationStationID": "104",
+        "DestinationStationName": {
+            "Zh_tw": "松竹",
+            "En": "Songzhu"
+        },
+        "TrainType": 0,
+        "Fares": [
+            {
+                "TicketType": 1,
+                "FareClass": 1,
+                "Price": 25
+            },
+            {
+                "TicketType": 1,
+                "FareClass": 4,
+                "Price": 12
+            },
+            {
+                "TicketType": 1,
+                "FareClass": 5,
+                "Price": 12
+            },
+            {
+                "TicketType": 1,
+                "FareClass": 7,
+                "Price": 12
+            },
+            {
+                "TicketType": 3,
+                "FareClass": 1,
+                "Price": 25
+            }
+        ],
+        "TravelTime": 12,
+        "TravelDistance": 6.67,
+        "SrcUpdateTime": "2020-11-25T00:00:00+08:00",
+        "UpdateTime": "2021-01-18T14:10:43+08:00",
+        "VersionID": 1
+    }
+]
