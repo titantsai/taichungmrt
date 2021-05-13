@@ -4,6 +4,30 @@
     <div class="detail-sheet">
         <div class="ds-header">
             <div class="ds-currentstation">
+                <div style="display:flex">
+                    <img class="ds-num" :src="current.path"/>  
+                    <div class="ds-station">
+                        <h3> {{current.zh}}</h3>
+                    </div>
+                </div>    
+
+                <div style="display:flex">
+                    <img src="@/assets/line-HSR.svg" v-show="current.en==='HSR Taichung Station'" alt="">
+                    <img src="@/assets/line-TRA.svg" style="margin-left:8px" v-show="current.transit" alt="">
+                </div>
+            </div>
+
+            <div >
+                <button @click="setOrigin(current.uid)">設為啟程站</button>
+                <button @click="setDest(current.uid)">設為抵達站</button>
+                <button>站點資訊</button>
+                <button to="#">轉乘資訊</button>
+            </div>
+
+            <div>
+                {{fareData}}
+            </div>
+            <!-- <div class="ds-currentstation">
                 <div style="display:flex;">
                     <img class="ds-num" :src="selected.src">
                     <div class="ds-station">   
@@ -16,12 +40,12 @@
                     <img src="@/assets/line-TRA.svg" v-show="selected.tra">
                     <img style="margin-left:8px;" src="@/assets/line-HSR.svg" v-show="selected.hsr">
                 </div>
-            </div>
-            <div class="ds-nav">
+            </div> -->
+            <!-- <div class="ds-nav">
                 <router-link to="/fare" class="ds-nav-item" replace>旅程規劃</router-link>
                 <router-link to="/facilities" class="ds-nav-item" replace>車站資訊</router-link>
                 <router-link to="/transfer" class="ds-nav-item" replace>轉乘資訊</router-link>
-            </div>
+            </div> -->
         </div>
         
         <router-view class="ds-nav-view">
@@ -39,7 +63,6 @@
 <script>
 
 import store from '@/store'
-import RouteData from '@/services/RouteData.js'
 import RouteMap from '../components/RouteMap'
 
 export default {
@@ -50,24 +73,32 @@ export default {
         return{
         }
     },
-    mounted(){
+    created(){
+        store.dispatch('initRoute')
     },
     methods:{
-        getStationInfo(id){
-            RouteData.getStation(id)
-            .then(res=>this.current=res.data)
-            .catch(err=>console.log(err))
+        setOrigin(id){
+            store.dispatch('setOrigin',id)
+        },
+
+        setDest(id){
+            store.dispatch('setDest',id);
+            if(store.state.origin === store.state.dest){ alert('請選擇不同的起迄站');return }
+            store.dispatch('getFare')
         }
     },
 
     computed:{
-        
-        Routes(){
-            return store.state.database
+        current(){
+            return store.state.current
         },
 
-        selected(){
-            return store.state.current
+        setOrig(){
+            return store.state.origin
+        },
+
+        fareData(){
+            return store.state.fare[0]
         }
     },
     watch:{

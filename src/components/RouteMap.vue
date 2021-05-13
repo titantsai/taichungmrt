@@ -7,10 +7,10 @@
             </div>
             <div 
               class="route-station" 
-              v-for="(station,index) in route.stations" 
+              v-for="station in route.stations" 
               :key="station.id" 
               :style="{top:`${station.position.top}`,left:`${station.position.left}`}"
-              @click="selectStation(index)">
+              @click="selectStation(station)">
               <span class="route-station-dot" :class="{hasTransit:station.transit}" :style="{borderColor:`${route.color}`}"></span>
               <div class="route-station-tag" :class="`${station.position.tag}`">{{station.zh}}</div>
             </div>
@@ -25,9 +25,7 @@ import Panzoom from 'panzoom'
 
 export default {
     created(){
-       this.$store.dispatch('initRoute');
-       this.$store.dispatch('getYoubike');
-       this.selectStation(104)
+
     },
     mounted(){
       this.panzoom = Panzoom(document.querySelector('#routemap'),{
@@ -45,12 +43,8 @@ export default {
     },
     methods:{
       selectStation(index){
-          if(this.$route.name === 'fare'){
-            console.log(index);
-            store.dispatch('setDest',index)
-            return
-          }
-          store.dispatch('selection',index);
+          console.log(index)
+          store.dispatch('showSelected',index)
       }
     },
     computed:{

@@ -3,12 +3,11 @@ import RouteData from '../services/RouteData'
 
 export default createStore({
   state: {
-    dest:'109',
-    selected:'110',
-    database:{},
-    current:{},
-    bikes: {},
-    fareSearchMode:false,
+      database:{},
+      current:{},
+      origin:'',
+      dest:'',
+      fare:{}
   },
   mutations: {
     // 掛載所有路線
@@ -16,35 +15,26 @@ export default createStore({
       state.database = obj
     },
 
-    clearCurrent(state){
-      state.current= null
+    selectedInfo(state,res){
+      state.current = res
     },
 
-    // 掛載選取車站的資料
-    loadCurrent(state,obj){
-      state.current = obj
+    setOrigin(state,payload){
+      state.origin = payload
+      console.log(state.origin)
     },
 
-    setCurrentID(state,id){
-      state.selected = id
+    setDest(state,payload){
+      state.dest = payload
+      console.log(state.dest)
     },
 
-    mountYoubike(state,db){
-      state.bikes = db
-    },
-
-    setFareMode(state){
-      state.fareSearchMode = true
-    },
-
-    unsetFareMode(state){
-      state.fareSearchMode = false
-    },
-
-    setDest(state,id){
-      state.dest = id
+    loadFare(state,data){
+      state.fare = data
     }
     
+
+
   },
   actions: {
     // 取得並呼叫所有路線
@@ -57,36 +47,26 @@ export default createStore({
       .catch(err=>console.log(err))
     },
     
-    // 選取車站
-    selection(context,payload){
-      RouteData.getStation(payload)
-      .then(res=>{
-        context.commit('clearCurrent');
-        context.commit('setCurrentID',payload)
-        context.commit('loadCurrent',res.data)})
+    showSelected(context,response){
+      context.commit('selectedInfo',response)
     },
 
-    //票價查詢模式
-    setFareMode(){
-      this.commit('setFareMode')
+    setOrigin(context,payload){
+      context.commit('setOrigin',payload)
     },
 
-    //關閉票價查詢模式
-    clearFareMode(){
-      this.commit('unsetFareMode')
+    setDest(context,payload){
+      context.commit('setDest',payload)
     },
 
-    //載入終點站
-    setDest(context,id){
-      context.commit('setDest',id)
-    },
-
-    //取得Youbike即時資料
-    getYoubike(){
-      RouteData.getYouBikeStat()
-      .then(response=>this.commit('mountYoubike',response.data.retVal))
-      .catch(error=>console.log(error))
+    getFare(context,data){
+      RouteData.getFare(this.state.origin,this.state.dest)
+      .then(response=>{
+        data = response.data;
+        context.commit('loadFare',data)
+      })
     }
+
   },
   getters: {
 
