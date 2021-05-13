@@ -17,11 +17,11 @@
                 </div>
             </div>
 
-            <div >
-                <button @click="setOrigin(current.uid)">設為啟程站</button>
-                <button @click="setDest(current.uid)">設為抵達站</button>
-                <button>站點資訊</button>
-                <button to="#">轉乘資訊</button>
+            <div class="ds-nav">
+                <button class="ds-nav-item" @click="setOrigin(current.uid)">設為啟程站</button>
+                <button class="ds-nav-item" @click="setDest(current.uid)">設為抵達站</button>
+                <router-link to="/facilities" class="ds-nav-item" replace>站點資訊</router-link>
+                <button class="ds-nav-item" to="#">轉乘資訊</button>
             </div>
 
             <div>
@@ -109,7 +109,7 @@ export default {
 
 <style>
     .map{
-        display:inline-flex;
+        display:flex;
         height:100%;
         width:100%;
         position:relative
@@ -139,7 +139,6 @@ export default {
     .ds-header{
         padding:16px;
         background: var(--white);
-        height:135px;
         box-sizing: border-box;
     }
 
@@ -150,18 +149,19 @@ export default {
 
     .ds-nav{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap:12px;
-        margin:1em 0;
+        grid-template-columns: 1fr 1fr;
+        grid-gap:16px;
+        margin-top:1em;
         background-color: var(--white);
     }
 
     .ds-nav-item{
+        background-color:var(--grey);
+        border:none;
+        border-radius:4px;
         padding:8px;
-        background: var(--grey);
-        border-radius: 6px;
-        font-size:13px;
-        text-decoration: none;
+        font-size:14px;
+        font-weight: 400;
         color:var(--caption)
     }
 
@@ -250,5 +250,11 @@ export default {
             overflow:hidden;
         }
         
+        .map-view{
+            width:100%;
+            left:0;
+            top:0;
+            height:100%;
+        }
     }
 </style>
