@@ -43,8 +43,8 @@ export default {
     },
     methods:{
       selectStation(index){
-          console.log(index)
-          store.dispatch('showSelected',index)
+          store.dispatch('showSelected',index);
+          store.dispatch('getStationInfo')
       }
     },
     computed:{

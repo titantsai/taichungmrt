@@ -17,7 +17,7 @@ export default{
         return APIClient.get('./routes.json')
     },
 
-    getStation(id){
+    getStationInfo(id){
         return APIClient.get(`/StationInfos/${id}.json`)
     },
 

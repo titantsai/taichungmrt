@@ -3,11 +3,13 @@ import RouteData from '../services/RouteData'
 
 export default createStore({
   state: {
+      fareSelection:false,
       database:{},
       current:{},
       origin:'',
       dest:'',
-      fare:{}
+      fare:{},
+      stationInfo:{},
   },
   mutations: {
     // 掛載所有路線
@@ -29,10 +31,21 @@ export default createStore({
       console.log(state.dest)
     },
 
+    setFareSearch(state){
+      state.fareSelection=true
+    },
+
+    clearFareSearch(state){
+      state.fareSelection=false
+    },
+
     loadFare(state,data){
       state.fare = data
+    },
+
+    loadStationInfo(state,data){
+      state.stationInfo = data
     }
-    
 
 
   },
@@ -64,6 +77,14 @@ export default createStore({
       .then(response=>{
         data = response.data;
         context.commit('loadFare',data)
+      })
+    },
+
+    getStationInfo(context,data){
+      RouteData.getStationInfo(this.state.current.uid)
+      .then(response=>{
+        data = response.data;
+        context.commit('loadStationInfo',data)
       })
     }
 

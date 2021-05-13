@@ -1,8 +1,8 @@
 <template>
-    <div class="ds-list" v-if="selected.line !==null">
+    <div class="ds-list">
         <div class="ds-list-header">首末班車</div>
         <ul>
-            <li class="ds-list-item ds-list-schedule" v-for="time in selected.servicetime" :key="time.to">
+            <li class="ds-list-item ds-list-schedule" v-for="time in current.servicetime" :key="time.to">
                 <div class="ds-schedule">
                     <div class="ds-schedule-via"><img :src="time.via"/></div>
                     <div class="ds-schedule-name">
@@ -16,9 +16,10 @@
                 </div>
             </li>
         </ul>
+
         <div class="ds-list-header">出入口資訊</div>
         <ul>
-            <li class="ds-list-item ds-list-exit" v-for="exit in selected.exits" :key="exit.num">
+            <li class="ds-list-item ds-list-exit" v-for="exit in current.exits" :key="exit.num">
                 <div class="ds-exit">
                     <img class="ds-exit-num" :src="exit.src" alt="">
                     <div class="ds-exit-name">
@@ -26,6 +27,7 @@
                         <p>{{exit.hints}}</p>
                     </div>
                 </div>
+
                 <div class="ds-exit-type-group">
                     <img v-if="exit.stair" src="@/assets/fac-stair.svg">
                     <img v-if="exit.escalator" src="@/assets/fac-escalator.svg"> 
@@ -33,16 +35,17 @@
                 </div>
             </li>
         </ul>
+
         <div class="ds-list-header">車站設施</div>
-        <ul>
-            <li class="ds-list-item" v-for="service in selected.services" :key="service.name">
-                <div class="ds-service-img"><img :src="service.src" alt=""></div>
-                <div class="ds-service-name">
-                    <h3>{{service.name}}</h3>
-                    <p>{{service.position}}</p>
-                </div>
-            </li>
-        </ul>
+            <ul>
+                <li class="ds-list-item" v-for="service in current.services" :key="service.name">
+                    <div class="ds-service-img"><img :src="service.src" alt=""></div>
+                    <div class="ds-service-name">
+                        <h3>{{service.name}}</h3>
+                        <p>{{service.position}}</p>
+                    </div>
+                </li>
+            </ul>
         <div class="ds-list-footer"></div>
     </div>
 </template>
@@ -50,7 +53,6 @@
 <script>
 
 import store from '@/store'
-import RouteData from '@/services/RouteData.js'
 
 export default {
     data(){
@@ -58,28 +60,12 @@ export default {
         }
     },
     mounted(){
-        
-    },
-    methods:{
-        getStationInfo(id){
-            RouteData.getStation(id)
-            .then(res=>this.current=res.data)
-            .catch(err=>console.log(err))
-        }
-    },
 
+    },
     computed:{
-        
-        Routes(){
-            return store.state.database
-        },
-
-        selected(){
-            return store.state.current
+        current(){
+            return store.state.stationInfo
         }
-    },
-    watch:{
-
     }
 }
 </script>

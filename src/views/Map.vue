@@ -1,7 +1,7 @@
 <template>
   <div class="map">
 
-    <div class="detail-sheet">
+    <div class="detail-sheet" v-show="$store.state.current">
         <div class="ds-header">
             <div class="ds-currentstation">
                 <div style="display:flex">
@@ -19,33 +19,11 @@
 
             <div class="ds-nav">
                 <button class="ds-nav-item" @click="setOrigin(current.uid)">設為啟程站</button>
-                <button class="ds-nav-item" @click="setDest(current.uid)">設為抵達站</button>
+                <router-link to="/fare" class="ds-nav-item" @click="setDest(current.uid)">設為抵達站</router-link>
                 <router-link to="/facilities" class="ds-nav-item" replace>站點資訊</router-link>
                 <button class="ds-nav-item" to="#">轉乘資訊</button>
             </div>
 
-            <div>
-                {{fareData}}
-            </div>
-            <!-- <div class="ds-currentstation">
-                <div style="display:flex;">
-                    <img class="ds-num" :src="selected.src">
-                    <div class="ds-station">   
-                        <h3>{{selected.name}}</h3>
-                        <p>{{selected.line}}</p>
-                    </div>
-                </div>    
-                
-                <div style="display:flex">
-                    <img src="@/assets/line-TRA.svg" v-show="selected.tra">
-                    <img style="margin-left:8px;" src="@/assets/line-HSR.svg" v-show="selected.hsr">
-                </div>
-            </div> -->
-            <!-- <div class="ds-nav">
-                <router-link to="/fare" class="ds-nav-item" replace>旅程規劃</router-link>
-                <router-link to="/facilities" class="ds-nav-item" replace>車站資訊</router-link>
-                <router-link to="/transfer" class="ds-nav-item" replace>轉乘資訊</router-link>
-            </div> -->
         </div>
         
         <router-view class="ds-nav-view">
@@ -78,13 +56,15 @@ export default {
     },
     methods:{
         setOrigin(id){
+            store.commit('setFareSearch');
             store.dispatch('setOrigin',id)
         },
 
         setDest(id){
             store.dispatch('setDest',id);
-            if(store.state.origin === store.state.dest){ alert('請選擇不同的起迄站');return }
-            store.dispatch('getFare')
+            if(store.state.origin === store.state.dest){ alert('請選擇不同的起迄站'); return}
+            store.dispatch('getFare');
+            store.commit('clearFareSearch')
         }
     },
 
