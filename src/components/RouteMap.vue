@@ -43,6 +43,11 @@ export default {
     },
     methods:{
       selectStation(index){
+        if(store.state.fareSelection){
+          store.dispatch('setDest',index);
+          store.dispatch('getFare')
+          return
+        }
           store.dispatch('showSelected',index);
           store.dispatch('getStationInfo')
       }

@@ -78,8 +78,6 @@ export default {
         height:37px;
     }
 
-    
-
     .ds-list-schedule, .ds-list-exit{
         display: flex;
         justify-content: space-between;

@@ -6,8 +6,7 @@ export default createStore({
       fareSelection:false,
       database:{},
       current:{},
-      origin:'',
-      dest:'',
+      dest:{},
       fare:{},
       stationInfo:{},
   },
@@ -19,11 +18,6 @@ export default createStore({
 
     selectedInfo(state,res){
       state.current = res
-    },
-
-    setOrigin(state,payload){
-      state.origin = payload
-      console.log(state.origin)
     },
 
     setDest(state,payload){
@@ -64,8 +58,12 @@ export default createStore({
       context.commit('selectedInfo',response)
     },
 
-    setOrigin(context,payload){
-      context.commit('setOrigin',payload)
+    setSearchMode(){
+      this.commit('setFareSearch')
+    },
+
+    clearSearchMode(){
+      this.commit('clearFareSearch')
     },
 
     setDest(context,payload){
@@ -73,8 +71,9 @@ export default createStore({
     },
 
     getFare(context,data){
-      RouteData.getFare(this.state.origin,this.state.dest)
+      RouteData.getFare(this.state.current.uid,this.state.dest.uid)
       .then(response=>{
+        console.log(response.data);
         data = response.data;
         context.commit('loadFare',data)
       })

@@ -8,6 +8,7 @@
                     <img class="ds-num" :src="current.path"/>  
                     <div class="ds-station">
                         <h3> {{current.zh}}</h3>
+                        <p>{{current.line}}</p>
                     </div>
                 </div>    
 
@@ -18,22 +19,49 @@
             </div>
 
             <div class="ds-nav">
-                <button class="ds-nav-item" @click="setOrigin(current.uid)">設為啟程站</button>
-                <router-link to="/fare" class="ds-nav-item" @click="setDest(current.uid)">設為抵達站</router-link>
+                <a class="ds-nav-item" @click="initSearch">路線規劃</a>
                 <router-link to="/facilities" class="ds-nav-item" replace>站點資訊</router-link>
-                <button class="ds-nav-item" to="#">轉乘資訊</button>
+                <button class="ds-nav-item" to="transfer">轉乘資訊</button>
             </div>
 
         </div>
-        
         <router-view class="ds-nav-view">
-
+        
         </router-view>
+
+        <div class="fs-overlay-modal" v-if="fareSearchMode">
+            <div class="fs-overlay-header">
+                <div style="display:flex;justify-content:space-between">
+                    <div>路線規劃</div>
+                    <div @click="endSearch">X</div>
+                </div>
+
+                <div>
+                    <div>{{current.zh}}</div>  
+                    <div>{{dest.zh}}</div>  
+                </div>
+            </div>
+            <div class="ds-list">
+                <div class="ds-list-header">票價</div>
+                <ul>
+                    <li class="ds-list-item">普通票：{{fareData.Fares[0].Price}}元</li>
+                    <li class="ds-list-item">普通票：{{fareData.Fares[1].Price}}元</li>
+                    <li class="ds-list-item">普通票：{{fareData.Fares[4].Price}}元</li>
+                </ul>
+                <div class="ds-list-header"></div>
+                <ul>
+                    <li class="ds-list-item">旅程時間：{{fareData.TravelTime}}分鐘</li>
+                </ul>
+                <div class="ds-list-footer"></div>
+            </div>
+        </div>
     </div>
 
     <div class="map-view">
       <RouteMap />
     </div>
+
+    
   </div>
 
 </template>
@@ -55,6 +83,14 @@ export default {
         store.dispatch('initRoute')
     },
     methods:{
+        initSearch(){
+            store.dispatch('setSearchMode')
+        },
+
+        endSearch(){
+            store.dispatch('clearSearchMode')
+        },
+
         setOrigin(id){
             store.commit('setFareSearch');
             store.dispatch('setOrigin',id)
@@ -69,12 +105,16 @@ export default {
     },
 
     computed:{
+        fareSearchMode(){
+            return store.state.fareSelection
+        },
+
         current(){
             return store.state.current
         },
 
-        setOrig(){
-            return store.state.origin
+        dest(){
+            return store.state.dest
         },
 
         fareData(){
@@ -111,6 +151,7 @@ export default {
     }
 
     .detail-sheet{
+        position:relative;
         width:375px;
         height:100vh;
         background:var(--grey);
@@ -129,7 +170,7 @@ export default {
 
     .ds-nav{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-gap:16px;
         margin-top:1em;
         background-color: var(--white);
@@ -218,6 +259,21 @@ export default {
     .ds-list-footer{
         height:1.5em;
         background-color:var(--grey)
+    }
+
+    .fs-overlay-modal{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        z-index:3;
+    }
+
+    .fs-overlay-header{
+        height:160px;
+        background-color:var(--blue);
+        padding:16px;
     }
 
     @media screen and (max-width:512px) {
