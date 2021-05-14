@@ -22,7 +22,9 @@
 
 body{
   background-color:var(--map-bg);
- 
+  -webkit-overflow-scrolling: touch;
+
+
   user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;

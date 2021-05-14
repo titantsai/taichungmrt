@@ -30,11 +30,12 @@ export default {
     mounted(){
       this.panzoom = Panzoom(document.querySelector('#routemap'),{
         bounds:true,
-        smoothScroll:false,
-        minZoom:0.5,
-        maxZoom:2,
-        initialZoom:0.75,
-      })
+        boundsPadding:0.75,
+         smoothScroll:false,
+         minZoom:0.5,
+         maxZoom:2,
+         initialZoom:0.75,
+       })
     },
     data(){
       return{

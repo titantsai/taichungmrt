@@ -1,7 +1,7 @@
 <template>
   <div class="map">
 
-    <div class="detail-sheet" v-show="$store.state.current">
+    <div class="detail-sheet">
         <div class="ds-header">
             <div class="ds-currentstation">
                 <div style="display:flex">
@@ -29,32 +29,6 @@
         
         </router-view>
 
-        <div class="fs-overlay-modal" v-if="fareSearchMode">
-            <div class="fs-overlay-header">
-                <div style="display:flex;justify-content:space-between">
-                    <div>路線規劃</div>
-                    <div @click="endSearch">X</div>
-                </div>
-
-                <div>
-                    <div>{{current.zh}}</div>  
-                    <div>{{dest.zh}}</div>  
-                </div>
-            </div>
-            <div class="ds-list">
-                <div class="ds-list-header">票價</div>
-                <ul>
-                    <li class="ds-list-item">普通票：{{fareData.Fares[0].Price}}元</li>
-                    <li class="ds-list-item">普通票：{{fareData.Fares[1].Price}}元</li>
-                    <li class="ds-list-item">普通票：{{fareData.Fares[4].Price}}元</li>
-                </ul>
-                <div class="ds-list-header"></div>
-                <ul>
-                    <li class="ds-list-item">旅程時間：{{fareData.TravelTime}}分鐘</li>
-                </ul>
-                <div class="ds-list-footer"></div>
-            </div>
-        </div>
     </div>
 
     <div class="map-view">
@@ -155,6 +129,7 @@ export default {
         width:375px;
         height:100vh;
         background:var(--grey);
+        bottom: 0;
     }
 
     .ds-header{
@@ -280,10 +255,14 @@ export default {
         .detail-sheet{
             position:absolute;
             z-index:3;
-            top:60px;
+            bottom:0;
             width: 100%;
             border-radius: 10px 10px 0 0;
             overflow:hidden;
+        }
+
+        .ds-collapsed{
+            height:180px;
         }
         
         .map-view{
