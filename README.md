@@ -14,10 +14,11 @@
 
 ## 待解決
 + Youbike僅能顯示單一站點
-+ 旅程規劃功能
-+ 於手機無法點選功能 
+
 
 ## Changelog
++ Temperarily disable PanZoom which conflict on mobile 
++ Implemented Mobile Bottom Sheet
 + Migrate database to Firebase
 + Add Vuex Store Support 
 + Initial Build 
