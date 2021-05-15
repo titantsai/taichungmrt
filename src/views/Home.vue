@@ -50,6 +50,7 @@ export default {
             fullHeight:'',
             initY:'',
             endY:'',
+            modalHeight:'',
         }
     },
     created(){
@@ -59,26 +60,33 @@ export default {
         initTouch(e){
             this.initY = e.touches[0].clientY
             this.fullHeight = e.touches[0].pageY
-            console.log(e.touches[0])
         },
 
         handleTouch(e){
+            let modalheight = '';
             if(this.modalCollapsed === true){
-                let modalheight = `calc( 100% - ${e.touches[0].clientY}px)`
-                document.querySelector('#bottomsheet').style.height = modalheight
-            } 
+                modalheight = `calc( 100% - ${e.touches[0].clientY}px)`}
+            else if (this.modalCollapsed === false && this.initY>44 && this.initY<150){
+                modalheight = `calc( 100% - ${e.touches[0].clientY}px)`}
+            
+            document.querySelector('#bottomsheet').style.height = modalheight
+
         },
 
         endTouch(e){
+            //若滑動小於初始值，展開表單
             this.endY = e.changedTouches[0].clientY;
             if(this.endY < this.initY){
                 this.modalCollapsed = false
                 document.querySelector('#bottomsheet').style.height= '100%';
             }
-            else if(this.endY > this.initY){
-                this.modalCollapsed = true
-                document.querySelector('#bottomsheet').classList.add="msCollapsed"
-            }
+
+             //若滑動初始值為header區域，滑動大於初始值，收合表單
+             else if(this.initY<73 && this.initY>44 && this.endY>this.initY){
+                 this.modalCollapsed = true;
+                 document.querySelector('#bottomsheet').style.height="184px"
+             }
+    
         },
         openModal(){
             this.modalCollapsed = false;
@@ -160,11 +168,12 @@ export default {
         .ms-sheet{
             width:100vw;
             padding:16px;
-            max-height:100%;
-            min-height: 150px;
+            max-height:calc(100% - 44px);
+            min-height: 184px;
             position:fixed;
             padding:0;
             z-index:2;
+            padding-bottom:34px;
         }
 
         .ms-handle{
@@ -182,7 +191,7 @@ export default {
         }
 
         .msCollapsed{
-            height:150px !important;
+            height:184px;
         }
 
         .map-container{
@@ -250,7 +259,8 @@ export default {
         padding:8px;
         font-size:14px;
         font-weight: 400;
-        color:var(--caption)
+        color:var(--caption);
+        text-decoration: none;
     }
 
     .ds-num img{

@@ -17,7 +17,7 @@
 
 
 ## Changelog
-+ Temperarily disable PanZoom which conflict on mobile 
++ Temperarily disable PanZoom which conflicts on mobile 
 + Implemented Mobile Bottom Sheet
 + Migrate database to Firebase
 + Add Vuex Store Support 

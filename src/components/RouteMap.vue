@@ -21,21 +21,21 @@
 
 <script>
 import store from '@/store'
-import Panzoom from 'panzoom'
+//import Panzoom from 'panzoom'
 
 export default {
     created(){
 
     },
     mounted(){
-      this.panzoom = Panzoom(document.querySelector('#routemap'),{
-        bounds:true,
-        boundsPadding:0.75,
-         smoothScroll:false,
-         minZoom:0.5,
-         maxZoom:2,
-         initialZoom:0.75,
-       })
+      // this.panzoom = Panzoom(document.querySelector('#routemap'),{
+      //   bounds:true,
+      //   boundsPadding:0.75,
+      //    smoothScroll:false,
+      //    minZoom:0.5,
+      //    maxZoom:2,
+      //    initialZoom:0.75,
+      //  })
     },
     data(){
       return{
