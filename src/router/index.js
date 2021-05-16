@@ -2,8 +2,8 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import MapView from '../views/Home.vue'
 import StationLayout from '../views/Detail/Layout.vue'
 import StationFacilities from '../views/Detail/Facilities.vue'
-// import StationTransfer from '../views/Detail/Transfer.vue'
-// import StationTimeFare from '../views/Detail/TimeFare'
+import StationTransfer from '../views/Detail/Transfer.vue'
+import FareSearch from '../views/Search.vue'
 
 const routes = [
   {
@@ -16,12 +16,27 @@ const routes = [
       name:'StationInfo',
       component:StationLayout,
       children:[
-        {path:'facilities',
-        name:'StationFacilities',
-        component:StationFacilities}
-      ]}
+        {
+          path:'facilities',
+          name:'StationFacilities',
+          component:StationFacilities
+        },
+        {
+          path:'transfer',
+          name:'StationTransfer',
+          component:StationTransfer
+        }
+
+      ]},
+      {
+        path:'/search',
+        name:'FareSearch',
+        component:FareSearch
+      }
     ]
-  }
+  },
+
+  
 ]
 
 const router = createRouter({

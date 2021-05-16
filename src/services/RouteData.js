@@ -1,5 +1,5 @@
 import axios from 'axios'
-import jsSHA from 'jssha'
+//import jsSHA from 'jssha'
 
 const url ='https://taichungmetro-github-default-rtdb.firebaseio.com/'
 
@@ -12,22 +12,23 @@ const APIClient = axios.create({
     }
 })
 
-const GetAuthorizationHeader=()=>{
-    let AppID = 'c48fa21c86cc4d09913f9f5ff49a8ff9';
-    let AppKey = '21p51wndihCNdkztosM0CJ3v2ww';
+// const GetAuthorizationHeader=()=>{
+//     let AppID = 'c48fa21c86cc4d09913f9f5ff49a8ff9';
+//     let AppKey = '21p51wndihCNdkztosM0CJ3v2ww';
 
-    let GMTString = new Date().toGMTString();
-    let ShaObj = new jsSHA('SHA-1', 'TEXT');
-    ShaObj.setHMACKey(AppKey, 'TEXT');
-    ShaObj.update('x-date: ' + GMTString);
-    let HMAC = ShaObj.getHMAC('B64');
-    let Authorization = 'hmac username="/' + AppID + '/", algorithm="hmac-sha1", headers="x-date", signature="/' + HMAC + '/"';
-    return { 'Authorization': Authorization, 'X-Date': GMTString };
-}
+//     let GMTString = new Date().toGMTString();
+//     let ShaObj = new jsSHA('SHA-1', 'TEXT');
+//     ShaObj.setHMACKey(AppKey, 'TEXT');
+//     ShaObj.update('x-date: ' + GMTString);
+//     let HMAC = ShaObj.getHMAC('B64');
+//     let Authorization = 'hmac username="/' + AppID + '/", algorithm="hmac-sha1", headers="x-date", signature="/' + HMAC + '/"';
+//     return { 'Authorization': Authorization, 'X-Date': GMTString };
+// }
 
 
 const PTX = axios.create({
-    headers: GetAuthorizationHeader()}
+    // headers: GetAuthorizationHeader()
+    }   
 )
 
 export default{
@@ -37,6 +38,10 @@ export default{
 
     getStationInfo(id){
         return APIClient.get(`/StationInfos/${id}.json`)
+    },
+
+    getStationTransfer(id){
+        return APIClient.get(`/StationTransfer/${id}.json`)
     },
 
     getYouBikeStat(){

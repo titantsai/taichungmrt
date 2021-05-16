@@ -38,6 +38,11 @@ export default createStore({
       state.fare = data
     },
 
+    clearFare(state){
+      state.fare = {}
+      state.dest={}
+    },
+
     loadStationInfo(state,data){
       state.stationInfo = data
     },
@@ -79,12 +84,21 @@ export default createStore({
     },
 
     getFare(context,data){
+      if(this.state.current.uid===this.state.dest.uid){
+        alert('請選擇不同的起迄站')
+        return
+      }
       RouteData.getFare(this.state.current.uid,this.state.dest.uid)
       .then(response=>{
         console.log(response.data);
         data = response.data;
-        context.commit('loadFare',data)
+        context.commit('loadFare',data);
       })
+      .catch(error=>console.log(error))
+    },
+
+    clearFare(context){
+      context.commit('clearFare')
     },
 
     getStationInfo(context,data){
@@ -93,6 +107,12 @@ export default createStore({
         data = response.data;
         context.commit('loadStationInfo',data)
       })
+      .catch(error=>console.log(error))
+    },
+
+    getStationTransfer(){
+      RouteData.getStationTransfer(this.state.current.uid)
+      .then(response=> console.log(response.data))
     }
 
   },

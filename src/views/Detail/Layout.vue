@@ -16,9 +16,9 @@
         </div>
 
         <div class="ds-nav">
-            <a class="ds-nav-item">路線規劃</a>
+            <router-link to="/search" @click="initSearch" class="ds-nav-item">設為起點</router-link>
             <router-link :to="{name:'StationFacilities'}" class="ds-nav-item" @click="openModal" replace>站點資訊</router-link>
-            <button class="ds-nav-item" to="transfer">轉乘資訊</button>
+            <router-link class="ds-nav-item" :to="{name: 'StationTransfer'}">轉乘資訊</router-link>
         </div>
     </div>
     <router-view class="ds-nav-view">
@@ -38,17 +38,6 @@ export default {
             store.dispatch('clearSearchMode')
         },
 
-        setOrigin(id){
-            store.commit('setFareSearch');
-            store.dispatch('setOrigin',id)
-        },
-
-        setDest(id){
-            store.dispatch('setDest',id);
-            if(store.state.origin === store.state.dest){ alert('請選擇不同的起迄站'); return}
-            store.dispatch('getFare');
-            store.commit('clearFareSearch')
-        },
         openModal(){
             store.commit('expandModal')
             document.querySelector('#bottomsheet').style.height='100%';
@@ -158,7 +147,7 @@ export default {
         overflow: auto;
     }
 
-    .router-link-exact-active{
+    .ds-nav.router-link-exact-active{
         background-color:var(--blue);
         color:var(--white)
     }

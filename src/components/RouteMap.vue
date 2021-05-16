@@ -5,8 +5,8 @@
             <div class="route-bg">
               <img :src="route.path" alt="">
             </div>
-            <router-link
-              :to="{name:'StationInfo' , params:{id:station.uid}}"
+            <div
+              tag="div"
               class="route-station" 
               v-for="station in route.stations" 
               :key="station.id" 
@@ -14,7 +14,7 @@
               @click="selectStation(station)">
               <span class="route-station-dot" :class="{hasTransit:station.transit}" :style="{borderColor:`${route.color}`}"></span>
               <div class="route-station-tag" :class="`${station.position.tag}`">{{station.zh}}</div>
-            </router-link>
+            </div>
         </div>
     </div>
   </div>
@@ -22,6 +22,7 @@
 
 <script>
 import store from '@/store'
+import router from '@/router'
 //import Panzoom from 'panzoom'
 
 export default {
@@ -43,18 +44,24 @@ export default {
     methods:{
       selectStation(index){
         if(store.state.fareSelection){
-          store.dispatch('setDest',index);
+          store.dispatch('setDest',index)
           store.dispatch('getFare')
+          store.dispatch('clearSearchMode')
           return
         }
-          console.log(index)
+          store.dispatch('clearSearchMode')
+          store.dispatch('clearFare')
+          router.push({name:'StationInfo' , params:{id: `${index.uid}`}})        
           store.dispatch('showSelected',index);
-          store.dispatch('getStationInfo')
+          
       }
     },
     computed:{
         Routes(){
             return store.state.database
+        },
+        searchMode(){
+          return store.state.fareSelection
         }
     }
 }
@@ -96,6 +103,22 @@ export default {
     top:0;
     left:0;
     z-index:-1;
+  }
+
+  .router-link-exact-active.route-station{
+    background-color:none;
+  }
+
+  .router-link-exact-active.route-station .route-station-tag{
+    font-size:16px;
+    font-weight: 700;
+ 
+  }
+
+  .router-link-exact-active.route-station .route-station-dot{
+    width:16px;
+    height:16px;
+    border:4px solid;
   }
 
   .route-station{

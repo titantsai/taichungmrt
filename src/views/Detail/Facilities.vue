@@ -1,5 +1,5 @@
 <template>
-    <div class="ds-list">
+    <div v-if="current" class="ds-list">
         <div class="ds-list-header">首末班車</div>
         <ul>
             <li class="ds-list-item ds-list-schedule" v-for="time in current.servicetime" :key="time.to">
@@ -60,7 +60,7 @@ export default {
         }
     },
     mounted(){
-
+        store.dispatch('getStationInfo')
     },
     computed:{
         current(){
