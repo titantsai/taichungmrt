@@ -23,7 +23,6 @@ export default createStore({
 
     setDest(state,payload){
       state.dest = payload
-      console.log(state.dest)
     },
 
     setFareSearch(state){
@@ -90,7 +89,6 @@ export default createStore({
       }
       RouteData.getFare(this.state.current.uid,this.state.dest.uid)
       .then(response=>{
-        console.log(response.data);
         data = response.data;
         context.commit('loadFare',data);
       })

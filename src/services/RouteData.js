@@ -1,5 +1,5 @@
 import axios from 'axios'
-//import jsSHA from 'jssha'
+import jsSHA from 'jssha'
 
 const url ='https://taichungmetro-github-default-rtdb.firebaseio.com/'
 
@@ -12,24 +12,26 @@ const APIClient = axios.create({
     }
 })
 
-// const GetAuthorizationHeader=()=>{
-//     let AppID = 'c48fa21c86cc4d09913f9f5ff49a8ff9';
-//     let AppKey = '21p51wndihCNdkztosM0CJ3v2ww';
-
-//     let GMTString = new Date().toGMTString();
-//     let ShaObj = new jsSHA('SHA-1', 'TEXT');
-//     ShaObj.setHMACKey(AppKey, 'TEXT');
-//     ShaObj.update('x-date: ' + GMTString);
-//     let HMAC = ShaObj.getHMAC('B64');
-//     let Authorization = 'hmac username="/' + AppID + '/", algorithm="hmac-sha1", headers="x-date", signature="/' + HMAC + '/"';
-//     return { 'Authorization': Authorization, 'X-Date': GMTString };
-// }
-
-
 const PTX = axios.create({
-    // headers: GetAuthorizationHeader()
-    }   
-)
+        headers: GetAuthorizationHeader()
+     })
+
+function GetAuthorizationHeader(){
+    const AppID = 'c48fa21c86cc4d09913f9f5ff49a8ff9';
+    const AppKey = '21p51wndihCNdkztosM0CJ3v2ww';
+
+    const GMTString = new Date().toGMTString();
+    const ShaObj = new jsSHA('SHA-1', 'TEXT');
+    ShaObj.setHMACKey(AppKey, 'TEXT');
+    ShaObj.update('x-date: ' + GMTString);
+    let HMAC = ShaObj.getHMAC('B64');
+    let Authorization = "hmac username=\"" + AppID + "\", algorithm=\"hmac-sha1\", headers=\"x-date\", signature=\"" + HMAC + "\"";
+
+    return { 'Authorization': Authorization, 'X-Date': GMTString /*,'Accept-Encoding': 'gzip'*/}; //如果要將js運行在伺服器，可額外加入 'Accept-Encoding': 'gzip'，要求壓縮以減少網路傳輸資料量
+}
+
+
+
 
 export default{
     getRoute(){
