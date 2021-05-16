@@ -5,13 +5,15 @@
                 <img class="ds-indicator" src="@/assets/fareinfo.svg">
                 <div>
                     <div class="fd-header-orig">{{current.zh}}</div>
-                    <div v-if="dest" class="fd-header-dest">{{dest.zh}}</div>
+                    <div class="fd-header-dest">{{dest.zh || placeholder}}</div>
                 </div>
             </div>
             <div v-if="fareData">
                 <div class="fd-traveltime">{{fareData.TravelTime}}<span>分</span></div>
             </div>
         </div>
+
+        <!-- <div class="fd-divider"></div> -->
 
         <div v-if="fareData" class="fd-pricetable">
             <div>
@@ -62,6 +64,7 @@ export default {
         display:flex;
         justify-content:space-between;
         align-items: center;
+        margin-bottom:16px;
     }
 
     .ds-indicator{
@@ -74,6 +77,7 @@ export default {
         font-weight: 400;
         font-size: 17px;
         line-height: 22px;
+        height:24px;
     }
 
     .fd-header-dest{
@@ -82,6 +86,7 @@ export default {
         color:var(--heading);
         font-weight: 500;
         font-size:19px;
+        height:21px;
     }
 
     .fd-traveltime{
@@ -90,13 +95,21 @@ export default {
         color:var(--blue)
     }
 
+
     .fd-traveltime span{
         font-size:15px;
         color:var(--blue);
     }
 
+    .fd-divider{
+        margin-top:10px;
+        margin-bottom:8px;
+        width:100%;
+        height:0.5px;
+        background: #b8b8b864;
+    }
+
     .fd-pricetable{
-        margin-top:16px;
         display:grid;
         grid-template-columns: 1fr 1fr 1fr;
 
@@ -113,5 +126,11 @@ export default {
         color:var(--blue);
         font-weight: 500;
         text-align:center
+    }
+
+    @media screen and (max-width:512px){
+        .fd-container{
+            padding:16px 32px;
+        }
     }
 </style>

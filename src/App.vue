@@ -1,7 +1,4 @@
 <template>
-  <!-- <div id="nav">
-    <router-link to="/routes">捷運路線圖</router-link>
-  </div> -->
   <router-view>
   </router-view>
 </template>
@@ -24,8 +21,8 @@
 body{
   background-color:var(--map-bg);
   -webkit-overflow-scrolling: touch;
-
-
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
   user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;

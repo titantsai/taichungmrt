@@ -5,8 +5,8 @@
             <div class="route-bg">
               <img :src="route.path" alt="">
             </div>
-            <div
-              tag="div"
+            
+            <div  
               class="route-station" 
               v-for="station in route.stations" 
               :key="station.id" 
@@ -22,19 +22,19 @@
 
 <script>
 import store from '@/store'
-import router from '@/router'
-//import Panzoom from 'panzoom'
+
+// import Panzoom from 'panzoom'
 
 export default {
     mounted(){
-      // this.panzoom = Panzoom(document.querySelector('#routemap'),{
-      //   bounds:true,
-      //   boundsPadding:0.75,
-      //    smoothScroll:false,
-      //    minZoom:0.5,
-      //    maxZoom:2,
-      //    initialZoom:0.75,
-      //  })
+    //    this.panzoom = Panzoom(document.querySelector('#routemap'),{
+    //      bounds:true,
+    //      boundsPadding:0.75,
+    //       smoothScroll:false,
+    //       minZoom:0.5,
+    //       maxZoom:2,
+    //       initialZoom:0.75,
+    //     })
     },
     data(){
       return{
@@ -51,7 +51,7 @@ export default {
         }
           store.dispatch('clearSearchMode')
           store.dispatch('clearFare')
-          router.push({name:'StationInfo' , params:{id: `${index.uid}`}})        
+          this.$router.replace({name:'StationInfo' , params:{id: `${index.uid}`}})        
           store.dispatch('showSelected',index);
           
       }
