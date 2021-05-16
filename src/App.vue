@@ -2,7 +2,8 @@
   <!-- <div id="nav">
     <router-link to="/routes">捷運路線圖</router-link>
   </div> -->
-  <router-view/>
+  <router-view>
+  </router-view>
 </template>
 
 <style>

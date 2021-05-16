@@ -3,6 +3,7 @@ import RouteData from '../services/RouteData'
 
 export default createStore({
   state: {
+      modalCollapsed:true,
       fareSelection:false,
       database:{},
       current:{},
@@ -39,8 +40,15 @@ export default createStore({
 
     loadStationInfo(state,data){
       state.stationInfo = data
-    }
+    },
 
+    collapseModal(state){
+      state.modalCollapsed = true
+    },
+
+    expandModal(state){
+      state.modalCollapsed = false
+    }
 
   },
   actions: {

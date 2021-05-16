@@ -1,61 +1,34 @@
 <template>
-  <div class="map">
-
-    <div class="detail-sheet">
-        <div class="ds-header">
-            <div class="ds-currentstation">
-                <div style="display:flex">
-                    <img class="ds-num" :src="current.path"/>  
-                    <div class="ds-station">
-                        <h3> {{current.zh}}</h3>
-                        <p>{{current.line}}</p>
-                    </div>
-                </div>    
-
-                <div style="display:flex">
-                    <img src="@/assets/line-HSR.svg" v-show="current.en==='HSR Taichung Station'" alt="">
-                    <img src="@/assets/line-TRA.svg" style="margin-left:8px" v-show="current.transit" alt="">
+    <div class="ds-header">
+        <div class="ds-currentstation">
+            <div style="display:flex">
+                <img class="ds-num" :src="current.path"/>  
+                <div class="ds-station">
+                    <h3> {{current.zh}}</h3>
+                    <p>{{current.line}}</p>
                 </div>
-            </div>
+            </div>    
 
-            <div class="ds-nav">
-                <a class="ds-nav-item" @click="initSearch">路線規劃</a>
-                <router-link to="/facilities" class="ds-nav-item" replace>站點資訊</router-link>
-                <button class="ds-nav-item" to="transfer">轉乘資訊</button>
+            <div style="display:flex">
+                <img src="@/assets/line-HSR.svg" v-show="current.en==='HSR Taichung Station'" alt="">
+                <img src="@/assets/line-TRA.svg" style="margin-left:8px" v-show="current.transit" alt="">
             </div>
-
         </div>
-        <router-view class="ds-nav-view">
-        
-        </router-view>
 
+        <div class="ds-nav">
+            <a class="ds-nav-item">路線規劃</a>
+            <router-link :to="{name:'StationFacilities'}" class="ds-nav-item" @click="openModal" replace>站點資訊</router-link>
+            <button class="ds-nav-item" to="transfer">轉乘資訊</button>
+        </div>
     </div>
+    <router-view class="ds-nav-view">
 
-    <div class="map-view">
-      <RouteMap />
-    </div>
-
-    
-  </div>
-
+    </router-view>
 </template>
 
 <script>
-
 import store from '@/store'
-import RouteMap from '../components/RouteMap'
-
 export default {
-  components:{
-    RouteMap
-  },
-    data(){
-        return{
-        }
-    },
-    created(){
-        store.dispatch('initRoute')
-    },
     methods:{
         initSearch(){
             store.dispatch('setSearchMode')
@@ -75,9 +48,12 @@ export default {
             if(store.state.origin === store.state.dest){ alert('請選擇不同的起迄站'); return}
             store.dispatch('getFare');
             store.commit('clearFareSearch')
+        },
+        openModal(){
+            store.commit('expandModal')
+            document.querySelector('#bottomsheet').style.height='100%';
         }
     },
-
     computed:{
         fareSearchMode(){
             return store.state.fareSelection
@@ -93,21 +69,12 @@ export default {
 
         fareData(){
             return store.state.fare[0]
-        }
+        },
     },
-    watch:{
-
-    }
 }
 </script>
 
 <style>
-    .map{
-        display:flex;
-        height:100%;
-        width:100%;
-        position:relative
-    }
 
     .list-view{
         width:375px;
@@ -158,18 +125,18 @@ export default {
         padding:8px;
         font-size:14px;
         font-weight: 400;
-        color:var(--caption)
+        color:var(--caption);
+        text-decoration: none;
     }
 
     .ds-num img{
-        margin-right:8px;
         width:37px;
         height:37px;
     }
 
     .ds-station{
         text-align: start;
-        margin-left:8px;
+        margin-left:16px;
     }
 
     .ds-station h3{
@@ -198,6 +165,8 @@ export default {
 
     .ds-list{
         background-color:var(--grey);
+        height:calc(100% - 150px);
+        overflow-y: auto;
     }
 
     .ds-list ul{
@@ -234,42 +203,5 @@ export default {
     .ds-list-footer{
         height:1.5em;
         background-color:var(--grey)
-    }
-
-    .fs-overlay-modal{
-        position:absolute;
-        top:0;
-        left:0;
-        width:100%;
-        height:100%;
-        z-index:3;
-    }
-
-    .fs-overlay-header{
-        height:160px;
-        background-color:var(--blue);
-        padding:16px;
-    }
-
-    @media screen and (max-width:512px) {
-        .detail-sheet{
-            position:absolute;
-            z-index:3;
-            bottom:0;
-            width: 100%;
-            border-radius: 10px 10px 0 0;
-            overflow:hidden;
-        }
-
-        .ds-collapsed{
-            height:180px;
-        }
-        
-        .map-view{
-            width:100%;
-            left:0;
-            top:0;
-            height:100%;
-        }
     }
 </style>

@@ -5,7 +5,8 @@
             <div class="route-bg">
               <img :src="route.path" alt="">
             </div>
-            <div 
+            <router-link
+              :to="{name:'StationInfo' , params:{id:station.uid}}"
               class="route-station" 
               v-for="station in route.stations" 
               :key="station.id" 
@@ -13,7 +14,7 @@
               @click="selectStation(station)">
               <span class="route-station-dot" :class="{hasTransit:station.transit}" :style="{borderColor:`${route.color}`}"></span>
               <div class="route-station-tag" :class="`${station.position.tag}`">{{station.zh}}</div>
-            </div>
+            </router-link>
         </div>
     </div>
   </div>
@@ -24,9 +25,6 @@ import store from '@/store'
 //import Panzoom from 'panzoom'
 
 export default {
-    created(){
-
-    },
     mounted(){
       // this.panzoom = Panzoom(document.querySelector('#routemap'),{
       //   bounds:true,
@@ -49,6 +47,7 @@ export default {
           store.dispatch('getFare')
           return
         }
+          console.log(index)
           store.dispatch('showSelected',index);
           store.dispatch('getStationInfo')
       }
