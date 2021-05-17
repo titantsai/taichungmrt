@@ -134,7 +134,7 @@ export default {
   }
 
   .route-station-tag{
-    color:var(--caption);
+    color:var(--grey);
     position:absolute;
     display: block;
     width:64px;
@@ -167,6 +167,6 @@ export default {
   .active  .route-station-tag{
     font-size:16px;
     font-weight:500;
-    color:var(--map-tag)
+    color:var(--green)
   }
 </style>

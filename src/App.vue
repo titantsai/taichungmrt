@@ -10,12 +10,10 @@
   --blue:#1E7ABB;
   --black:#000000;
   --map-bg:#25282d;
-  --disabled:#707070;
   --heading:#474747;
   --caption:#868686;
   --grey:#F2F2F7;
   --white:#FFFFFF;
-  --map-tag:#ffffff;
 }
 
 
