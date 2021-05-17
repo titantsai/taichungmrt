@@ -113,8 +113,6 @@ export default {
         overflow: hidden;
     }
 
-    
-
     .map-container{
         position:absolute;
         width: calc( 100% - 375px);
@@ -122,8 +120,7 @@ export default {
         left:375px;
         z-index:1;
     }
-    
-   
+       
     .map{
         display:flex;
         height:100%;
@@ -180,12 +177,12 @@ export default {
             border-radius: 2.5px;
         }
 
-        .ms-closebtn{
+        .ms-closebtn img{
             position:absolute;
             top:16px;
             right:16px;
-            width:32px;
-            height:32px;
+            width:30px;
+            height:30px;
             border-radius: 24px;
             background-color:var(--grey);
         }

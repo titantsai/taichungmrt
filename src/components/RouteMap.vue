@@ -34,6 +34,9 @@ export default {
          maxScale:1.75,
          minScale:0.5,
          startScale:0.75,
+         startX:-320,
+         startY:-50,
+         step:0.5
         //  excludeClass:'route-station',
        })
        parent.addEventListener('wheel', panzoom.zoomWithWheel)
@@ -89,9 +92,9 @@ export default {
 
   @media screen and (max-width:512px) {
       .route{
+        margin-top:60px;
+        height:70%;
         min-height:570px;
-        overflow-x:auto;
-        overflow-y:hidden;
       }
   }
 

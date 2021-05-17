@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="fac-escalator" transform="translate(-1733 -467)">
+    <rect id="Rectangle_29" data-name="Rectangle 29" width="24" height="24" rx="3" transform="translate(1733 467)" fill="#868686"/>
+    <g id="Group_96" data-name="Group 96" transform="translate(495 79.669)">
+      <g id="Group_96-2" data-name="Group 96" transform="translate(1241 393.512)">
+        <path id="Path_41" data-name="Path 41" d="M1245.734,414.818h-2.6a2.138,2.138,0,0,1-2.136-2.136v-1a2.138,2.138,0,0,1,2.136-2.136h1.5l8.064-8.064a1.622,1.622,0,0,1,1.155-.478h2.6a2.138,2.138,0,0,1,2.135,2.136v1a2.138,2.138,0,0,1-2.135,2.136h-1.5l-8.064,8.064A1.622,1.622,0,0,1,1245.734,414.818Zm-2.6-4.02a.88.88,0,0,0-.879.879v1a.88.88,0,0,0,.879.879h2.6a.375.375,0,0,0,.266-.11l8.432-8.432h2.019a.88.88,0,0,0,.879-.879v-1a.88.88,0,0,0-.879-.879h-2.6a.375.375,0,0,0-.266.11l-8.432,8.432Z" transform="translate(-1241 -401)" fill="#fff"/>
+      </g>
+      <circle id="Ellipse_39" data-name="Ellipse 39" cx="1.382" cy="1.382" r="1.382" transform="translate(1246.213 391)" fill="#fff"/>
+      <path id="Path_42" data-name="Path 42" d="M1260.25,408.9l3.517-3.517v-.126a1.759,1.759,0,0,0-1.759-1.759h0a1.759,1.759,0,0,0-1.759,1.759Z" transform="translate(-14.414 -9.359)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

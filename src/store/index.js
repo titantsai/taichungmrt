@@ -83,16 +83,16 @@ export default createStore({
     },
 
     getFare(context,data){
-      if(this.state.current.uid===this.state.dest.uid){
+        if(this.state.current.uid===this.state.dest.uid){
         alert('請選擇不同的起迄站')
         return
-      }
-      RouteData.getFare(this.state.current.uid,this.state.dest.uid)
-      .then(response=>{
+        } 
+
+        RouteData.getFare(this.state.current.uid,this.state.dest.uid)
+        .then(response=>{
         data = response.data;
-        context.commit('loadFare',data);
-      })
-      .catch(error=>console.log(error))
+        context.commit('loadFare',data)})
+        .catch(error=>console.log(error))
     },
 
     clearFare(context){

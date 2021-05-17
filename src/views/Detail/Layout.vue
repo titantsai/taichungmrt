@@ -2,17 +2,17 @@
     <div class="ds-header">
         <div class="ds-currentstation">
             <div style="display:flex">
-                <img class="ds-num" :src="current.path"/>  
+                <img class="ds-num" :src="current.path" alt="UID"/>  
                 <div class="ds-station">
                     <h3> {{current.zh}}</h3>
-                    <p>{{current.line}}</p>
+                    <div class="ds-transfer-logo">
+                        <p>{{current.line}}</p>
+                        <img src="@/assets/line-HSR.svg" v-if="current.en==='HSR Taichung Station'" alt="HSR">
+                        <img src="@/assets/line-TRA.svg" v-if="current.transit" alt="TRA">
+                    </div>
                 </div>
-            </div>    
-
-            <div style="display:flex">
-                <img src="@/assets/line-HSR.svg" v-show="current.en==='HSR Taichung Station'" alt="">
-                <img src="@/assets/line-TRA.svg" style="margin-left:8px" v-show="current.transit" alt="">
             </div>
+  
         </div>
 
         <div class="ds-nav">
@@ -90,7 +90,7 @@ export default {
 
     .ds-header{
         padding:16px;
-        padding-top:4px;
+        padding-top:8px;
         background: var(--white);
         box-sizing: border-box;
     }
@@ -119,9 +119,9 @@ export default {
         text-decoration: none;
     }
 
-    .ds-num img{
-        width:37px;
-        height:37px;
+    .ds-num{
+        width:48px;
+        height:48px;
     }
 
     .ds-station{
@@ -130,6 +130,7 @@ export default {
     }
 
     .ds-station h3{
+        width:150px;
         line-height: 23px;
         font-size:19px;
         color:var(--map-bg);
@@ -138,9 +139,22 @@ export default {
     }
 
     .ds-station p{
-        line-height: 16px;
+        font-weight: 500;
+        line-height: 24px;
         font-size:14px;
         margin:0;
+        padding-bottom:0;
+    }
+
+    .ds-transfer-logo{
+        display:flex;
+        align-items: center;
+    }
+
+    .ds-transfer-logo img{
+        margin-left:8px;
+        width:24px;
+        height:24px;
     }
 
     .ds-nav-view{

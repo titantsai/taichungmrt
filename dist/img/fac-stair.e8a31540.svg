@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="fac-stair" transform="translate(-1733 -467)">
+    <rect id="Rectangle_29" data-name="Rectangle 29" width="24" height="24" rx="3" transform="translate(1733 467)" fill="#868686"/>
+    <g id="fac-stair-2" data-name="fac-stair" transform="translate(-308.953 -133.105)">
+      <g id="Group_95" data-name="Group 95" transform="translate(2046 604)">
+        <g id="Group_93" data-name="Group 93" transform="translate(0 8.18)">
+          <path id="Path_39" data-name="Path 39" d="M1504.643,535.788v1.867h-15.872v-8.029h3.548v2.054h3.548v2.054h3.548v2.054Z" transform="translate(-1488.771 -529.626)" fill="#fff"/>
+        </g>
+        <g id="Group_94" data-name="Group 94" transform="translate(0.181)">
+          <path id="Path_40" data-name="Path 40" d="M1504.764,524.927h-3.317l-9.123-8.176-3.24.053-.012-.747L1492.6,516l9.128,8.18h3.031Z" transform="translate(-1489.072 -516)" fill="#fff"/>
+        </g>
+      </g>
+      <rect id="Rectangle_27" data-name="Rectangle 27" width="15.906" height="15.906" transform="translate(2046 604.303)" fill="none"/>
+    </g>
+  </g>
+</svg>
