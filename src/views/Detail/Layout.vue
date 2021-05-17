@@ -148,7 +148,8 @@ export default {
         overflow: auto;
     }
 
-    .ds-nav.router-link-exact-active{
+
+    .ds-nav-item.router-link-exact-active{
         background-color:var(--blue);
         color:var(--white)
     }

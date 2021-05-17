@@ -24,19 +24,19 @@
 <script>
 import store from '@/store'
 
-//import Panzoom from '@panzoom/panzoom'
+import Panzoom from '@panzoom/panzoom'
 
 export default {
     mounted(){
-      // const elem = document.querySelector('#routemap')
-      // const parent = elem.parentElement
-      // let panzoom = Panzoom(elem,{
-      //   maxScale:2,
-      //   minScale:0.5,
-      //   startScale:0.75,
-      //   excludeClass:'route-station',
-      // })
-      // parent.addEventListener('wheel', panzoom.zoomWithWheel)
+       const elem = document.querySelector('#routemap')
+       const parent = elem.parentElement
+       let panzoom = Panzoom(elem,{
+         maxScale:1.75,
+         minScale:0.5,
+         startScale:0.75,
+        //  excludeClass:'route-station',
+       })
+       parent.addEventListener('wheel', panzoom.zoomWithWheel)
     },
     data(){
       return{
@@ -125,9 +125,8 @@ export default {
 
   .route-station-dot{
     display:block;
-    width:10px;
-    height:10px;
-    border:3px solid var(--green);
+    width:8px;
+    height:8px;
     border-radius: 50%;
     background-color:var(--grey);
     z-index:2;
@@ -135,7 +134,7 @@ export default {
   }
 
   .route-station-tag{
-    color:var(--grey);
+    color:var(--caption);
     position:absolute;
     display: block;
     width:64px;
@@ -151,16 +150,17 @@ export default {
 
   .right{top:-8px;left:15px;text-align:start}
 
-  .bottom-left{top:15px;left:-75px;width:72px;text-align: end;}
+  .bottom-left{top:15px;left:-100px;width:96px;text-align: end;}
 
   .hasTransit{
-    background-color:#494949;
+    border:2px solid ;
+    background-color:var(--heading)
   }
 
   .active .route-station-dot{
-    width:16px;
-    height:16px;
-    border:4px solid;
+    width:12px;
+    height:12px;
+    border:3px solid;
     box-shadow: 0 2px 4px rgba(0,0,0,.36);
   }
 
