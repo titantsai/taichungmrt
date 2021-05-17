@@ -6,10 +6,11 @@
               <img :src="route.path" alt="">
             </div>
             
-            <div  
+            <div
+            :class="{active:active(station.uid)}"
               class="route-station" 
               v-for="station in route.stations" 
-              :key="station.id" 
+              :key="station.uid" 
               :style="{top:`${station.position.top}`,left:`${station.position.left}`}"
               @click="selectStation(station)">
               <span class="route-station-dot" :class="{hasTransit:station.transit}" :style="{borderColor:`${route.color}`}"></span>
@@ -47,14 +48,15 @@ export default {
         if(store.state.fareSelection){
           store.dispatch('setDest',index)
           store.dispatch('getFare')
-          store.dispatch('clearSearchMode')
           return
         }
           store.dispatch('clearSearchMode')
           store.dispatch('clearFare')
-          this.$router.replace({name:'StationInfo' , params:{id: `${index.uid}`}})        
+          this.$router.replace({name:'StationInfo' , params:{id: `${index.uid}`}})
           store.dispatch('showSelected',index);
-          
+      },
+      active(index){
+        return index.toString() === this.$route.path.slice(9)
       }
     },
     computed:{
@@ -63,7 +65,7 @@ export default {
         },
         searchMode(){
           return store.state.fareSelection
-        }
+        },
     }
 }
 </script>
@@ -130,11 +132,10 @@ export default {
     background-color:var(--grey);
     z-index:2;
     transform:translate(-50%, -50%);
-   
   }
 
   .route-station-tag{
-    color:var(--map-tag);
+    color:var(--grey);
     position:absolute;
     display: block;
     width:64px;
@@ -154,5 +155,18 @@ export default {
 
   .hasTransit{
     background-color:#494949;
+  }
+
+  .active .route-station-dot{
+    width:16px;
+    height:16px;
+    border:4px solid;
+    box-shadow: 0 2px 4px rgba(0,0,0,.36);
+  }
+
+  .active  .route-station-tag{
+    font-size:16px;
+    font-weight:500;
+    color:var(--map-tag)
   }
 </style>

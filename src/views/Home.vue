@@ -14,7 +14,7 @@
 
 
             <div class="ms-sheet-placeholder" v-else>
-                點選車站即可查看詳細資訊
+                <img src="../assets/chevron.up.svg"/> 點選車站即可查看詳細資訊
             </div>
 
 
@@ -45,7 +45,6 @@ export default {
     },
     methods:{
         initTouch(e){
-            console.log(e.touches[0])
             this.initY = e.touches[0].clientY
             this.fullHeight = e.touches[0].pageY
         },
@@ -77,6 +76,8 @@ export default {
         },
         closeModal(){
             this.$router.push('/')
+            store.dispatch('clearSearchMode')
+            store.dispatch('clearFare')
         }
         
     },
@@ -146,18 +147,22 @@ export default {
         }
         
         .ms-sheet-placeholder{
-            box-shadow: 0 -1x 2px rgba(0,0,0,0.3);
-            box-sizing: border-box;
+            position:fixed;
+            display: flex;
+            align-items:center;
+            width:100%;
+            height:64px;
+            bottom:0;
             font-size:14px;
             color:var(--caption);
-            display: flex;
-            justify-content:center;
-            padding-top:16px;
-            width:100%;
-            position:fixed;
-            bottom:0;
-            height:48px;
-            background-color:var(--white)
+            background-color:var(--white);
+            box-shadow: 0 -1px 2px rgba(0,0,0,0.3);
+        }
+
+        .ms-sheet-placeholder img{
+            height:8px;
+            margin-left:32px;
+            margin-right:16px
         }
 
         .ms-handle-container{
