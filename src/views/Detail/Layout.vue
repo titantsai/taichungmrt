@@ -91,7 +91,7 @@ export default {
     .ds-header{
         padding:16px;
         padding-top:8px;
-        background: var(--white);
+        background: var(--modalbg);
         box-sizing: border-box;
     }
 
@@ -105,7 +105,7 @@ export default {
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap:16px;
         margin-top:1em;
-        background-color: var(--white);
+        background-color: var(--modal-bg);
     }
 
     .ds-nav-item{
@@ -126,19 +126,20 @@ export default {
 
     .ds-station{
         text-align: start;
-        margin-left:16px;
+        margin-left:12px;
     }
 
     .ds-station h3{
         width:150px;
         line-height: 23px;
         font-size:19px;
-        color:var(--map-bg);
+        color:var(--heading);
         margin:0;
-        margin-bottom: 3px;
+        
     }
 
     .ds-station p{
+        color:var(--caption);
         font-weight: 500;
         line-height: 24px;
         font-size:14px;
@@ -178,9 +179,9 @@ export default {
         list-style: none;
         margin:0;
         padding:0;
-        border-top:0.5px solid #b8b8b848;
-        border-bottom:0.5px solid #b8b8b848;
-        background-color:var(--white)
+        border-top:0.5px solid var(--divider);
+        border-bottom:0.5px solid var(--divider);
+        background-color:var(--list-bg)
     }
 
     .ds-list-header{
@@ -188,6 +189,7 @@ export default {
         padding:8px 16px 4px 16px;
         font-size:13px;
         line-height: 18px;
+        background-color:var(--list-hd);
         color:var(--caption)
     }
 
@@ -198,7 +200,7 @@ export default {
         align-items: center;
         padding:12px 0;
         margin-left:16px;
-        border-bottom:1px solid #b8b8b836
+        border-bottom:1px solid var(--divider)
     }
 
     .ds-list-item:only-child, .ds-list-item:last-child{
@@ -207,6 +209,6 @@ export default {
 
     .ds-list-footer{
         height:1.5em;
-        background-color:var(--grey)
+        background-color:var(--list-bg)
     }
 </style>

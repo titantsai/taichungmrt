@@ -31,10 +31,10 @@ export default {
        const elem = document.querySelector('#routemap')
        const parent = elem.parentElement
        let panzoom = Panzoom(elem,{
-         maxScale:1.75,
+         maxScale:2,
          minScale:0.5,
          startScale:0.75,
-         startX:-320,
+         startX:-360,
          startY:-50,
          step:0.5
         //  excludeClass:'route-station',
@@ -131,13 +131,13 @@ export default {
     width:8px;
     height:8px;
     border-radius: 50%;
-    background-color:var(--grey);
+    background-color:var(--white);
     z-index:2;
     transform:translate(-50%, -50%);
   }
 
   .route-station-tag{
-    color:var(--grey);
+    color:var(--map-tag);
     position:absolute;
     display: block;
     width:64px;

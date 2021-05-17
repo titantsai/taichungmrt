@@ -4,16 +4,45 @@
 </template>
 
 <style>
+
 :root{
-  --green:#8EC31C;
-  --green-lighten:#AAD255;
-  --blue:#1E7ABB;
-  --black:#000000;
-  --map-bg:#25282d;
-  --heading:#474747;
-  --caption:#868686;
-  --grey:#F2F2F7;
-  --white:#FFFFFF;
+    --green:#8EC31C;
+    --green-lighten:#AAD255;
+    --blue:#1E7ABB;
+    --white:#FFFFFF;
+}
+
+@media (prefers-color-scheme: light){
+  
+  :root{
+    --black:#000000;
+    --map-bg:#25282d;
+    --map-tag:#959595;
+    --heading:#474747;
+    --caption:#868686;
+    --grey:#F2F2F7;
+    --divider:#3C3C4336;
+    --modalbg:#FFFFFF;
+    --list-hd:#F2F2F7;
+    --list-bg:#FFFFFF;
+  }
+
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root{
+    --black:#000000;
+    --map-bg:#25282d;
+    --map-tag:#8C8C8C;
+    --heading:#FFFFFF;
+    --caption:#757575;
+    --grey:#74748018;
+    --divider:#54545865;
+    --modalbg:#1D1D1D;
+    --list-hd:#000000;
+    --list-bg:#1C1C1C;
+  }
 }
 
 

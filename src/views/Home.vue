@@ -109,7 +109,7 @@ export default {
         max-height: 100%;
         height:100vh;
         width:375px;
-        background-color: var(--white);
+        background-color: var(--modalbg);
         overflow: hidden;
     }
 
@@ -152,7 +152,7 @@ export default {
             bottom:0;
             font-size:14px;
             color:var(--caption);
-            background-color:var(--white);
+            background-color:var(--modalbg);
             box-shadow: 0 -1px 2px rgba(0,0,0,0.3);
         }
 

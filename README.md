@@ -17,6 +17,7 @@
 
 
 ## Changelog
++ Add dark mode
 + Temperarily disable PanZoom which conflicts on mobile 
 + Implemented Mobile Bottom Sheet
 + Migrate database to Firebase
