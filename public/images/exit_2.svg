@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
-  <g id="Group_19" data-name="Group 19" transform="translate(-15.521 -309.006)">
-    <path id="Path_6" data-name="Path 6" d="M859.521-11.994v60l60-60Z" transform="translate(-844 321)" fill="#ffc440"/>
-    <text id="_2" data-name="2" transform="translate(34 356)" fill="#2e2e2e" font-size="48" font-family="SFProText-Semibold, SF Pro Text" font-weight="600" letter-spacing="-0.024em"><tspan x="0" y="0">2</tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37">
+  <g id="exit_2" transform="translate(-15.521 -309.006)">
+    <path id="Path_6" data-name="Path 6" d="M859.521-11.994v37l37-37Z" transform="translate(-844 321)" fill="#ffc440"/>
+    <path id="Path_49" data-name="Path 49" d="M2.138,0H16.327V-3.03H7.08v-.3l4.092-3.965c3.724-3.583,4.843-5.423,4.843-7.746v-.042c0-3.441-2.86-5.862-6.839-5.862-4.262,0-7.236,2.662-7.236,6.471l.014.042,3.4.014.014-.057a3.4,3.4,0,0,1,3.625-3.54A3.139,3.139,0,0,1,12.4-14.769v.042c0,1.572-.779,2.605-3.554,5.409L2.138-2.464Z" transform="translate(24.581 337.619)" fill="#2e2e2e"/>
   </g>
 </svg>

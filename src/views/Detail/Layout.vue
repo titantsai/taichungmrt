@@ -90,6 +90,7 @@ export default {
 
     .ds-header{
         padding:16px;
+        padding-top:4px;
         background: var(--white);
         box-sizing: border-box;
     }
@@ -131,7 +132,7 @@ export default {
     .ds-station h3{
         line-height: 23px;
         font-size:19px;
-        color:var(--black);
+        color:var(--map-bg);
         margin:0;
         margin-bottom: 3px;
     }

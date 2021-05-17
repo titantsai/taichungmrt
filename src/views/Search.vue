@@ -73,7 +73,7 @@ export default {
 
     .fd-header-orig{
         text-align:start;
-        color:var(--black);
+        color:var(--map-bg);
         font-weight: 400;
         font-size: 17px;
         line-height: 22px;

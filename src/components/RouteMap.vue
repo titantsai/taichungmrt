@@ -23,18 +23,19 @@
 <script>
 import store from '@/store'
 
-// import Panzoom from 'panzoom'
+//import Panzoom from '@panzoom/panzoom'
 
 export default {
     mounted(){
-    //    this.panzoom = Panzoom(document.querySelector('#routemap'),{
-    //      bounds:true,
-    //      boundsPadding:0.75,
-    //       smoothScroll:false,
-    //       minZoom:0.5,
-    //       maxZoom:2,
-    //       initialZoom:0.75,
-    //     })
+      // const elem = document.querySelector('#routemap')
+      // const parent = elem.parentElement
+      // let panzoom = Panzoom(elem,{
+      //   maxScale:2,
+      //   minScale:0.5,
+      //   startScale:0.75,
+      //   excludeClass:'route-station',
+      // })
+      // parent.addEventListener('wheel', panzoom.zoomWithWheel)
     },
     data(){
       return{
@@ -71,11 +72,11 @@ export default {
 
   .route{
     overflow:hidden;
-    width: 100%;
-    height: 100%;
+    -webkit-overflow-scrolling: none;
   }
 
   .route-map{
+    touch-action:pan-x pan-y pinch-zoom;
     position:relative;
     width:840px;
     height:570px;
@@ -86,15 +87,9 @@ export default {
 
   @media screen and (max-width:512px) {
       .route{
-        max-width:100%;
-        width:375px;
         min-height:570px;
         overflow-x:auto;
         overflow-y:hidden;
-      }
-
-      .route-map{
-        transform: matrix(0.75,0,0,0.75,-100,-50);
       }
   }
 
