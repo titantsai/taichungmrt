@@ -99,7 +99,7 @@ export default {
         height:-webkit-fill-available;
         height: fill-available;
         overflow-y: scroll;
-        -webkit-overflow-scrolling: touch; /* enables “momentum” (smooth) scrolling */
+        -webkit-overflow-scrolling: auto; /* enables “momentum” (smooth) scrolling */
     }
     
     .ms-sheet{
@@ -199,8 +199,9 @@ export default {
             position:absolute;
             z-index:0;
             width:100%;
-            height:calc(100% - 150px);
+            height:calc(100% - 64px);
             overflow: hidden;
+            -webkit-overflow-scrolling: auto;
         }
     }
     
