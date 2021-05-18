@@ -34,7 +34,7 @@ export default {
         let preset = {}
 
         if(window.screen.width<=512){
-          preset={maxScale:2,minScale:0.5,startScale:0.75,startX:-360,startY:-50}
+          preset={maxScale:2,minScale:0.5,startScale:0.75,startX:-320,startY:-50}
         }else{
           preset={maxScale:2,minScale:1,startX:0,startY:0}
         }

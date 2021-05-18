@@ -1,21 +1,24 @@
 
 <template>
     <div class="container">
-        <div class="ms-sheet" id="bottomsheet" v-if="$route.path !== '/'" :class="{msCollapsed:modalCollapsed}" @touchstart="initTouch" @touchmove="handleTouch" @touchend="endTouch">
-            <div class="ms-handle-container">
-                <span class="ms-handle"></span>
-                <div class="ms-closebtn" @click="closeModal">
-                    <img src="../assets/xmark.circle.fill.svg">
+        <transition name="swipeUp" mode="out-in">
+            
+            <div class="ms-sheet" id="bottomsheet" v-if="$route.path !== '/'" :class="{msCollapsed:modalCollapsed}" @touchstart="initTouch" @touchmove="handleTouch" @touchend="endTouch">
+                <div class="ms-handle-container">
+                    <span class="ms-handle"></span>
+                    <div class="ms-closebtn" @click="closeModal">
+                        <img src="../assets/xmark.circle.fill.svg">
+                    </div>
                 </div>
+                <router-view></router-view>
             </div>
-            <router-view></router-view>
-        </div>
-    
+        
 
-        <div class="ms-sheet-placeholder" v-else>
-            <img src="../assets/chevron.up.svg"/> 點選車站即可查看詳細資訊
-        </div>
+            <div class="ms-sheet-placeholder" v-else>
+                <img src="../assets/chevron.up.svg"/> 點選車站即可查看詳細資訊
+            </div>
 
+        </transition>
 
         <div class="map-container">
             <RouteMap/>
@@ -121,7 +124,8 @@ export default {
         padding:16px;
         background-color:var(--modal-bg);
         box-shadow:0 -2px 4px rgba(0,0,0,0.16);
-        color:var(--caption)
+        color:var(--caption);
+        transition:all .2s
     }
 
     .map-container{
@@ -145,7 +149,7 @@ export default {
         width:100%;
         position:relative
     }
-    
+
 
      @media screen and (max-height:750px){
          .ms-sheet-placeholder{
@@ -179,11 +183,11 @@ export default {
             color:var(--caption);
             background-color:var(--modal-bg);
             box-shadow: 0 -1px 2px rgba(0,0,0,0.16);
+            padding:16px;
         }
 
         .ms-sheet-placeholder img{
             height:8px;
-            margin-left:32px;
             margin-right:16px
         }
 
@@ -225,6 +229,22 @@ export default {
             height:calc(100% - 64px);
             overflow: hidden;
             -webkit-overflow-scrolling: auto;
+        }
+
+        .swipeUp-enter, .swipeUp-leave-to{
+            height:0;
+        }
+
+        .swipeUp-enter-active, .swipeUp-leave-active{
+            transition: all .1s ease-in
+        }
+
+        .swipeUp-leave {
+            height:183px;
+        }
+
+        .swipeUp-enter-to{
+            height:64px
         }
     }
     
