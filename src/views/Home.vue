@@ -1,22 +1,20 @@
 
 <template>
     <div class="container">
-        
-            <div class="ms-sheet" id="bottomsheet" v-if="$route.path !== '/'" :class="{msCollapsed:modalCollapsed}" @touchstart="initTouch" @touchmove="handleTouch" @touchend="endTouch">
-                <div class="ms-handle-container">
-                    <span class="ms-handle"></span>
-                    <div class="ms-closebtn" @click="closeModal">
-                       <img src="../assets/xmark.circle.fill.svg">
-                    </div>
+        <div class="ms-sheet" id="bottomsheet" v-if="$route.path !== '/'" :class="{msCollapsed:modalCollapsed}" @touchstart="initTouch" @touchmove="handleTouch" @touchend="endTouch">
+            <div class="ms-handle-container">
+                <span class="ms-handle"></span>
+                <div class="ms-closebtn" @click="closeModal">
+                    <img src="../assets/xmark.circle.fill.svg">
                 </div>
-                <router-view></router-view>
             </div>
+            <router-view></router-view>
+        </div>
+    
 
-
-            <div class="ms-sheet-placeholder" v-else>
-                <img src="../assets/chevron.up.svg"/> 點選車站即可查看詳細資訊
-            </div>
-
+        <div class="ms-sheet-placeholder" v-else>
+            <img src="../assets/chevron.up.svg"/> 點選車站即可查看詳細資訊
+        </div>
 
 
         <div class="map-container">
@@ -110,8 +108,20 @@ export default {
         max-height: 100%;
         height:100vh;
         width:375px;
-        background-color: var(--modalbg);
+        background-color: var(--modal-bg);
         overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.16);
+    }
+
+    .ms-sheet-placeholder{
+        width:100%;
+        position:fixed;
+        bottom:0;
+        z-index:1;
+        padding:16px;
+        background-color:var(--modal-bg);
+        box-shadow:0 -2px 4px rgba(0,0,0,0.16);
+        color:var(--caption)
     }
 
     .map-container{
@@ -121,6 +131,13 @@ export default {
         left:375px;
         z-index:1;
     }
+
+    .ms-closebtn img{
+        position:absolute;
+        top:16px;
+        right:16px;
+    }
+    
        
     .map{
         display:flex;
@@ -128,12 +145,19 @@ export default {
         width:100%;
         position:relative
     }
+    
 
+     @media screen and (max-height:750px){
+         .ms-sheet-placeholder{
+            height:48px;
+            box-sizing:border-box;
+         }
+     }   
 
      @media screen and (max-width:512px){
         .ms-sheet{
             box-shadow: 0 -1x 2px rgba(0,0,0,0.3);
-            border-radius:8px 8px 0 0 ;
+            border-radius:10px 10px 0 0 ;
             width:100vw;
             padding:16px;
             max-height:calc(100% - 44px);
@@ -142,19 +166,19 @@ export default {
             padding:0;
             z-index:2;
             padding-bottom:34px;
+            transition: height .3s cubic-bezier(0.165, 0.84, 0.44, 1) 
         }
         
         .ms-sheet-placeholder{
-            position:fixed;
             display: flex;
             align-items:center;
             width:100%;
             height:64px;
-            bottom:0;
+            box-sizing:border-box;
             font-size:14px;
             color:var(--caption);
-            background-color:var(--modalbg);
-            box-shadow: 0 -1px 2px rgba(0,0,0,0.3);
+            background-color:var(--modal-bg);
+            box-shadow: 0 -1px 2px rgba(0,0,0,0.16);
         }
 
         .ms-sheet-placeholder img{
@@ -174,7 +198,7 @@ export default {
             position: relative;
             width:37px;
             height:5px;
-            background-color:#494949;
+            background-color:var(--modal-handle);
             border-radius: 2.5px;
         }
 
@@ -190,6 +214,7 @@ export default {
 
         .msCollapsed{
             height:184px;
+            transition: height .3s cubic-bezier(0.075, 0.82, 0.165, 1)
         }
 
         .map-container{

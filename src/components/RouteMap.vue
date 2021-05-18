@@ -13,9 +13,10 @@
               :key="station.uid" 
               :style="{top:`${station.position.top}`,left:`${station.position.left}`}"
               @click="selectStation(station)">
-              <span class="route-station-dot" :class="{hasTransit:station.transit}" :style="{borderColor:`${route.color}`}"></span>
+              <div class="route-station-dot" :class="{hasTransit:station.transit}" :style="{borderColor:`${route.color}`}" ></div>
               <div class="route-station-tag" :class="`${station.position.tag}`">{{station.zh}}</div>
             </div>
+     
         </div>
     </div>
   </div>
@@ -28,18 +29,18 @@ import Panzoom from '@panzoom/panzoom'
 
 export default {
     mounted(){
-       const elem = document.querySelector('#routemap')
-       const parent = elem.parentElement
-       let panzoom = Panzoom(elem,{
-         maxScale:2,
-         minScale:0.5,
-         startScale:0.75,
-         startX:-360,
-         startY:-50,
-         step:0.5
-        //  excludeClass:'route-station',
-       })
-       parent.addEventListener('wheel', panzoom.zoomWithWheel)
+        const elem = document.querySelector('#routemap')
+        const parent = elem.parentElement
+        let preset = {}
+
+        if(window.screen.width<=512){
+          preset={maxScale:2,minScale:0.5,startScale:0.75,startX:-360,startY:-50}
+        }else{
+          preset={maxScale:2,minScale:1,startX:0,startY:0}
+        }
+        const panzoom = Panzoom(elem,preset)
+        
+        parent.addEventListener('wheel', panzoom.zoomWithWheel)
     },
     data(){
       return{
@@ -78,6 +79,9 @@ export default {
   .route{
     overflow:hidden;
     -webkit-overflow-scrolling: none;
+    height:90%;
+    display:flex;
+    align-items:center
   }
 
   .route-map{
@@ -85,8 +89,7 @@ export default {
     position:relative;
     width:840px;
     height:570px;
-    margin-left:auto;
-    margin-right:auto;
+    margin:auto auto;
   }
 
 
@@ -96,6 +99,7 @@ export default {
         height:70%;
         min-height:570px;
       }
+
   }
 
   .route-bg{
@@ -127,11 +131,11 @@ export default {
   }
 
   .route-station-dot{
-    display:block;
     width:8px;
     height:8px;
     border-radius: 50%;
     background-color:var(--white);
+    border:1px solid var(--map-tag);
     z-index:2;
     transform:translate(-50%, -50%);
   }
@@ -156,8 +160,9 @@ export default {
   .bottom-left{top:15px;left:-100px;width:96px;text-align: end;}
 
   .hasTransit{
-    border:2px solid ;
-    background-color:var(--heading)
+    border:1px solid;
+    background-color:#505050;
+    
   }
 
   .active .route-station-dot{
@@ -165,11 +170,13 @@ export default {
     height:12px;
     border:3px solid;
     box-shadow: 0 2px 4px rgba(0,0,0,.36);
+    transition:width height .2s ease-in
   }
 
   .active  .route-station-tag{
     font-size:16px;
     font-weight:500;
-    color:var(--green)
+    color:var(--green);
+    transition: font-size .1s ease-in
   }
 </style>

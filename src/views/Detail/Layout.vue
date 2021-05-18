@@ -2,24 +2,19 @@
     <div class="ds-header">
         <div class="ds-currentstation">
             <div style="display:flex">
-                <img class="ds-num" :src="current.path" alt="UID"/>  
-                <div class="ds-station">
-                    <h3> {{current.zh}}</h3>
-                    <div class="ds-transfer-logo">
-                        <p>{{current.line}}</p>
-                        <img src="@/assets/line-HSR.svg" v-if="current.en==='HSR Taichung Station'" alt="HSR">
-                        <img src="@/assets/line-TRA.svg" v-if="current.transit" alt="TRA">
-                    </div>
-                </div>
+                <img v-if="current" class="ds-num" :src="current.path" alt="UID"/>  
+                <h3 class="ds-station"> {{current.zh}}</h3>
             </div>
   
         </div>
 
-        <div class="ds-nav">
-            <router-link to="/search" @click="initSearch" class="ds-nav-item">設為起點</router-link>
-            <router-link :to="{name:'StationFacilities'}" class="ds-nav-item" @click="openModal" replace>站點資訊</router-link>
-            <router-link class="ds-nav-item" :to="{name: 'StationTransfer'}">轉乘資訊</router-link>
-        </div>
+        <transition name="slide" mode="in-out">
+            <div class="ds-nav">
+                <router-link to="/search" @click="initSearch" class="ds-nav-item">設為起點</router-link>
+                <router-link :to="{name:'StationFacilities'}" class="ds-nav-item" @click="openModal" replace>站點資訊</router-link>
+                <router-link class="ds-nav-item" :to="{name: 'StationTransfer'}">轉乘資訊</router-link>
+            </div>
+        </transition>
     </div>
     <router-view class="ds-nav-view">
 
@@ -90,6 +85,7 @@ export default {
     }
 
     .ds-header{
+        margin-top:8px;
         padding:16px;
         padding-top:8px;
         background: var(--modalbg);
@@ -121,40 +117,28 @@ export default {
     }
 
     .ds-num{
-        width:48px;
-        height:48px;
+        width:37px;
+        height:37px;
     }
 
     .ds-station{
         text-align: start;
-        margin-left:12px;
-    }
-
-    .ds-station h3{
+        margin: auto 16px auto 16px;
+        align-items: center;
         width:150px;
         line-height: 23px;
         font-size:19px;
         color:var(--heading);
-        margin:0;
-        
-    }
-
-    .ds-station p{
-        color:var(--caption);
-        font-weight: 500;
-        line-height: 24px;
-        font-size:14px;
-        margin:0;
-        padding-bottom:0;
     }
 
     .ds-transfer-logo{
         display:flex;
+        margin-top:3px;
         align-items: center;
     }
 
     .ds-transfer-logo img{
-        margin-left:8px;
+        margin-right:8px;
         width:24px;
         height:24px;
     }
@@ -166,7 +150,7 @@ export default {
 
 
     .ds-nav-item.router-link-exact-active{
-        background-color:var(--blue);
+        background-color:var(--system-blue);
         color:var(--white)
     }
 
@@ -180,8 +164,8 @@ export default {
         list-style: none;
         margin:0;
         padding:0;
-        border-top:0.5px solid var(--divider);
-        border-bottom:0.5px solid var(--divider);
+        border-top:0.5px solid var(--list-divider);
+        border-bottom:0.5px solid var(--list-divider);
         background-color:var(--list-bg)
     }
 
@@ -201,7 +185,7 @@ export default {
         align-items: center;
         padding:12px 0;
         margin-left:16px;
-        border-bottom:1px solid var(--divider)
+        border-bottom:1px solid var(--list-divider)
     }
 
     .ds-list-item:only-child, .ds-list-item:last-child{
@@ -210,6 +194,19 @@ export default {
 
     .ds-list-footer{
         height:1.5em;
-        background-color:var(--list-bg)
+        background-color:var(--list-hd)
     }
+
+    .slide-enter-active,
+    .slide-leave-active{
+        transition:opacity 1s, transform 1s;
+    }
+
+    .slide-enter,
+    .slide-leave-to{
+        opacity: 0;
+        transform:translate(-30%)
+    }
+
+
 </style>
