@@ -76,6 +76,7 @@ export default {
         },
         closeModal(){
             this.$router.push('/')
+            store.commit('collapseModal')
             store.dispatch('clearSearchMode')
             store.dispatch('clearFare')
         }

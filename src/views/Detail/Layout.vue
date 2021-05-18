@@ -31,6 +31,7 @@ import store from '@/store'
 export default {
     methods:{
         initSearch(){
+            store.commit('collapseModal')
             store.dispatch('setSearchMode')
         },
 

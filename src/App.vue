@@ -26,9 +26,7 @@
     --list-hd:#F2F2F7;
     --list-bg:#FFFFFF;
   }
-
 }
-
 
 @media (prefers-color-scheme: dark) {
   :root{
@@ -44,7 +42,6 @@
     --list-bg:#1C1C1C;
   }
 }
-
 
 body{
   background-color:var(--map-bg);
