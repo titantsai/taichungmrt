@@ -10,6 +10,7 @@ export default createStore({
       dest:{},
       fare:{},
       stationInfo:{},
+      wxData:{}
   },
   mutations: {
     // 掛載所有路線
@@ -52,6 +53,10 @@ export default createStore({
 
     expandModal(state){
       state.modalCollapsed = false
+    },
+
+    uplinkForecast(state,wx){
+      state.wxData = wx
     }
 
   },
@@ -111,12 +116,19 @@ export default createStore({
     getStationTransfer(){
       RouteData.getStationTransfer(this.state.current.uid)
       .then(response=> console.log(response.data))
+    },
+
+    getForecast(context,wxdata){
+      RouteData.getForecast()
+      .then(res=>{
+      wxdata=res.data
+      context.commit('uplinkForecast',wxdata)})
     }
 
   },
   getters: {
 
-    getBikesById:(state) => (id) => {
+    GET_BIKES_By_ID:(state) => (id) => {
         return state.bikes.find(bike => bike.sno === id)
     }
   },

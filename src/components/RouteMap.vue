@@ -53,7 +53,7 @@ export default {
           store.dispatch('setDest',index)
           store.dispatch('getFare')
           return
-        }
+        }else if(index.line === 'tra'){return}
           store.dispatch('clearSearchMode')
           store.dispatch('clearFare')
           this.$router.replace({name:'StationInfo' , params:{id: `${index.uid}`}})

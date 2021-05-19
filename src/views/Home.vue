@@ -22,16 +22,19 @@
 
         <div class="map-container">
             <RouteMap/>
+            <Weather/>
         </div>
     </div>
 </template>
 
 <script>
 import store from '@/store'
+import Weather from '../components/Forecast'
 import RouteMap from '../components/RouteMap'
 export default {
     components:{
-       RouteMap
+       RouteMap,
+       Weather
     },
     data(){
         return{
@@ -43,6 +46,7 @@ export default {
     },
     created(){
         store.dispatch('initRoute')
+        store.dispatch('getForecast')
     },
     methods:{
         initTouch(e){

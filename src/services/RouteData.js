@@ -53,6 +53,10 @@ export default{
     getFare(ori,des){
         if(ori === des){return}
         return PTX.get(`https://ptx.transportdata.tw/MOTC/v2/Rail/Metro/ODFare/TMRT?$filter=OriginStationID%20eq%20'${ori}'%20and%20DestinationStationID%20eq%20'${des}'&$format=JSON`)
+    },
+
+    getForecast(){
+        return axios.get('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-7CDD5094-E934-418C-962D-37DAA91912DA&locationName=%E8%87%BA%E4%B8%AD%E5%B8%82&elementName=Wx,MaxT')
     }
 
 }

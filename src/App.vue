@@ -19,6 +19,7 @@
     --map-bg:#E5E5E5;
     --map-tag:#141414;
 
+    --trns-bg:#F9F9F978;
     --modal-bg:#FFFFFF;
     --modal-handle:#C7C7C7;
 
@@ -39,6 +40,7 @@
     --map-bg:#25282d;
     --map-tag:#FFFFFF;
 
+    --trns-bg:#25252578;
     --modal-bg:#1C1C1E;
     --modal-handle:#24242478;
 
