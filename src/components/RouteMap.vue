@@ -52,6 +52,7 @@ export default {
         if(store.state.fareSelection){
           store.dispatch('setDest',index)
           store.dispatch('getFare')
+          store.commit('expandModal')
           return
         }else if(index.line === 'tra'){return}
           store.dispatch('clearSearchMode')

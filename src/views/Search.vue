@@ -1,34 +1,34 @@
 <template>
     <div class="fd-container">
         <div class="fd-header">
-            <div style="display:flex">
-                <img class="ds-indicator" src="@/assets/fareinfo.svg">
-                <div>
-                    <div class="fd-header-orig">{{current.zh}}</div>
-                    <div class="fd-header-dest">{{dest.zh || placeholder}}</div>
+            <div class="fd-heading">旅程時間與票價</div>
+            <span class="fd-divider"></span>
+            <div class="fd-header-search">
+                <div class="fd-nav">
+                    <div class="fd-orig"><span class="orig-icon"></span>{{current.zh}}</div>
+                    <div class="fd-dest"><span class="dest-icon"></span>{{dest.zh || placeholder}}</div>
+                    <span class="fd-link"></span>
                 </div>
-            </div>
-            <div v-if="fareData">
-                <div class="fd-traveltime">{{fareData.TravelTime}}<span>分</span></div>
+                <div v-if="fareData" class="fd-duration">{{fareData.TravelTime}}分</div>
             </div>
         </div>
 
-        <!-- <div class="fd-divider"></div> -->
-
-        <div v-if="fareData" class="fd-pricetable">
-            <div>
-                <p class="fd-faretype">單程票</p>
-                <h3 class="fd-fareprice">{{fareData.Fares[0].Price}}元</h3>
-            </div>
-            <div>
-                <p class="fd-faretype">電子票證</p>
-                <h3 class="fd-fareprice">{{fareData.Fares[4].Price}}元</h3>
-            </div>
-            <div>
-                <p class="fd-faretype">愛心票</p>
-                <h3 class="fd-fareprice">{{fareData.Fares[1].Price}}元</h3>
-            </div>
-        
+        <div v-if="fareData" class="ds-list">
+            <div class="ds-list-header">票價</div>
+            <ul>
+                <li class="ds-list-item fd-fare-item">
+                    <p class="fd-faretype">單程票</p>
+                    <h3 class="fd-fareprice">{{fareData.Fares[0].Price}}<span class="fd-fareprice-unit">元</span></h3>
+                </li>
+                <li class="ds-list-item fd-fare-item">
+                    <p class="fd-faretype">電子票證</p>
+                    <h3 class="fd-fareprice">{{fareData.Fares[4].Price}}<span class="fd-fareprice-unit">元</span></h3>
+                </li>
+                <li class="ds-list-item fd-fare-item">
+                    <p class="fd-faretype">愛心票</p>
+                    <h3 class="fd-fareprice">{{fareData.Fares[1].Price}}<span class="fd-fareprice-unit">元</span></h3>
+                </li>
+            </ul>
         </div>
     </div>
 </template>
@@ -57,80 +57,114 @@ export default {
 
 <style scoped>
     .fd-container{
-        padding:16px 32px;
+        margin-top:12px;
     }
-
     .fd-header{
-        display:flex;
-        justify-content:space-between;
-        align-items: center;
-        margin-bottom:16px;
-    }
-
-    .ds-indicator{
-        margin-right:10px
-    }
-
-    .fd-header-orig{
-        text-align:start;
-        color:var(--heading);
-        font-weight: 400;
-        font-size: 17px;
-        line-height: 22px;
-        height:24px;
-    }
-
-    .fd-header-dest{
-        margin-top:6px;
-        text-align:start;
-        color:var(--heading);
-        font-weight: 500;
-        font-size:19px;
-        height:21px;
-    }
-
-    .fd-traveltime{
-        font-size:21px;
-        font-weight: 700;
-        color:var(--blue)
-    }
-
-
-    .fd-traveltime span{
-        font-size:15px;
-        color:var(--blue);
+        padding:10px 16px 16px 16px;
     }
 
     .fd-divider{
-        margin-top:10px;
-        margin-bottom:8px;
-        width:100%;
+        margin:1em -1em 1em 0;
+        display:flex;
         height:0.5px;
-        background: #b8b8b864;
+        background-color:var(--list-divider);
     }
 
-    .fd-pricetable{
-        display:grid;
-        grid-template-columns: 1fr 1fr 1fr;
+    .fd-heading{
+        color:var(--caption);
+        text-align:start;
+    }
 
+    .fd-header-search{
+        margin-top:8px;
+        margin-bottom:1em;
+        display:flex;
+        align-items:center;
+        justify-content: space-between;
+        position:relative;
+    }
+
+    .fd-orig, .fd-dest{
+        line-height:19px;
+        margin-left:1em;
+        display:flex;
+        align-items: center;
+        font-size:19px;
+        text-align: start;
+        font-weight: 500;
+    }
+
+    .fd-orig{
+        color:var(--caption);
+    }
+
+    .fd-dest{
+        margin-top:1.5em;
+        color:var(--heading)
+    }
+
+    .orig-icon{
+        margin-left:2px;
+        margin-right:8px;
+        display:block;
+        width:6px;
+        height:6px;
+        border-radius: 3px;
+        background-color:var(--caption);
+        
+    }
+
+    .dest-icon{
+        margin-right:8px;
+        display: block;
+        width:10px;
+        height:10px;
+        background-color:var(--heading)
+    }
+
+    .fd-link{
+        display:flex;
+        align-self: center;
+        width:0.5px;
+        height:1.5em;
+        background-color:#888888;
+        position:absolute;
+        top:19px;
+        left:23.5px;
+    }
+
+    .fd-duration{
+        margin-right:16px;
+        display:block;
+        height:60px;
+        width:60px;
+        border-radius:8px;
+        background-color:var(--system-blue);
+        color:white;
+        font-size:17px;
+        font-weight: 500;
+        line-height:60px;
+    }
+
+    .fd-fare-item{
+        display:flex;
+        justify-content: space-between;
+        padding-right:1em;
     }
 
     .fd-faretype{
-        font-size:13px;
-        color:var(--caption);
-        text-align:center
+        color:var(--heading)
     }
 
     .fd-fareprice{
-        margin-top:8px;
-        color:var(--blue);
-        font-weight: 500;
-        text-align:center
+        color:var(--heading);
+        font-weight:300;
     }
 
-    @media screen and (max-width:512px){
-        .fd-container{
-            padding:16px 32px;
-        }
+    .fd-fareprice-unit{
+        font-size:13px;
+        padding-left:4px;
+        font-weight: 500;
     }
+
 </style>

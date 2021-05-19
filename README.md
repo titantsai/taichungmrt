@@ -5,6 +5,8 @@
 + 捷運與台鐵轉乘路線圖
 
 + 車站資訊
+  * 旅程規劃
+    - 查詢行車時間與票價
   * 站點資訊
     - 首末班車
     - 出口位置設施
@@ -26,4 +28,6 @@
 
 ## Credits
 
-[PanZoom from anvaka](https://github.com/anvaka/panzoom)
+[PanZoom from timmywil](https://github.com/timmywil/panzoom)
+[交通部公共運輸整合資訊流通服務平台](https://ptx.transportdata.tw/)
+[氣象資料開放平台](https://opendata.cwb.gov.tw/index)

@@ -119,10 +119,12 @@ export default createStore({
     },
 
     getForecast(context,wxdata){
-      RouteData.getForecast()
-      .then(res=>{
-      wxdata=res.data
-      context.commit('uplinkForecast',wxdata)})
+        setTimeout(()=>{
+          RouteData.getForecast()
+          .then(res=>{
+          wxdata=res.data
+          context.commit('uplinkForecast',wxdata)})
+        },3000)
     }
 
   },

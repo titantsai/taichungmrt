@@ -48,6 +48,7 @@ export default {
         store.dispatch('initRoute')
         store.dispatch('getForecast')
     },
+
     methods:{
         initTouch(e){
             this.initY = e.touches[0].clientY

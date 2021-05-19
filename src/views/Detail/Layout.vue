@@ -102,7 +102,6 @@ export default {
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap:16px;
         margin-top:1em;
-        background-color: var(--modal-bg);
     }
 
     .ds-nav-item{
