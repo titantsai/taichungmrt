@@ -49,16 +49,16 @@ export default {
     },
     methods:{
       selectStation(index){
-        if(store.state.fareSelection){
-          store.dispatch('setDest',index)
-          store.dispatch('getFare')
-          store.commit('expandModal')
+        if(index.line === 'tra'){return}
+        else if(store.state.fareSelection){
+          store.dispatch('SET_DEST',index)
+          store.dispatch('GET_FARE')
           return
-        }else if(index.line === 'tra'){return}
-          store.dispatch('clearSearchMode')
-          store.dispatch('clearFare')
+        }
+          store.dispatch('CLEAR_SEARCH_MODE')
+          store.dispatch('CLEAR_FARE')
           this.$router.replace({name:'StationInfo' , params:{id: `${index.uid}`}})
-          store.dispatch('showSelected',index);
+          store.dispatch('SHOW_SELECTED',index);
       },
       active(index){
         return index.toString() === this.$route.path.slice(9)

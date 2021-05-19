@@ -62,7 +62,7 @@ export default createStore({
   },
   actions: {
     // 取得並呼叫所有路線
-    initRoute(){
+    INIT_ROUTE(){
       RouteData.getRoute()
       .then(response=>{
         let db = response.data;
@@ -71,40 +71,43 @@ export default createStore({
       .catch(err=>console.log(err))
     },
     
-    showSelected(context,response){
+    SHOW_SELECTED(context,response){
       context.commit('selectedInfo',response)
     },
 
-    setSearchMode(){
+    SET_SEARCH_MODE(){
+      this.commit('collapseModal')
       this.commit('setFareSearch')
     },
 
-    clearSearchMode(){
+    CLEAR_SEARCH_MODE(){
       this.commit('clearFareSearch')
     },
 
-    setDest(context,payload){
+    SET_DEST(context,payload){
       context.commit('setDest',payload)
     },
 
-    getFare(context,data){
+    GET_FARE(context,data){
         if(this.state.current.uid===this.state.dest.uid){
         alert('請選擇不同的起迄站')
+        context.commit('clearFare')
         return
         } 
 
         RouteData.getFare(this.state.current.uid,this.state.dest.uid)
         .then(response=>{
         data = response.data;
-        context.commit('loadFare',data)})
+        context.commit('loadFare',data)
+        context.commit('expandModal')})
         .catch(error=>console.log(error))
     },
 
-    clearFare(context){
+    CLEAR_FARE(context){
       context.commit('clearFare')
     },
 
-    getStationInfo(context,data){
+    GET_STATION_INFO(context,data){
       RouteData.getStationInfo(this.state.current.uid)
       .then(response=>{
         data = response.data;
@@ -113,12 +116,12 @@ export default createStore({
       .catch(error=>console.log(error))
     },
 
-    getStationTransfer(){
+    GET_TRANSFER(){
       RouteData.getStationTransfer(this.state.current.uid)
       .then(response=> console.log(response.data))
     },
 
-    getForecast(context,wxdata){
+    GET_FORECAST(context,wxdata){
         setTimeout(()=>{
           RouteData.getForecast()
           .then(res=>{

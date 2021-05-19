@@ -1,7 +1,7 @@
 
 <template>
     <div class="container">
-        <transition name="swipeUp" mode="out-in">
+        
             
             <div class="ms-sheet" id="bottomsheet" v-if="$route.path !== '/'" :class="{msCollapsed:modalCollapsed}" @touchstart="initTouch" @touchmove="handleTouch" @touchend="endTouch">
                 <div class="ms-handle-container">
@@ -18,7 +18,6 @@
                 <img src="../assets/chevron.up.svg"/> 點選車站即可查看詳細資訊
             </div>
 
-        </transition>
 
         <div class="map-container">
             <RouteMap/>
@@ -45,8 +44,8 @@ export default {
         }
     },
     created(){
-        store.dispatch('initRoute')
-        store.dispatch('getForecast')
+        store.dispatch('INIT_ROUTE')
+        store.dispatch('GET_FORECAST')
     },
 
     methods:{
@@ -83,8 +82,8 @@ export default {
         closeModal(){
             this.$router.push('/')
             store.commit('collapseModal')
-            store.dispatch('clearSearchMode')
-            store.dispatch('clearFare')
+            store.dispatch('CLEAR_SEARCH_MODE')
+            store.dispatch('CLEAR_FARE')
         }
         
     },

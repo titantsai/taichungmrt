@@ -17,18 +17,19 @@
             <div class="ds-list-header">票價</div>
             <ul>
                 <li class="ds-list-item fd-fare-item">
-                    <p class="fd-faretype">單程票</p>
-                    <h3 class="fd-fareprice">{{fareData.Fares[0].Price}}<span class="fd-fareprice-unit">元</span></h3>
+                    <h3 class="fd-faretype">單程票</h3>
+                    <p class="fd-fareprice">{{fareData.Fares[0].Price}}<span class="fd-fareprice-unit">元</span></p>
                 </li>
                 <li class="ds-list-item fd-fare-item">
-                    <p class="fd-faretype">電子票證</p>
-                    <h3 class="fd-fareprice">{{fareData.Fares[4].Price}}<span class="fd-fareprice-unit">元</span></h3>
+                    <h3 class="fd-faretype">電子票證</h3>
+                    <p class="fd-fareprice">{{fareData.Fares[4].Price}}<span class="fd-fareprice-unit">元</span></p>
                 </li>
                 <li class="ds-list-item fd-fare-item">
-                    <p class="fd-faretype">愛心票</p>
-                    <h3 class="fd-fareprice">{{fareData.Fares[1].Price}}<span class="fd-fareprice-unit">元</span></h3>
+                    <h3 class="fd-faretype">愛心票</h3>
+                    <p class="fd-fareprice">{{fareData.Fares[1].Price}}<span class="fd-fareprice-unit">元</span></p>
                 </li>
             </ul>
+            <div class="ds-list-footer"></div>
         </div>
     </div>
 </template>
@@ -77,7 +78,7 @@ export default {
 
     .fd-header-search{
         margin-top:8px;
-        margin-bottom:1em;
+        margin-bottom:8px;
         display:flex;
         align-items:center;
         justify-content: space-between;
@@ -99,7 +100,7 @@ export default {
     }
 
     .fd-dest{
-        margin-top:1.5em;
+        margin-top:2em;
         color:var(--heading)
     }
 
@@ -126,24 +127,24 @@ export default {
         display:flex;
         align-self: center;
         width:0.5px;
-        height:1.5em;
+        height:2em;
         background-color:#888888;
         position:absolute;
         top:19px;
         left:23.5px;
+        transform: translateX(50%);
     }
 
     .fd-duration{
-        margin-right:16px;
         display:block;
-        height:60px;
-        width:60px;
+        height:48px;
+        width:48px;
         border-radius:8px;
         background-color:var(--system-blue);
         color:white;
         font-size:17px;
         font-weight: 500;
-        line-height:60px;
+        line-height:48px;
     }
 
     .fd-fare-item{
@@ -153,7 +154,9 @@ export default {
     }
 
     .fd-faretype{
-        color:var(--heading)
+        color:var(--heading);
+        font-size:15px;
+        font-weight:500;
     }
 
     .fd-fareprice{
@@ -167,4 +170,13 @@ export default {
         font-weight: 500;
     }
 
+    .ds-list-header{
+        border-top:0.5px solid var(--list-divider);
+        padding-top:12px;
+    }
+
+    .ds-list-footer{
+        display:block;
+        height:300px;
+    }
 </style>

@@ -44,7 +44,7 @@
     --modal-bg:#1C1C1E;
     --modal-handle:#24242478;
 
-    --list-hd:000000;
+    --list-hd:#000000;
     --list-bg:#1C1C1E;
     --list-divider:#54545865;
 

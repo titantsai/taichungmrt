@@ -9,7 +9,7 @@
 import store from '@/store'
 export default {
     mounted(){
-        store.dispatch('getStationTransfer')
+        store.dispatch('GET_TRANSFER')
     },
     computed:{
         

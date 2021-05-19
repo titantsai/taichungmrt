@@ -60,7 +60,7 @@ export default {
         }
     },
     mounted(){
-        store.dispatch('getStationInfo')
+        store.dispatch('GET_STATION_INFO')
     },
     computed:{
         current(){

@@ -4,9 +4,12 @@
             <div style="display:flex">
                 <img v-if="current" class="ds-num" :src="current.path" alt="UID"/>  
                 <h3 class="ds-station"> {{current.zh}}</h3>
+                 <img class="ds-transfer-icon" src="@/assets/line-HSR.svg" v-if="current.uid===119">
+                <img class="ds-transfer-icon" src="@/assets/line-TRA.svg" v-if="current.transit">
             </div>
-  
+           
         </div>
+
 
         <transition name="slide" mode="in-out">
             <div class="ds-nav">
@@ -26,12 +29,12 @@ import store from '@/store'
 export default {
     methods:{
         initSearch(){
-            store.commit('collapseModal')
-            store.dispatch('setSearchMode')
+
+            store.dispatch('SET_SEARCH_MODE')
         },
 
         endSearch(){
-            store.dispatch('clearSearchMode')
+            store.dispatch('CLEAR_SEARCH_MODE')
         },
 
         openModal(){
@@ -88,7 +91,7 @@ export default {
         margin-top:8px;
         padding:16px;
         padding-top:8px;
-        background: var(--modalbg);
+
         box-sizing: border-box;
     }
 
@@ -124,19 +127,13 @@ export default {
         text-align: start;
         margin: auto 16px auto 16px;
         align-items: center;
-        width:150px;
         line-height: 23px;
         font-size:19px;
         color:var(--heading);
     }
 
-    .ds-transfer-logo{
-        display:flex;
-        margin-top:3px;
-        align-items: center;
-    }
-
-    .ds-transfer-logo img{
+    .ds-transfer-icon{
+        align-self:center;
         margin-right:8px;
         width:24px;
         height:24px;
@@ -154,7 +151,6 @@ export default {
     }
 
     .ds-list{
-        background-color:var(--grey);
         height:calc(100% - 150px);
         overflow-y: auto;
     }
@@ -173,8 +169,8 @@ export default {
         padding:8px 16px 4px 16px;
         font-size:13px;
         line-height: 18px;
+        color:var(--caption);
         background-color:var(--list-hd);
-        color:var(--caption)
     }
 
     .ds-list-item{
