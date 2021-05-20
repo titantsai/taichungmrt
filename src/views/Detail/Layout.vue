@@ -13,9 +13,9 @@
 
         <transition name="slide" mode="in-out">
             <div class="ds-nav">
-                <router-link to="/search" @click="initSearch" class="ds-nav-item">設為起點</router-link>
+                <router-link to="/search" @click="initSearch" class="ds-nav-item" replace>設為起點</router-link>
                 <router-link :to="{name:'StationFacilities'}" class="ds-nav-item" @click="openModal" replace>站點資訊</router-link>
-                <router-link class="ds-nav-item" :to="{name: 'StationTransfer'}">轉乘資訊</router-link>
+                <router-link class="ds-nav-item" :to="{name: 'StationTransfer'}" @click="openModal" replace>轉乘資訊</router-link>
             </div>
         </transition>
     </div>
@@ -29,7 +29,7 @@ import store from '@/store'
 export default {
     methods:{
         initSearch(){
-
+            store.commit('collapseModal')
             store.dispatch('SET_SEARCH_MODE')
         },
 
@@ -108,14 +108,20 @@ export default {
     }
 
     .ds-nav-item{
-        background-color:var(--grey);
+        text-align:center;
+        width:64px;
         border:none;
-        border-radius:4px;
-        padding:8px;
+        padding:8px 0;
         font-size:14px;
-        font-weight: 400;
+        font-weight: 500;
         color:var(--caption);
         text-decoration: none;
+        justify-self: center;
+    }
+
+    .ds-nav-item.router-link-exact-active{
+        border-bottom:2px solid var(--system-blue);
+        color:var(--heading)
     }
 
     .ds-num{
@@ -144,11 +150,6 @@ export default {
         overflow: auto;
     }
 
-
-    .ds-nav-item.router-link-exact-active{
-        background-color:var(--system-blue);
-        color:var(--white)
-    }
 
     .ds-list{
         height:calc(100% - 150px);

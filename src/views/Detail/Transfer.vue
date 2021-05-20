@@ -3,10 +3,14 @@
         <div class="ds-list-header">轉乘停車場</div>
         <ul v-if="transfer.parking">
             <li class="ds-list-item trans-list-item" v-for="parking in transfer.parking" :key="parking">
-                <div class="parking-name">
-                    <img class="parking-type" src="@/assets/transfer-bike.svg" v-if="parking.type==='bike'">
-                    <img class="parking-type" src="@/assets/transfer-motorbike.svg" v-if="parking.type==='motorbike'">
-                    <p>{{parking.name}}</p>
+                <div style="display:flex;padding-right:1em;align-items:center">
+                    <div class="ds-service-img">
+                        <img src="@/assets/transfer-bike.svg" v-if="parking.type==='bike'">
+                        <img src="@/assets/transfer-motorbike.svg" v-if="parking.type==='motorbike'">
+                    </div>
+                    <div class="ds-service-name">
+                        <h3>{{parking.name}}</h3>
+                    </div>
                 </div>
                 <div style="display:flex;padding-right:1em">
                     <p class="parking-amount">車格總數：{{parking.amount}}</p>
@@ -17,12 +21,18 @@
         <ul v-else>
             <li class="ds-list-item">
                 <p style="font-size:15px;color:var(--caption)">本站無轉乘停車場</p>
-                </li>
+            </li>
         </ul>
-        <div class="ds-list-header">公共自行車</div>
+        <div class="ds-list-header">Youbike2.0</div>
         <ul>
-            <li class="ds-list-item">
-
+            <li class="ds-list-item ds-list-bikes" v-for="bike in transfer.bikes" :key="bike.uid">
+                <div style="display:flex;align-items:center">
+                    <div class="ds-service-img"><img class="ds-ubike-logo" src="@/assets/ubike.png"></div>
+                    <div class="ds-service-name">
+                        <h3>{{getBikeStatus(bike.uid).sna.slice(11)}}</h3>
+                    </div>
+                </div>
+                <div class="ds-bike-amount">{{getBikeStatus(bike.uid).sbi}}<span>/{{getBikeStatus(bike.uid).tot}}</span></div>
             </li>
         </ul>
         <div class="ds-list-header">公車及客運</div>
@@ -43,8 +53,18 @@
 
 import store from '@/store'
 export default {
+    data(){
+        return{
+            counter:500
+        }
+    },
     mounted(){
         store.dispatch('GET_TRANSFER')
+    },
+    methods:{
+        getBikeStatus(id){
+            return store.state.bikesData.find(data=>data.sno === `${id}`)
+        }
     },
     computed:{
         transfer(){
@@ -55,23 +75,8 @@ export default {
 </script>
 
 <style scoped>
-    .ds-list-ibike{
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .ds-ibike-status{
-        color:var(--heading);
-        font-size:13px;
-        margin-right:16px;
-    }
-    .ds-ibike-rentable{
-        font-size:17px;
-    }
-
     .trans-list-item{
-        display: flex;
-        justify-content:space-between;
+        justify-content: space-between;
     }
 
     .parking-name{
@@ -94,7 +99,6 @@ export default {
     .ds-bus-num{
         font-size:17px;
         width:54px;
-        margin-right:4px;
         text-align:start;
         font-weight:500;
         color:var(--system-blue);
@@ -110,7 +114,7 @@ export default {
         color:var(--heading);
         margin:0;
         margin-bottom:6px;
-        font-weight: 500;
+        font-weight: 400;
     }
 
     .ds-bus-stop{
@@ -118,4 +122,35 @@ export default {
         color:var(--caption);
         margin:0;
     }
+
+    .ds-list-bikes{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .ds-ubike-logo{
+        width:37px;
+        height: 37px;
+        margin-right:16px;
+    }
+
+    .ds-ubike-name{
+        font-weight: 400;
+        font-size:15px;
+        color:var(--heading)
+    }
+
+    .ds-bike-amount{
+        margin-right:16px;
+        font-size:17px;
+        font-weight: 500;
+        color:var(--heading)
+    }
+
+    .ds-bike-amount span{
+        font-size:13px;
+        color:var(--caption);
+    }
+    
 </style>

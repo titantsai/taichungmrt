@@ -1,22 +1,24 @@
 
 <template>
     <div class="container">
-        
-            
-            <div class="ms-sheet" id="bottomsheet" v-if="$route.path !== '/'" :class="{msCollapsed:modalCollapsed}" @touchstart="initTouch" @touchmove="handleTouch" @touchend="endTouch">
-                <div class="ms-handle-container">
-                    <span class="ms-handle"></span>
-                    <div class="ms-closebtn" @click="closeModal">
-                        <img src="../assets/xmark.circle.fill.svg">
-                    </div>
-                </div>
-                <router-view></router-view>
-            </div>
-        
+        <div class="tmrt-logo">
+            <img src="@/assets/tmrt.svg" alt="">
+        </div>
 
-            <div class="ms-sheet-placeholder" v-else>
-                <img src="../assets/chevron.up.svg"/> 點選車站即可查看詳細資訊
+        <div class="ms-sheet" id="bottomsheet" v-if="$route.path !== '/'" :class="{msCollapsed:modalCollapsed}" @touchstart="initTouch" @touchmove="handleTouch" @touchend="endTouch">
+            <div class="ms-handle-container">
+                <span class="ms-handle"></span>
+                <div class="ms-closebtn" @click="closeModal">
+                    <img src="../assets/xmark.circle.fill.svg">
+                </div>
             </div>
+            <router-view></router-view>
+        </div>
+    
+
+        <div class="ms-sheet-placeholder" v-else>
+            <img src="../assets/chevron.up.svg"/> 點選車站即可查看詳細資訊
+        </div>
 
 
         <div class="map-container">
@@ -46,6 +48,7 @@ export default {
     created(){
         store.dispatch('INIT_ROUTE')
         store.dispatch('GET_FORECAST')
+        store.dispatch('GET_BIKES')
     },
 
     methods:{
@@ -106,6 +109,12 @@ export default {
         height: fill-available;
         overflow-y: scroll;
         -webkit-overflow-scrolling: auto; /* enables “momentum” (smooth) scrolling */
+    }
+
+    .tmrt-logo{
+        position:absolute;
+        top:1.5em;
+        left:1.5em;
     }
     
     .ms-sheet{

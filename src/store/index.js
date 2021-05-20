@@ -12,6 +12,7 @@ export default createStore({
       stationInfo:{},
       wxData:{},
       transferData:{},
+      bikesData:{},
   },
   mutations: {
     // 掛載所有路線
@@ -62,6 +63,10 @@ export default createStore({
 
     loadTransfer(state,payload){
       state.transferData=payload
+    },
+
+    uplinkBike(state,data){
+      state.bikesData = data
     }
 
   },
@@ -81,7 +86,6 @@ export default createStore({
     },
 
     SET_SEARCH_MODE(){
-      this.commit('collapseModal')
       this.commit('setFareSearch')
     },
 
@@ -124,7 +128,6 @@ export default createStore({
     GET_TRANSFER(context){
       RouteData.getStationTransfer(this.state.current.uid)
       .then(response=> {
-        console.log(response.data)
         context.commit('loadTransfer',response.data)})
     },
 
@@ -135,14 +138,16 @@ export default createStore({
           wxdata=res.data
           context.commit('uplinkForecast',wxdata)})
         },3000)
+    },
+
+    GET_BIKES(context,db){
+      RouteData.getYouBikeStat()
+      .then(response=>{
+        db=response.data.retVal
+        context.commit('uplinkBike',db)
+      })
     }
 
-  },
-  getters: {
-
-    GET_BIKES_By_ID:(state) => (id) => {
-        return state.bikes.find(bike => bike.sno === id)
-    }
   },
   modules: {
   }
