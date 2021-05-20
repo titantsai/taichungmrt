@@ -10,7 +10,8 @@ export default createStore({
       dest:{},
       fare:{},
       stationInfo:{},
-      wxData:{}
+      wxData:{},
+      transferData:{},
   },
   mutations: {
     // 掛載所有路線
@@ -57,6 +58,10 @@ export default createStore({
 
     uplinkForecast(state,wx){
       state.wxData = wx
+    },
+
+    loadTransfer(state,payload){
+      state.transferData=payload
     }
 
   },
@@ -116,9 +121,11 @@ export default createStore({
       .catch(error=>console.log(error))
     },
 
-    GET_TRANSFER(){
+    GET_TRANSFER(context){
       RouteData.getStationTransfer(this.state.current.uid)
-      .then(response=> console.log(response.data))
+      .then(response=> {
+        console.log(response.data)
+        context.commit('loadTransfer',response.data)})
     },
 
     GET_FORECAST(context,wxdata){

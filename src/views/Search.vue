@@ -87,10 +87,9 @@ export default {
 
     .fd-orig, .fd-dest{
         line-height:19px;
-        margin-left:1em;
+        margin-left:0.5em;
         display:flex;
         align-items: center;
-        font-size:19px;
         text-align: start;
         font-weight: 500;
     }
@@ -131,7 +130,7 @@ export default {
         background-color:#888888;
         position:absolute;
         top:19px;
-        left:23.5px;
+        left:14px;
         transform: translateX(50%);
     }
 
@@ -156,7 +155,7 @@ export default {
     .fd-faretype{
         color:var(--heading);
         font-size:15px;
-        font-weight:500;
+        font-weight:400;
     }
 
     .fd-fareprice{

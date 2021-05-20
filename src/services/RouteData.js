@@ -44,7 +44,7 @@ export default{
     },
 
     getStationTransfer(id){
-        return APIClient.get(`/StationTransfer/${id}.json`)
+        return APIClient.get(`/transfer/${id}.json`)
     },
 
     getYouBikeStat(){
